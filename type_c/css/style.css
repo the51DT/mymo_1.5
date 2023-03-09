@@ -12,7 +12,7 @@ section {
 }
 .wrap {
     width: 100%;
-    max-width: 360px;
+    max-width: 768px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
