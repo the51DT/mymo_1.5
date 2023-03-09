@@ -1,0 +1,43 @@
+body {
+    max-width: 360px;
+    margin: 0 auto !important;
+}
+
+.header {
+    box-sizing: border-box;
+    position: relative;
+    padding: 5.556vw 6.944vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .img-box+.img-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 5.556vw;
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    background: #5725e0;
+}
+
+.container .section {
+    padding: 5.556vw 6.944vw;
+}
+
+.container .section .box {
+    padding: 5.556vw;
+    background: #fff;
+    border-radius: 2.778vw;
+}
+
+.container .section .box+.box {
+    margin-top: 2.778vw;
+}
