@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MYMO</title>
+    <title>MYMO Type B</title>
 
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/swiper.css" />
@@ -21,13 +21,11 @@
         font-weight: 700;
         font-style: normal;
       }
-
       .swiper.mySwiper {
         width: 100%;
         height: 100%;
         padding-left: 12%;
       }
-
       .swiper.mySwiper .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -38,18 +36,15 @@
         border-radius: 24px;
         overflow: hidden;
       }
-
       .swiper.mySwiper .swiper-wrapper{
         margin-left: -5%;
       }
-
       .swiper.mySwiper .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-
       body {
         max-width: 768px;
         margin: 0 auto !important;
@@ -69,14 +64,14 @@
           width: 77%;
         }
       }
-
       .body{
         position: relative;
       }
-
       .section {
         margin-top: 5%;
       }
+
+
       .section1 {
         position: relative;
       }
@@ -91,6 +86,8 @@
           font-size: 9.5vw;
         }
       }
+
+
       .section2 {
         margin-top: -10%;
         z-index: 1;
@@ -179,8 +176,7 @@
         height: 6vw;
       }
       }
-
-      .prog-info{
+      .section2 .prog-info img{
         position: absolute;
         right: 46px;
         max-width: 432px;
@@ -193,24 +189,36 @@
 	      100% { top: 170px;}
       }
       @media (max-width: 768px) {
-        .prog-info{
-        max-width: 56vw;
+        .section2 .prog-info img{
+          max-width: 56vw;
+          right: 5vw;
+        }
+        @keyframes prog-ani {
+        0% { top: 83vw; }
+	      100% { top: 21vw;}
       }
       }
+
 
       .section.section3{
         margin-top:-9%;
         position: relative;
+        background: url(./img/section-white.png) no-repeat;
+        background-size: cover;
+        padding: 12% 0 12% 12%;
+        z-index: 1;
       }
       .section3 .cal-contents{
-        top: 21%;
+        top: 18%;
         right: 0;
         position: absolute;
         z-index: 2;
+        max-width: 100%;
       }
-      @media (max-width: 768px) {
-        .section3 .cal-contents{max-width: 85%;}
+      .section3 .swiper-slide > img{
+        padding-right: 7%;
       }
+
 
       .section4 {
         background: url(./img/section-gray-mid.png) no-repeat;
@@ -219,9 +227,11 @@
         background-size: cover;
       }
 
+
       .section5 {
         margin-top: -10%;
       }
+
 
       .section6 {
         background: url(./img/section-gray-bott.png) no-repeat;
@@ -231,9 +241,11 @@
         margin-top: -12%;
       }
 
+
       .section.section7{
         margin-top:0;
       }
+
 
       .menu-bott {
         margin: 0 auto;
@@ -264,10 +276,14 @@
           <div class="item">
             <img src="./img/section01.png" />
             <div class="num-increase total">
-              <span class="value" akhi="134523040">0</span>
+              <span class="value" id="counter1">0</span>
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="menu-bott" class="menu-bott">
+        <img src="./img/menu-bar-bot.png"/>
       </section>
 
       <section id="section2" class="section section2">
@@ -395,10 +411,6 @@
           <div class="item"></div>
         </div>
       </section>
-
-      <section id="menu-bott" class="menu-bott">
-        <img src="./img/menu-bar-bot.png"  data-aos="fade-up"/>
-      </section>
     </section>
   </body>
 
@@ -420,7 +432,6 @@
     //달력 스와이프
     var swiper = new Swiper(".calSwiper", {
       slidesPerView: 1,
-      spaceBetween: 0,
       // centeredSlides: true,
       pagination: {
         el: ".swiper-pagination",
@@ -449,7 +460,7 @@
           const time = value / perSpeed;
           if (data < value) {
             counter.innerText = Math.ceil(data + time);
-            setTimeout(animate, 1);
+            setTimeout(animate, 20);
           } else {
             counter.innerText = value
           }
@@ -457,39 +468,34 @@
 
         animate();
       });
-
-      //프로그래스 바
-      $(".prog-info").css({"top" : "170px"});
-    }else{
-
     }
     });
 
-    
-
     //총 자산 증감
-    const counters = document.querySelectorAll(".value");
-    const speed = 200;
-
-    counters.forEach((counter) => {
-      const animate = () => {
-        const value = +counter.getAttribute("akhi");
-        const data = +counter.innerText;
-
-        const time = value / speed;
-        if (data < value) {
-          counter.innerText = Math.ceil(data + time);
-          setTimeout(animate, 1);
-        } else {
-          counter.innerText = value
-            .toString()
-            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    function numberCounter(target_frame, target_number) {
+    this.count = 0; this.diff = 0;
+    this.target_count = parseInt(target_number);
+    this.target_frame = document.getElementById(target_frame);
+    this.timer = null;
+    this.counter();
+    };
+    numberCounter.prototype.counter = function() {
+        var self = this;
+        this.diff = this.target_count - this.count;
+        
+        if(this.diff > 0) {
+            self.count += Math.ceil(this.diff / 5);
         }
-      };
+        
+        this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        
+        if(this.count < this.target_count) {
+            this.timer = setTimeout(function() { self.counter(); }, 20);
+        } else {
+            clearTimeout(this.timer);
+        }
+    };
 
-      animate();
-    });
-
-    
+    new numberCounter("counter1", 134523040);
   </script>
 </html>
