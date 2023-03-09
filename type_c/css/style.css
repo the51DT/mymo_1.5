@@ -180,6 +180,7 @@ footer {
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
+    border-top: 1px solid #eeeeee;
 }
 footer ul {
     display: flex;
