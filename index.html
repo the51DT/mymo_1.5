@@ -76,6 +76,12 @@
             color: black;
             text-decoration: none;
         }
+        .barChart{
+            height: 20px;
+        }
+        .barChart canvas{
+            height: 20px!important;
+        }
     </style>
   </head>
   <body>
@@ -110,7 +116,7 @@
                 <div>
                     <canvas id="myChart" aria-label="내 자산" role="Chart"></canvas>
                 </div>
-                <div>
+                <div class="barChart">
                     <canvas id="myChart2" aria-label="내 자산" role="Chart"></canvas>
                 </div>
                 <div>
@@ -158,8 +164,10 @@
 
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script>
   <script>
+    Chart.register(ChartjsPluginStacked100.default);
     const ctx = document.getElementById('myChart');
     const ctx2 = document.getElementById('myChart2');
     const ctx3 = document.getElementById('myChart3');
@@ -200,7 +208,7 @@
             datasets: [
                 {
                     label:'계좌/현금',
-                    data:[5],
+                    data:[100],
                     backgroundColor:'rgb(25, 220, 161)',
                 },
                 {
@@ -210,12 +218,12 @@
                 },
                 {
                     label:'페이머니',
-                    data:[8],
+                    data:[80],
                     backgroundColor:'rgb(249, 146, 50)',
                 },
                 {
                     label:'포인트',
-                    data:[14],
+                    data:[50],
                     backgroundColor:'rgb(249, 217, 50)',
                 }
             ]
@@ -224,6 +232,9 @@
             responsive:true,
             indexAxis: 'y',
             plugins: {
+                stacked100:{
+                    enable: true
+                },
                 legend: {
                     position: 'right',
                     display: false
@@ -237,8 +248,8 @@
                 x:{
                     stacked: true,
                     display:false,
+                     beginAtZero: true
                 },
-                
                 y:{
                     stacked: true,
                     display:false,
