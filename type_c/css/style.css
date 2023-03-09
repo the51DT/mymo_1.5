@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 360px;
+}
+body {
+    width: 100%;
+}
+.animationContents {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+}
+.animationContents.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+section {
+    position: relative;
+}
+.wrap {
+    width: 100%;
+    max-width: 360px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section01 {
+    background-color: rgba(244, 244, 244, 1);
+    height: 473px;
+}
+.section01 .main {
+    margin: 0 30px;
+    padding-top: 30px;
+}
+.down-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    width: 8px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/icon-down-arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section02 {
+    background-color: rgba(87, 37, 224, 1);
+    height: 576px;
+}
+.section02 .text {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+.section02 .shape {
+    position: absolute;
+    top: 266px;
+    right: 0;
+}
+.section03 {
+    background-color: rgba(87, 37, 224, 1);
+    height: 120px;
+}
+.section03 .img {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+.section04 {
+    background-color: rgba(244, 244, 244, 1);
+    height: 146px;
+}
+.section04 .img {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+.section05 {
+    background-color: rgba(255, 255, 255, 1);
+    height: 520px;
+}
+.section05 .text {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+.section05 .shape {
+    position: absolute;
+    top: 230px;
+    left: 30px;
+}
+.section06 {
+    background-color: rgba(255, 255, 255, 1);
+    height: 295px;
+}
+.section06 .banner1 {
+    position: absolute;
+    top: 26px;
+    right: 0;
+}
+.section06 .banner2 {
+    position: absolute;
+    bottom: 49px;
+    right: 0;
+}
+.section07 {
+    background-color: rgba(87, 37, 224, 1);
+    height: 561px;
+}
+.section07 .text {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+.section07 .shape {
+    position: absolute;
+    top: 256px;
+    right: 0;
+}
+.section08 {
+    background-color: rgba(87, 37, 224, 1);
+    height: 124px;
+}
+.section09 {
+    background-color: rgba(244, 244, 244, 1);
+    height: 126px;
+}
+.section09 .banner {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+.section10 {
+    background-color: rgba(255, 255, 255, 1);
+    height: 285px;
+}
+.section11 {
+    background-color: rgba(255, 255, 255, 1);
+    height: 100px;
+}
+.section11 .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
