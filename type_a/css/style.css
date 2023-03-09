@@ -187,3 +187,11 @@ body {
 
 
 /* sub_myasset ----------------------------------------- */
+
+.wrap.sub_myasset .header_menue {
+    padding: 13px 25px;
+}
+
+.wrap.sub_myasset .header_menue .logo a img {
+    display: block;
+}
