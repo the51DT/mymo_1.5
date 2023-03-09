@@ -1,21 +1,29 @@
 body {
   background-color: #5725e0;
 }
-.card {
+.slide-card {
   background-color: #fff;
   padding: 20px;
   display: flex !important;
   justify-content: space-between;
   border-radius: 10px;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 .slide1-left {
   width: 119px;
-  /* height: 52px; */
+  height: 100%;
 }
 .slide1-right {
   width: 75px;
-  /* height: 50px; */
+  height: 100%;
 }
+
+/* slick */
 .slick-dots li.slick-active button:before {
   color: #fff;
+}
+.slick-arrow {
+  display: none;
 }
