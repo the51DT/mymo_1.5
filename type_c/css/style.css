@@ -59,14 +59,14 @@ section {
     bottom: 20px;
     transform: translateX(-50%);
     cursor: pointer;
-    width: 12px;
-    height: 7.56px;
+    width: 24px;
+    height: 24px;
     border: none;
     background-color: transparent;
     background-image: url(../img/icon-down-arrow.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 12px 7.56px;
     outline: none;
 }
 .section01.active .down-arrow {
