@@ -69,22 +69,57 @@ body {
     padding: 20px 25px;
 }
 
-.container section .box {
+.container .box {
     padding: 20px;
     background: #fff;
     border-radius: 10px;
 }
 
-.container section .box+.box {
+.container .box+.box {
     margin-top: 10px;
 }
 
-.container section .title-box {
+.container .title-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container section .title-box+.box {
+.container .title-box+.box {
     margin-top: 14px;
+}
+
+.graph-desc li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.graph-desc+.img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.graph-desc+.img-box img+img {
+    margin-left: 4px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #dedede;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.progress-bar .progress {
+    width: 72%;
+    height: 30px;
+    padding: 0;
+    text-align: center;
+    background-color: #4f98ff;
+    color: #111;
 }

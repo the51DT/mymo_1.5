@@ -30,6 +30,14 @@
         </div>
         <div class="container">
             <section>
+                <div class="title-box">
+                    <div class="img-box">
+                        <img src="./img/section-titlle1.svg" alt="">
+                    </div>
+                    <div class="img-box">
+                        <img src="./img/title-arrow-white.svg" alt="">
+                    </div>
+                </div>
                 <div class="box box-book">
                     <div class="box__list">
                         <img src="./img/back-book-01-01.svg">
@@ -74,6 +82,25 @@
                 <div class="box box-benefit">
                     <img src="./img/suggest-01.svg">
                     <img src="./img/suggest-02.svg">
+                </div>
+            </section>
+            <section>
+                <div class="box">
+                    <div class="progress-wrap progress-type1">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <ul class="graph-desc">
+                        <li><img src="./img/graph01-desc1.svg" alt=""><img src="./img/graph01-won1.svg" alt=""></li>
+                        <li><img src="./img/graph01-desc2.svg" alt=""><img src="./img/graph01-won2.svg" alt=""></li>
+                        <li><img src="./img/graph01-desc3.svg" alt=""><img src="./img/graph01-won3.svg" alt=""></li>
+                        <li><img src="./img/graph01-desc4.svg" alt=""><img src="./img/graph01-won4.svg" alt=""></li>
+                    </ul>
+                    <div class="img-box">
+                        <img src="./img/text-btn-add.svg" alt="">
+                        <img src="./img/add-black.svg" alt="">
+                    </div>
                 </div>
             </section>
             <section>
@@ -156,6 +183,16 @@
                     draggable: true, //드래그 가능 여부
                 });
             });
+
+            let t = 0
+            const bar = document.querySelector('.progress')
+            let totalMinwon = 72,
+                resolveMinwon = 12
+            bar.style.width = 0
+            const barAnimation = setInterval(() => {
+                bar.style.width = t + '%'
+                t++ >= totalMinwon && clearInterval(barAnimation)
+            }, 10)
         </script>
 </body>
 
