@@ -12,16 +12,16 @@ body {
     align-items: center;
 }
 
-.header .img-box+.img-box {
-    display: flex;
-    justify-content: space-between;
-    gap: 5.556vw;
-}
-
 .header.fixed {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.header .img-box+.img-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 5.556vw;
 }
 
 .container {
