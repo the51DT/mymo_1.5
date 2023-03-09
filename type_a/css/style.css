@@ -150,5 +150,40 @@ body {
 
 /* sub_mydata ----------------------------------------- */
 
+.wrap.sub_mydata .header_menue {
+    padding: 13px 25px;
+}
+
+.wrap.sub_mydata .header_menue .logo a img {
+    display: block;
+}
+
+.wrap.sub_mydata .section--text-wrap .title-box+.title-box {
+    margin-top: 10px;
+}
+
+.wrap.sub_mydata .container .text-list {
+    margin: 0 auto;
+}
+
+.wrap.sub_mydata .container .text-list li {}
+
+.wrap.sub_mydata .container .text-list li+li {
+    margin-top: 10px;
+}
+
+.wrap.sub_mydata .container .title-box+.title-box.title-box--list-title {
+    margin-top: 20px;
+}
+
+.wrap.sub_mydata .container .title-box.title-box--list-title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.wrap.sub_mydata .container .title-box.title-box--list-title+.text-list {
+    margin-top: 12px;
+}
+
 
 /* sub_myasset ----------------------------------------- */
