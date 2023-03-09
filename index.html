@@ -29,6 +29,7 @@
         .containel{
             height: 100%;
             background-color: #5725E0;
+            overflow-y: auto;
         }
         .btm_menu ul{
             display: flex;
@@ -52,6 +53,9 @@
             padding: 16px 25px;
             margin: 0;
         }
+        .header_menue .logo{
+            padding-top: 4px;
+        }
         .header_menue li {
             display: flex;
         }
@@ -61,12 +65,13 @@
         .type_box li {
             border-radius: 10px;
             background-color: #fff;
-            padding: 20px;
+            
         }
         .type_box li:nth-child(n+2){
             margin-top: 10px;
         }
         .type_box li a{
+            padding: 20px;
             display: block;
             color: black;
             text-decoration: none;
@@ -101,6 +106,15 @@
                             <a href="https://the51uid.github.io/mymo_1.5/type_c/index.html">Type C</a>
                         </li>
                     </ul>
+                </div>
+                <div>
+                    <canvas id="myChart" aria-label="내 자산" role="Chart"></canvas>
+                </div>
+                <div>
+                    <canvas id="myChart2" aria-label="내 자산" role="Chart"></canvas>
+                </div>
+                <div>
+                    <canvas id="myChart3" aria-label="내 자산" role="Chart"></canvas>
                 </div>
             </section>
         </div>
@@ -144,4 +158,148 @@
 
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart');
+    const ctx2 = document.getElementById('myChart2');
+    const ctx3 = document.getElementById('myChart3');
+    const doughnut = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: [
+                '계좌/현금',
+                '투자',
+                '페이머니',
+                '포인트'
+            ],
+            datasets: [{
+                label: '자산구성',
+                data: [5, 73, 80, 14],
+                backgroundColor: [
+                'rgb(25, 220, 161)',
+                'rgb(50, 153, 249)',
+                'rgb(249, 146, 50)',
+                'rgb(249, 217, 50)'
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options:{
+            plugins: {
+                legend: {
+                    display:false
+                }
+            }
+        }
+    });
+    const stackedBar = new Chart(ctx2, {
+        type: 'bar',
+        // data 총합 100 에 맞춰서 사용
+        data: {
+            labels: ['내 자산'],
+            datasets: [
+                {
+                    label:'계좌/현금',
+                    data:[5],
+                    backgroundColor:'rgb(25, 220, 161)',
+                },
+                {
+                    label:'투자',
+                    data:[73],
+                    backgroundColor:'rgb(50, 153, 249)',
+                },
+                {
+                    label:'페이머니',
+                    data:[8],
+                    backgroundColor:'rgb(249, 146, 50)',
+                },
+                {
+                    label:'포인트',
+                    data:[14],
+                    backgroundColor:'rgb(249, 217, 50)',
+                }
+            ]
+        },
+        options:{
+            responsive:true,
+            indexAxis: 'y',
+            plugins: {
+                legend: {
+                    position: 'right',
+                    display: false
+                },
+                title: {
+                    display: false,
+                    text: 'Chart.js Horizontal Bar Chart'
+                }
+            },
+            scales:{
+                x:{
+                    stacked: true,
+                    display:false,
+                },
+                
+                y:{
+                    stacked: true,
+                    display:false,
+                },  
+            }
+        }
+    });
+    const barChart = new Chart(ctx3, {
+        type: 'bar',
+        // data 총합 100 에 맞춰서 사용
+        data: {
+            labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+            datasets: [
+                 {
+                    label:'순자산',
+                    data:[0, 0, 0, 0, 40, 30],
+                    backgroundColor:'rgb(129, 90, 237)',
+                    min: -10,
+                    max: 100,
+                    type: 'line',
+                },
+                {
+                    label:'자산',
+                    data:[0, 0, 0, 0, 50, 50],
+                    backgroundColor:'rgb(129, 90, 237)',
+                    min: -10,
+                    max: 100,
+                    borderRadius:100,
+                    categoryPercentage: 0.5
+                },
+                {
+                    label:'부채',
+                    data:[0, 0, 0, 0, -10, -10],
+                    backgroundColor:'rgb(224, 214, 253)',
+                    min: -10,
+                    max: 100,
+                    categoryPercentage: 0.5
+                },
+            ]
+        },
+        options:{
+            responsive:true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    grid:{
+                        display:false
+                    }
+                    
+                },
+                y: {
+                    stacked: true,
+                }
+            }
+        }
+    });
+    
+    </script>
 </html>
