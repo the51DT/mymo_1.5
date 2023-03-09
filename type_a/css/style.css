@@ -16,15 +16,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-}
-
-.header .img-box+.img-box {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    width: 100%;
 }
 
 .container {
+    padding: 68px 0 73px;
     background: #5725e0;
 }
 
@@ -40,4 +36,32 @@ body {
 
 .container .section .box+.box {
     margin-top: 10px;
+}
+
+.container .section .title-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .section .title-box+.box {
+    margin-top: 14px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.footer footer {
+    position: relative;
+}
+
+.footer ul {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
