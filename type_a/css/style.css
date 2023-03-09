@@ -1,12 +1,11 @@
 body {
-    max-width: 360px;
-    margin: 0 auto !important;
+    margin: 0 auto;
 }
 
 .header {
     box-sizing: border-box;
     position: relative;
-    padding: 5.556vw 6.944vw;
+    padding: 20px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +20,7 @@ body {
 .header .img-box+.img-box {
     display: flex;
     justify-content: space-between;
-    gap: 5.556vw;
+    gap: 20px;
 }
 
 .container {
@@ -29,15 +28,15 @@ body {
 }
 
 .container .section {
-    padding: 5.556vw 6.944vw;
+    padding: 20px 25px;
 }
 
 .container .section .box {
-    padding: 5.556vw;
+    padding: 20px;
     background: #fff;
-    border-radius: 2.778vw;
+    border-radius: 10px;
 }
 
 .container .section .box+.box {
-    margin-top: 2.778vw;
+    margin-top: 10px;
 }
