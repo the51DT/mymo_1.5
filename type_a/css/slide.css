@@ -8,8 +8,8 @@ body {
   justify-content: space-between;
   border-radius: 10px;
   align-items: center;
-  margin-left: 25px;
-  margin-right: 25px;
+  /* margin-left: 25px;
+  margin-right: 25px; */
 }
 .slide1-left {
   width: 119px;
@@ -25,5 +25,12 @@ body {
   color: #fff;
 }
 .slick-arrow {
-  display: none;
+  display: none !important;
+}
+
+/* box */
+
+.box__price {
+  display: flex;
+  justify-content: space-between;
 }
