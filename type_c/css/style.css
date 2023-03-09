@@ -16,6 +16,7 @@ section {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    padding-bottom: 72px;
 }
 .section01 {
     background-color: rgba(244, 244, 244, 1);
@@ -172,4 +173,28 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+footer ul {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    margin: 0;
+    padding: 7px 20px 0;
+}
+footer ul li {
+    box-sizing: content-box;
+}
+footer ul a {
+    display: flex;
+}
+footer ul img {
+    width: 100%;
 }
