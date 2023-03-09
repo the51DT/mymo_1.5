@@ -227,12 +227,6 @@
                         <li>
                             <a href="javascript:void(0);">
 
-                                <img src="../../src/assets/img/ico_menu_product.svg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-
                                 <img src="../../src/assets/img/ico_menu_loan.svg" alt="">
                             </a>
                         </li>
@@ -245,6 +239,12 @@
                         <li>
                             <a href="javascript:void(0);">
                                 <img src="../../src/assets/img/ico_menu_chetbot.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+
+                                <img src="../../src/assets/img/ico_menu_product.svg" alt="">
                             </a>
                         </li>
                     </ul>
@@ -322,43 +322,43 @@
                 // const repeat = setInterval(() => {
                 //     barAnimation()
                 // })
-            
+
             const cafeBar = document.querySelector(".cafe-graph")
             const cafeTotal = 72
             let cafeT = 0
             cafeBar.style.width = 0
             const cafeBarAnimation = setInterval(() => {
-                cafeBar.style.width =  cafeT + '%'
+                cafeBar.style.width = cafeT + '%'
                 cafeT++ >= cafeTotal && clearInterval(cafeBarAnimation)
                 console.log(cafeT)
             }, 10)
-            
+
             const janBar = document.querySelector(".jan-graph-bar")
             const janTotal = 80
             let janT = 0
             janBar.style.height = 0
             const janBarAnimation = setInterval(() => {
-                janBar.style.height =  janT + 'px'
+                janBar.style.height = janT + 'px'
                 janT++ >= janTotal && clearInterval(janBarAnimation)
                 console.log(janT)
             }, 10)
-            
+
             const febBar = document.querySelector(".feb-graph-bar")
             const febTotal = 100
             let febT = 0
             febBar.style.height = 0
             const febBarAnimation = setInterval(() => {
-                febBar.style.height =  febT + 'px'
+                febBar.style.height = febT + 'px'
                 febT++ >= febTotal && clearInterval(febBarAnimation)
                 console.log(janT)
             }, 10)
-            
+
             const marBar = document.querySelector(".mar-graph-bar")
             const marTotal = 120
             let marT = 0
             marBar.style.height = 0
             const marBarAnimation = setInterval(() => {
-                marBar.style.height =  marT + 'px'
+                marBar.style.height = marT + 'px'
                 marT++ >= marTotal && clearInterval(marBarAnimation)
                 console.log(marT)
             }, 10)
