@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hanwhabank</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      @font-face {
+        font-family: "Gotham";
+        font-style: normal;
+        font-weight: 300;
+        src: url("./font/");
+      }
+      body {
+        min-width: 360px;
+        max-width: 768px;
+        margin: 0 auto !important;
+      }
+      body img {
+        display: inline-block;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+      }
+      .body {
+        padding-top: 11.3%;
+      }
+
+
+      /* transfer */
+      .blind {display: none;}
+      .btn_back {margin-left: 12.2%; width: 6.6%;}
+
+      /* sec1 */
+      #section1 {background: #F7F7F7; overflow: hidden;}
+      #section1 .top {margin-top: 4,4%; margin-left: 12.2%;}
+      #section1 .top img { width: 100%;}
+      #section1 .bottom {margin-top: 11.1%; height: 100%;}
+      #section1 .bottom img {width: 100%;}
+
+      /* sec1_active */
+      #section1_active {background: #F7F7F7; overflow: hidden;}
+      #section1_active .top {margin-top: 4,4%; margin-left: 12.2%;}
+      #section1_active .top img { width: 100%;}
+      #section1_active .bottom {margin-top: 11.1%; height: 100%;}
+      #section1_active .bottom img {width: 100%;}
+
+      /* sec2 */
+      #section2 {position: relative;}
+      #section2 .top {margin-top: 14.16%; margin-left: 12.2%;}
+      #section2 .middle {margin-top: 9.72%; margin-left: 30%; width: 45.5%;}
+      #section2 .middle img {width: 100%}
+      #section2 .bottom {margin-top: 12.2%; margin-left: 7.7%;}
+      #section2 .bottom img {width: 100%;}
+      #section2 .btn_bottom {margin-top: 12.2%; margin-left: 12.2%; width: 81.1%; margin-bottom: calc(100vw * 40 / 800);}
+
+      /* sec3 */
+      #section3 {position: relative;}
+      #section3 .top { margin-top: 14.16%; margin-left: 14.16%; width: 56.1%;}
+      #section3 .top img {width: 100%;}
+      #section3 .back {margin-left: 12.7%; margin-top: 1.375%; width: 87.7%; z-index: -1;}
+      #section3 .btn_bottom {position: absolute; bottom: calc(100vw * 40 / 800); left: 12.2%; width: 81.1%;}
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        
+      </nav>
+    </header>
+    <div class="dim"></div>
+
+    <section id="section1" class="body">
+      <div class="btn_back">
+        <a href="#"><img src="./img/btn_back.png" alt=""/></a>
+      </div>
+      <div class="top" data-aos="fade-up">
+        <img src="./img/transfer_01_top.png" alt=""/>
+      </div>
+      <div class="bottom" data-aos="fade-up" data-aos-delay="300">
+        <img src="./img/transfer_01_bottom.png" alt=""/>
+      </div>
+    </section>
+<!-- 
+    <section id="section1_active" class="body blind">
+      <div class="btn_back">
+        <a href="#"><img src="./img/btn_back.png" alt=""/></a>
+      </div>
+      <div class="top">
+        <img src="./img/transfer_01_top_active.png" alt=""/>
+      </div>
+      <div class="bottom">
+        <img src="./img/transfer_01_bottom.png" alt=""/>
+      </div>
+    </section> -->
+
+    <section id="section2" class="body blind">
+      <div class="btn_back">
+        <img src="./img/btn_back.png" alt=""/>
+      </div>
+      <div class="top">
+        <img src="./img/transfer_02_top.png" alt=""/>
+      </div>
+      <div class="middle">
+        <img src="./img/transfer_02_middle.png" alt=""/>
+      </div>
+      <div class="bottom">
+        <img src="./img/transfer_02_bottom.png" alt=""/>
+      </div>
+      <div class="btn_bottom">
+        <img src="./img/btn_send.png" alt=""/>
+      </div>
+    </section>
+
+    <section id="section3" class="body blind">
+      <div class="btn_back">
+        <img src="./img/btn_back.png" alt=""/>
+      </div>
+      <div class="top">
+        <img src="./img/transfer_03_top.png" alt=""/>
+      </div>
+      <div class="back">
+        <img src="./img/transfer_03_back.png" alt=""/>
+      </div>
+      <div class="btn_bottom">
+        <img src="./img/btn_ok.png" alt=""/>
+      </div>
+    </section>
+
+  </body>
+
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+
+    $(document).ready(function(){
+      //01 계좌입력
+      $('#section1 .bottom').click(function(){
+        $('#section1').addClass('active')
+        $('#section1 .top img').attr('src', './img/transfer_01_top_active.png')
+      })
+
+      //01 확인버튼
+      if($('#section1').hasClass('active')===true){
+        $('#section1 .top').click(function(){
+          console.log('go')
+          $('#section1').addClass('blind')
+          $('#section2').removeClass('blind')
+      })
+      }
+      
+      //02 뒤로가기
+      $('#section2 .btn_back').click(function(){
+        $('#section2').addClass('blind')
+        $('#section1').removeClass('blind')
+      })
+
+      //02 보내기
+      $('#section2 .btn_bottom').click(function(){
+        $('#section2').addClass('blind')
+        $('#section3').removeClass('blind')
+      })
+
+      //03 뒤로가기
+      $('#section3 .btn_back').click(function(){
+        $('#section3').addClass('blind')
+        $('#section2').removeClass('blind')
+      })
+    })
+  </script>
+</html>
