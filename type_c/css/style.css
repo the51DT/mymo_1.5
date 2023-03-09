@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    max-width: 360px;
+    max-width: 768px;
 }
 body {
     width: 100%;
@@ -23,12 +23,31 @@ section {
 }
 .section01 .main {
     margin: 0 30px;
+}
+.section01 .main-text {
     padding-top: 30px;
+}
+.section01 .main-button {
+    margin-top: 7px;
+}
+.section01 .main-profile {
+    position: absolute;
+    top: 74px;
+    right: 40px;
+}
+.section01 .main .main-contents1 {
+    margin-top: 90px;
+}
+.section01 .main .main-contents2 {
+    margin-top: 19px;
 }
 .section01 .main-hidden {
     margin: 0 30px;
     padding-top: 20px;
     display: none;
+}
+.section01 .main-hidden .main-contents2 {
+    margin-top: 19px;
 }
 .section01.active {
     height: 620px;
@@ -66,6 +85,7 @@ section {
 .section02 .shape {
     margin-top: 40px;
     padding-left: 30px;
+    text-align: right;
 }
 .section03 {
     background-color: rgba(87, 37, 224, 1);
@@ -107,9 +127,11 @@ section {
 .section06 .banner1 {
     padding-top: 26px;
     padding-left: 30px;
+    text-align: right;
 }
 .section06 .banner2 {
     padding-left: 30px;
+    text-align: right;
 }
 .section07 {
     background-color: rgba(87, 37, 224, 1);
@@ -122,6 +144,7 @@ section {
 .section07 .shape {
     margin-top: 30px;
     padding-left: 30px;
+    text-align: right;
 }
 .section08 {
     background-color: rgba(87, 37, 224, 1);
