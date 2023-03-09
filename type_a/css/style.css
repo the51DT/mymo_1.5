@@ -2,6 +2,13 @@ body {
     margin: 0 auto;
 }
 
+.wrap {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 768px;
+    width: 100%;
+}
+
 .header {
     box-sizing: border-box;
     position: relative;
@@ -41,6 +48,7 @@ body {
 .container .section .title-box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .container .section .title-box+.box {
@@ -60,7 +68,8 @@ body {
 }
 
 .footer ul {
-    padding-top: 8px;
+    padding: 8px 0 0 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
