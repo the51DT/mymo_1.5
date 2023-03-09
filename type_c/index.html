@@ -5,9 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Type C : 매거진형</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="../src/assets/css/reset.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
@@ -49,9 +53,11 @@
                 </div>
             </section>
             <section class="section03">
-                <div class="img">
-                    <img src="./img/section3-img.png" />
-                </div>
+                <a href="./sub.html">
+                    <div class="img">
+                        <img src="./img/section3-img.png" />
+                    </div>
+                </a>
             </section>
             <section class="section04">
                 <div class="img">
@@ -83,7 +89,7 @@
                 </div>
             </section>
             <section class="section08">
-                <div>
+                <div class="banner">
                     <img src="./img/section8.png" />
                 </div>
             </section>
@@ -93,80 +99,79 @@
                 </div>
             </section>
             <section class="section10">
-				<div class="swiper section10-swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="./img/swiper_01.png" />
-						</div>
-						<div class="swiper-slide">
-							<img src="./img/swiper_01.png" />
-						</div>
-						<div class="swiper-slide">
-							<img src="./img/swiper_01.png" />
-						</div>
-					</div>
-				</div>
-			</section>
+                <div class="swiper section10-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/swiper_01.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper_01.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper_01.png" />
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="section11">
                 <div class="button">
                     <img src="./img/section11-button.png" />
                 </div>
             </section>
-
+            <footer>
+                <div class="btm_menu">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img
+                                    src="../src\assets\img\ico_menu_mymo.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img
+                                    src="../src\assets\img\ico_menu_product.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img
+                                    src="../src\assets\img\ico_menu_loan.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img
+                                    src="../src\assets\img\ico_menu_benefit.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img
+                                    src="../src\assets\img\ico_menu_chetbot.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
         </div>
-        <footer>
-            <div class="btm_menu">
-                <ul>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <img
-                                src="../src\assets\img\ico_menu_mymo.svg"
-                                alt=""
-                            />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <img
-                                src="../src\assets\img\ico_menu_product.svg"
-                                alt=""
-                            />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <img
-                                src="../src\assets\img\ico_menu_loan.svg"
-                                alt=""
-                            />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <img
-                                src="../src\assets\img\ico_menu_benefit.svg"
-                                alt=""
-                            />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <img
-                                src="../src\assets\img\ico_menu_chetbot.svg"
-                                alt=""
-                            />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
     </body>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-        const button = document.querySelector(".section01 .down-arrow");
         const section1 = document.querySelector(".section01");
+        const button = section1.querySelector(".down-arrow");
         button.addEventListener("click", () => {
             if (!section1.classList.contains("active")) {
                 section1.classList.add("active");
@@ -174,9 +179,9 @@
                 section1.classList.remove("active");
             }
         });
-		var swiper = new Swiper(".section10-swiper", {
-			loop : true, 
-			loopAdditionalSlides : 1,
-		});
+        var swiper = new Swiper(".section10-swiper", {
+            loop: true,
+            loopAdditionalSlides: 1,
+        });
     </script>
 </html>
