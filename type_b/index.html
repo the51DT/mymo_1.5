@@ -22,13 +22,13 @@
         font-style: normal;
       }
 
-      .swiper {
+      .swiper.mySwiper {
         width: 100%;
         height: 100%;
         padding-left: 12%;
       }
 
-      .swiper-slide {
+      .swiper.mySwiper .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -39,7 +39,11 @@
         overflow: hidden;
       }
 
-      .swiper-slide img {
+      .swiper.mySwiper .swiper-wrapper{
+        margin-left: -5%;
+      }
+
+      .swiper.mySwiper .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
@@ -55,10 +59,15 @@
         display: inline-block;
       }
       header {
-        max-width: 576px;
+        max-width: 584px;
         margin: 0 auto;
         background-color: #fff;
         padding: 7% 0;
+      }
+      @media (max-width: 768px) {
+        header {
+          width: 77%;
+        }
       }
 
       .body{
@@ -87,14 +96,51 @@
         z-index: 1;
         position: relative;
       }
-      .section2 .tab-list li{
+      .section2 .tab-list > li{
         display: none;
         width: 100%;
+        max-height: 88vw;
+        overflow: hidden;
+        position: relative;
       }
-      .section2 .tab-list li img{
+      .section2 .tab-list .per-info li{
+        color: #fff;
+        font-size: 50px;
+        position: absolute;
+      }
+      .section2 .tab-list .per-info li:nth-child(1){
+        top: 185px;
+        left: 12%;
+      }
+      .section2 .tab-list .per-info li:nth-child(2){
+        top: 315px;
+        left: 12%;
+      }
+      .section2 .tab-list .per-info li:nth-child(3){
+        top: 458px;
+        left: 12%;
+      }
+      @media (max-width: 768px) {
+        .section2 .tab-list .per-info li{
+        font-size: 6.5104vw;
+        }
+        .section2 .tab-list .per-info li:nth-child(1){
+          top: 24vw;
+        }
+        .section2 .tab-list .per-info li:nth-child(2){
+          top: 41vw;
+        }
+        .section2 .tab-list .per-info li:nth-child(3){
+          top: 60vw;
+        }
+      }
+      @media (max-width: 768px) {
+        .section2 .tab-list > li{max-height: 751px;}
+      }
+      .section2 .tab-list > li img{
         width: 100%;
       }
-      .section2 .tab-list li:first-child{
+      .section2 .tab-list > li:first-child{
         display: inline-block;
       }
       .section2 .tab-btn li{
@@ -133,6 +179,39 @@
         height: 6vw;
       }
       }
+
+      .prog-info{
+        position: absolute;
+        right: 46px;
+        max-width: 432px;
+        display: inline-block;
+        width: 100%;
+        animation: prog-ani 1s ease forwards;
+      }
+      @keyframes prog-ani {
+        0% { top: 740px; }
+	      100% { top: 170px;}
+      }
+      @media (max-width: 768px) {
+        .prog-info{
+        max-width: 56vw;
+      }
+      }
+
+      .section.section3{
+        margin-top:-9%;
+        position: relative;
+      }
+      .section3 .cal-contents{
+        top: 21%;
+        right: 0;
+        position: absolute;
+        z-index: 2;
+      }
+      @media (max-width: 768px) {
+        .section3 .cal-contents{max-width: 85%;}
+      }
+
       .section4 {
         background: url(./img/section-gray-mid.png) no-repeat;
         width: 100%;
@@ -202,9 +281,9 @@
                 <div class="chart-info">
                   <div class="per-info">
                     <ul>
-                      <li><span class="per-val">0</span>%</li>
-                      <li><span class="per-val">0</span>%</li>
-                      <li><span class="per-val">0</span>%</li>
+                      <li><span class="per-val" akhi="52">0</span>%</li>
+                      <li><span class="per-val" akhi="32">0</span>%</li>
+                      <li><span class="per-val" akhi="6">0</span>%</li>
                     </ul>
                   </div>
                   <div class="prog-info">
@@ -224,7 +303,29 @@
 
       <section id="section3" class="section section3">
         <div class="section-inner">
-          <div class="item"></div>
+          <div class="item">
+            <div class="cal-wrap">
+              
+              <!-- Swiper -->
+              <div class="swiper calSwiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/cal01.png">
+                    <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
+                      <img src="./img/cal-content.png">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/cal02.png">
+                    <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
+                      <img src="./img/cal-content.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </section>
 
@@ -316,12 +417,55 @@
       },
     });
 
-    //탭
-    $(".section2 .tab-btn li").on("click", function(){
-      var tabIndex = $(this).index() + 1;
-      $(".tab-list li").css({"display": "none"})
-      $(".tab-list li:nth-child( "+ tabIndex +")").css({"display": "inline-block"})
+    //달력 스와이프
+    var swiper = new Swiper(".calSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      // centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
+
+    //탭
+    $(".section2 .tab-btn > li").on("click", function(){
+      var tabIndex = $(this).index() + 1;
+      $(".tab-list > li").css({"display": "none"}).removeClass("active")
+      $(".tab-list > li:nth-child( "+ tabIndex +")").css({"display": "inline-block"}).addClass("active")
+
+      if($(".tab-list > li:last-child").hasClass("active")){
+      //소비내역 퍼센트 증가
+      const perCounters = document.querySelectorAll(".per-val");
+      const perSpeed = 900;
+
+      console.log(perCounters)
+
+      perCounters.forEach((counter) => {
+        const animate = () => {
+          const value = +counter.getAttribute("akhi");
+          const data = +counter.innerText;
+
+          const time = value / perSpeed;
+          if (data < value) {
+            counter.innerText = Math.ceil(data + time);
+            setTimeout(animate, 1);
+          } else {
+            counter.innerText = value
+          }
+        };
+
+        animate();
+      });
+
+      //프로그래스 바
+      $(".prog-info").css({"top" : "170px"});
+    }else{
+
+    }
+    });
+
+    
 
     //총 자산 증감
     const counters = document.querySelectorAll(".value");
@@ -346,27 +490,6 @@
       animate();
     });
 
-    //소비내역 퍼센트 증가
-    // const perCounters = document.querySelectorAll(".per-val");
-    // const perSpeed = 200;
-
-    // perCounters.forEach((counter) => {
-    //   const animate = () => {
-    //     const value = +counter.getAttribute("akhi");
-    //     const data = +counter.innerText;
-
-    //     const time = value / perSpeed;
-    //     if (data < value) {
-    //       counter.innerText = Math.ceil(data + time);
-    //       setTimeout(animate, 1);
-    //     } else {
-    //       counter.innerText = value
-    //         .toString()
-    //         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    //     }
-    //   };
-
-    //   animate();
-    // });
+    
   </script>
 </html>
