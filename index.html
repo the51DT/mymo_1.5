@@ -76,6 +76,11 @@
             color: black;
             text-decoration: none;
         }
+        .doughnutChart{
+            width: 170px;
+            height: 170px;
+            margin: 0 auto;
+        }
         .barChart{
             height: 30px;
         }
@@ -113,7 +118,7 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="doughnutChart">
                     <canvas id="myChart" aria-label="내 자산" role="Chart"></canvas>
                 </div>
                 <div class="barChart">
@@ -188,8 +193,7 @@
                 'rgb(50, 153, 249)',
                 'rgb(249, 146, 50)',
                 'rgb(249, 217, 50)'
-                ],
-                hoverOffset: 4
+                ]
             }]
         },
         options:{
