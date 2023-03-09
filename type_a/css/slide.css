@@ -1,0 +1,21 @@
+body {
+  background-color: #5725e0;
+}
+.card {
+  background-color: #fff;
+  padding: 20px;
+  display: flex !important;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.slide1-left {
+  width: 119px;
+  /* height: 52px; */
+}
+.slide1-right {
+  width: 75px;
+  /* height: 50px; */
+}
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
