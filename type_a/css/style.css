@@ -60,7 +60,7 @@ body {
 }
 
 .container {
-    height: 100%;
+    height: calc(100vh - 132px);
     background: #5725e0;
     overflow-y: scroll;
 }
