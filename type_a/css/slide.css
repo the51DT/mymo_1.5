@@ -1,7 +1,7 @@
 body {
   background-color: #5725e0;
 }
-.slide-card {
+.slider-wrap .slide-card {
   background-color: #fff;
   padding: 20px;
   display: flex !important;
@@ -18,6 +18,27 @@ body {
 .slide1-right {
   width: 75px;
   height: 100%;
+}
+
+/* mymo-slide */
+.slider-mymo-wrap .slide-card {
+  background-color: #fff;
+  padding: 14px;
+  /* display: flex !important; */
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
+  margin-left: 10px;
+  height: 160px;
+  /* margin-right: 25px; */
+}
+.slider-mymo-wrap .slide-card:first-child {
+  margin-left: 25px;
+}
+
+.mymo-icon {
+  margin-left: auto;
+  margin-top: 10px;
 }
 
 /* slick */
@@ -58,6 +79,10 @@ body {
   margin-top: 4px;
 }
 
+/* .container .section-mymo-slide {
+  padding-left: 25px;
+  padding-right: 0;
+} */
 .container .section-slide {
   padding-left: 0;
   padding-right: 0;
