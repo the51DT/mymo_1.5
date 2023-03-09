@@ -8,8 +8,8 @@ body {
   justify-content: space-between;
   border-radius: 10px;
   align-items: center;
-  /* margin-left: 25px;
-  margin-right: 25px; */
+  margin-left: 25px;
+  margin-right: 25px;
 }
 .slide1-left {
   width: 119px;
@@ -56,4 +56,9 @@ body {
 
 .box-loan .box__flex + img {
   margin-top: 4px;
+}
+
+.container .section-slide {
+  padding-left: 0;
+  padding-right: 0;
 }
