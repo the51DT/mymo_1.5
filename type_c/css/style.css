@@ -6,15 +6,6 @@
 body {
     width: 100%;
 }
-.animationContents {
-    transform: translateY(100px);
-    opacity: 0;
-    transition: all ease-in-out 0.3s;
-}
-.animationContents.active {
-    transform: translateY(0);
-    opacity: 1;
-}
 
 section {
     position: relative;
@@ -54,14 +45,12 @@ section {
     height: 576px;
 }
 .section02 .text {
-    position: absolute;
-    top: 50px;
-    left: 30px;
+    padding-top: 50px;
+    padding-left: 30px;
 }
 .section02 .shape {
-    position: absolute;
-    top: 266px;
-    right: 0;
+    margin-top: 40px;
+    padding-left: 30px;
 }
 .section03 {
     background-color: rgba(87, 37, 224, 1);
@@ -88,42 +77,36 @@ section {
     height: 520px;
 }
 .section05 .text {
-    position: absolute;
-    top: 50px;
-    left: 30px;
+    padding-top: 50px;
+    padding-left: 30px;
 }
 .section05 .shape {
-    position: absolute;
-    top: 230px;
-    left: 30px;
+    margin-top: 30px;
+    padding-left: 30px;
 }
 .section06 {
     background-color: rgba(255, 255, 255, 1);
     height: 295px;
+    font-size: 0;
 }
 .section06 .banner1 {
-    position: absolute;
-    top: 26px;
-    right: 0;
+    padding-top: 26px;
+    padding-left: 30px;
 }
 .section06 .banner2 {
-    position: absolute;
-    bottom: 49px;
-    right: 0;
+    padding-left: 30px;
 }
 .section07 {
     background-color: rgba(87, 37, 224, 1);
     height: 561px;
 }
 .section07 .text {
-    position: absolute;
-    top: 50px;
-    left: 30px;
+    padding-top: 50px;
+    padding-left: 30px;
 }
 .section07 .shape {
-    position: absolute;
-    top: 256px;
-    right: 0;
+    margin-top: 30px;
+    padding-left: 30px;
 }
 .section08 {
     background-color: rgba(87, 37, 224, 1);
