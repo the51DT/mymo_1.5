@@ -30,6 +30,10 @@ body {
 
 /* box */
 
+.box__list + .box__list {
+  margin-top: 10px;
+}
+
 .box__price {
   display: flex;
   justify-content: space-between;
