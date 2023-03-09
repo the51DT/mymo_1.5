@@ -1,3 +1,5 @@
+/* common */
+
 body {
     margin: 0 auto;
 }
@@ -99,7 +101,6 @@ body {
     background-color: #efefef;
     overflow: hidden;
     border-radius: 100px;
-    /* background: linear-gradient(to right, #19DCA1 0 16%, #3299F9 16% 50%, ); */
 }
 
 .progress-wrap .progress-bar .progress {
@@ -138,3 +139,16 @@ body {
 .progress-desc+.img-box img+img {
     margin-left: 4px;
 }
+
+
+/* main ----------------------------------------- */
+
+.wrap.main .container>section:first-child {
+    padding: 20px 25px 10px;
+}
+
+
+/* sub_mydata ----------------------------------------- */
+
+
+/* sub_myasset ----------------------------------------- */
