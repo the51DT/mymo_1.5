@@ -99,10 +99,11 @@ body {
     background-color: #efefef;
     overflow: hidden;
     border-radius: 100px;
+    /* background: linear-gradient(to right, #19DCA1 0 16%, #3299F9 16% 50%, ); */
 }
 
 .progress-wrap .progress-bar .progress {
-    width: 72%;
+    width: 100%;
     height: 30px;
     padding: 0;
     text-align: center;

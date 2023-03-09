@@ -251,18 +251,22 @@
             });
 
             // graph type1
-            const bar = document.querySelector(".progress-bar") // 여러 색 민원바
+            const bar = document.querySelector(".progress")
             let per1 = 16,
                 per2 = 50,
                 per3 = 16,
                 per4 = 18
             let t = 0
             const barAnimation = setInterval(() => {
-                    bar.style.background = per1 > t ? `linear-gradient(to right, #19DCA1 0 ${t}%, #dedede ${t}% 100% )` :
-                        per1 + per2 > t ? `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per2}%, #dedede ${per2}% $100%)` :
-                        per1 + per2 + per3 > t ? `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per2}% ${per3}%, #F99232 ${per3}% 100%)` :
-                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per2}%, #F99232 ${per2}% 100%)`
-                    t++ >= per1 + per2 && clearInterval(barAnimation)
+                    bar.style.background =
+                        per1 > t ?
+                        `linear-gradient(to right, #19DCA1 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
+                        per1 + per2 > t ?
+                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
+                        per1 + per2 + per3 > t ?
+                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
+                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                    t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
                 }, 10)
                 // const repeat = setInterval(() => {
                 //     barAnimation()
