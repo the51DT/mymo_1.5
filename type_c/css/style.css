@@ -25,20 +25,35 @@ section {
     margin: 0 30px;
     padding-top: 30px;
 }
+.section01 .main-hidden {
+    margin: 0 30px;
+    padding-top: 20px;
+    display: none;
+}
+.section01.active {
+    height: 620px;
+}
+.section01.active .main-hidden {
+    display: block;
+}
 .down-arrow {
     position: absolute;
     left: 50%;
     bottom: 10px;
     transform: translateX(-50%);
     cursor: pointer;
-    width: 8px;
+    width: 7.56px;
     height: 12px;
     border: none;
     background-color: transparent;
     background-image: url(../img/icon-down-arrow.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    outline: none;
+}
+.section01.active .down-arrow {
+    transform: translateX(-50%) rotateX(180deg);
 }
 .section02 {
     background-color: rgba(87, 37, 224, 1);

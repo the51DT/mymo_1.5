@@ -14,6 +14,9 @@
                 <div class="main">
                     <img src="./img/main.png" />
                 </div>
+                <div class="main-hidden">
+                    <img src="./img/main-hidden.png" />
+                </div>
                 <button class="down-arrow"></button>
             </section>
             <section class="section02">
@@ -79,5 +82,14 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+        const button = document.querySelector(".section01 .down-arrow");
+        const section1 = document.querySelector(".section01");
+        button.addEventListener("click", () => {
+            if (!section1.classList.contains("active")) {
+                section1.classList.add("active");
+            } else {
+                section1.classList.remove("active");
+            }
+        });
     </script>
 </html>
