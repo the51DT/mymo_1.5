@@ -19,7 +19,7 @@ section {
     padding-bottom: 72px;
 }
 .section01 {
-    background-color: rgba(244, 244, 244, 1);
+    background-color: #F4F4F4;
     height: 473px;
 }
 .section01 .main {
@@ -76,7 +76,7 @@ section {
     transform: translateX(-50%) rotateX(180deg);
 }
 .section02 {
-    background-color: rgba(87, 37, 224, 1);
+    background-color: #5725E0;
     height: 576px;
 }
 .section02 .text {
@@ -89,7 +89,7 @@ section {
     text-align: right;
 }
 .section03 {
-    background-color: rgba(87, 37, 224, 1);
+    background-color: #5725E0;
     height: 120px;
 }
 .section03 .img {
@@ -99,7 +99,7 @@ section {
     transform: translateY(-50%);
 }
 .section04 {
-    background-color: rgba(244, 244, 244, 1);
+    background-color: #F4F4F4;
     height: 146px;
 }
 .section04 .img {
@@ -109,7 +109,7 @@ section {
     transform: translateY(-50%);
 }
 .section05 {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fff;
     height: 520px;
 }
 .section05 .text {
@@ -121,7 +121,7 @@ section {
     padding-left: 30px;
 }
 .section06 {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fff;
     height: 295px;
     font-size: 0;
 }
@@ -135,7 +135,7 @@ section {
     text-align: right;
 }
 .section07 {
-    background-color: rgba(87, 37, 224, 1);
+    background-color: #5725E0;
     height: 561px;
 }
 .section07 .text {
@@ -148,11 +148,11 @@ section {
     text-align: right;
 }
 .section08 {
-    background-color: rgba(87, 37, 224, 1);
+    background-color: #5725E0;
     height: 124px;
 }
 .section09 {
-    background-color: rgba(244, 244, 244, 1);
+    background-color: #F4F4F4;
     height: 126px;
 }
 .section09 .banner {
@@ -161,11 +161,10 @@ section {
     left: 30px;
 }
 .section10 {
-    background-color: rgba(255, 255, 255, 1);
-    height: 285px;
+    background-color:#fff;
 }
 .section11 {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fff;
     height: 100px;
 }
 .section11 .button {
@@ -173,6 +172,34 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.swiper.section10-swiper {
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+}
+
+.section10-swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section10-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section10-swiper .swiper-slide {
+    opacity:0.1; 
+    transition:opacity 0.5s;
+}
+.section10-swiper .swiper-slide-active {
+    opacity:1;
 }
 footer {
     position: fixed;
