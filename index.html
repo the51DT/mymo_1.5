@@ -3,18 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="src/assets/css/reset.css">
     <style>
         html,body{
             height: 100%;
             margin: 0;
+            
         }
         .wrap{
             display: flex;
             flex-direction: column;
             height: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 768px;
         }
         .header{
             flex: 0 0 60px;
@@ -24,38 +28,113 @@
         }
         .containel{
             height: 100%;
+            background-color: #5725E0;
         }
-        .btm_menu{
-            ul
+        .btm_menu ul{
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 7px 20px 0;
+        }
+        .btm_menu ul li {
+            box-sizing: content-box;
+        }
+        .btm_menu ul a {
+            display: flex;
+        }
+        .btm_menu ul img{
+            width: 100%;
+        }
+        .header_menue{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 25px;
+            margin: 0;
+        }
+        .header_menue li {
+            display: flex;
+        }
+        .type_box{
+            padding: 0 25px;
+        }
+        .type_box li {
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .type_box li:nth-child(n+2){
+            margin-top: 10px;
+        }
+        .type_box li a{
+            display: block;
+            color: black;
+            text-decoration: none;
         }
     </style>
   </head>
   <body>
     <div class="wrap">
         <div class="header">
-            <header></header>  
+            <header>
+                <ul class="header_menue">
+                    <li class="logo">
+                        <img src="src\assets\img\mymo_logo.svg" alt="">
+                    </li>
+                    <li class="gnb">
+                        <img src="src\assets\img\ico_menu_gnb_alarm.svg" alt="">
+                    </li>
+                </ul>
+            </header>  
         </div>
         <div class="containel">
-            <section></section>
+            <section>
+                <div class="type_box">
+                    <ul>
+                        <li>
+                            <a href="">Type A</a>
+                        </li>
+                        <li>
+                            <a href="">Type B</a>
+                        </li>
+                        <li>
+                            <a href="">Type C</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
         <div class="footer">
             <footer>
                 <div class="btm_menu">
                     <ul>
                         <li>
-                            <img src="src\assets\img\ico_menu_mymo.svg" alt="">
+                            <a href="javascript:void(0);">
+                                <img src="src\assets\img\ico_menu_mymo.svg" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="src\assets\img\ico_menu_product.svg" alt="">
+                            <a href="javascript:void(0);">
+
+                                <img src="src\assets\img\ico_menu_product.svg" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="src\assets\img\ico_menu_loan.svg" alt="">
+                            <a href="javascript:void(0);">
+
+                                <img src="src\assets\img\ico_menu_loan.svg" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="src\assets\img\ico_menu_benefit.svg" alt="">
+                            <a href="javascript:void(0);">
+
+                                <img src="src\assets\img\ico_menu_benefit.svg" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="src\assets\img\ico_menu_chetbot.svg" alt="">
+                            <a href="javascript:void(0);">
+                                <img src="src\assets\img\ico_menu_chetbot.svg" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>
