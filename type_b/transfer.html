@@ -152,13 +152,13 @@
       })
 
       //01 확인버튼
-      if($('#section1').hasClass('active')===true){
         $('#section1 .top').click(function(){
-          console.log('go')
-          $('#section1').addClass('blind')
-          $('#section2').removeClass('blind')
+          if($('#section1').hasClass('active')===true){
+            $('#section1').addClass('blind')
+            $('#section2').removeClass('blind')
+        }
       })
-      }
+      
       
       //02 뒤로가기
       $('#section2 .btn_back').click(function(){
