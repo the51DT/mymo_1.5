@@ -30,11 +30,30 @@ body {
 
 /* box */
 
-.box__list + .box__list {
+.box-book .box__list + .box__list {
   margin-top: 10px;
 }
 
-.box__price {
+.box__flex {
   display: flex;
   justify-content: space-between;
+}
+
+.box-benefit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-loan {
+}
+
+.box-loan .box__list + .box__list {
+  border-top: 1px solid #eeeeee;
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.box-loan .box__flex + img {
+  margin-top: 4px;
 }
