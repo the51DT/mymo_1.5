@@ -159,90 +159,90 @@
                         }
                     }, ]
                 });
-                //총 자산 증감
-                function numberCounter(target_frame, target_number) {
-                    this.count = 0;
-                    this.diff = 0;
-                    this.target_count = parseInt(target_number);
-                    this.target_frame = document.getElementById(target_frame);
-                    this.timer = null;
-                    this.counter();
-                };
-                numberCounter.prototype.counter = function() {
-                    var self = this;
-                    this.diff = this.target_count - this.count;
+            });
+            //총 자산 증감
+            function numberCounter(target_frame, target_number) {
+                this.count = 0;
+                this.diff = 0;
+                this.target_count = parseInt(target_number);
+                this.target_frame = document.getElementById(target_frame);
+                this.timer = null;
+                this.counter();
+            };
+            numberCounter.prototype.counter = function() {
+                var self = this;
+                this.diff = this.target_count - this.count;
 
-                    if (this.diff > 0) {
-                        self.count += Math.ceil(this.diff / 5);
-                    }
+                if (this.diff > 0) {
+                    self.count += Math.ceil(this.diff / 5);
+                }
 
-                    this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-                    if (this.count < this.target_count) {
-                        this.timer = setTimeout(function() {
-                            self.counter();
-                        }, 20);
-                    } else {
-                        clearTimeout(this.timer);
-                    }
-                };
-                new numberCounter("counter1", 550000000);
+                if (this.count < this.target_count) {
+                    this.timer = setTimeout(function() {
+                        self.counter();
+                    }, 20);
+                } else {
+                    clearTimeout(this.timer);
+                }
+            };
+            new numberCounter("counter1", 550000000);
 
-                // 도넛그래프
-                Chart.register(ChartjsPluginStacked100.default);
-                const ctx = document.getElementById('myChart');
-                const doughnut = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: [
-                            '계좌/현금',
-                            '투자',
-                            '페이머니',
-                            '포인트'
-                        ],
-                        datasets: [{
-                            label: '자산구성',
-                            data: [5, 73, 8, 14],
-                            backgroundColor: [
-                                'rgb(25, 220, 161)',
-                                'rgb(50, 153, 249)',
-                                'rgb(249, 146, 50)',
-                                'rgb(249, 217, 50)'
-                            ]
-                        }]
-                    },
-                    options: {
-                        plugins: {
-                            legend: {
-                                display: false
-                            }
+            // 도넛그래프
+            Chart.register(ChartjsPluginStacked100.default);
+            const ctx = document.getElementById('myChart');
+            const doughnut = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        '계좌/현금',
+                        '투자',
+                        '페이머니',
+                        '포인트'
+                    ],
+                    datasets: [{
+                        label: '자산구성',
+                        data: [5, 73, 8, 14],
+                        backgroundColor: [
+                            'rgb(25, 220, 161)',
+                            'rgb(50, 153, 249)',
+                            'rgb(249, 146, 50)',
+                            'rgb(249, 217, 50)'
+                        ]
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
                         }
-                    }
-                });
-                let progressSwitch = 0
-                let cafeSwitch = 0
-                let consumeSwitch = 0
-
-                function scrollEvents() {
-                    const vh = window.innerHeight
-                    let containerHeight = $('.container').scrollTop() + vh;
-                    let scrollItem = document.querySelectorAll('.scroll-item');
-                    let progressBox = document.querySelector('.progress-type2');
-
-                    for (let i = 0; i < scrollItem.length; i += 1) {
-                        if (containerHeight - 100 >= scrollItem[i].offsetTop) {
-                            scrollItem[i].classList.add("active");
-                        }
-                    }
-
-                    if (containerHeight - 100 >= progressBox.offsetTop && cafeSwitch == 0) {
-                        progressBox.classList.add('active')
                     }
                 }
-                scrollEvents()
-                $('.container').scroll(function() {
-                    scrollEvents();
-                });
+            });
+            let progressSwitch = 0
+            let cafeSwitch = 0
+            let consumeSwitch = 0
+
+            function scrollEvents() {
+                const vh = window.innerHeight
+                let containerHeight = $('.container').scrollTop() + vh;
+                let scrollItem = document.querySelectorAll('.scroll-item');
+                let progressBox = document.querySelector('.progress-type2');
+
+                for (let i = 0; i < scrollItem.length; i += 1) {
+                    if (containerHeight - 100 >= scrollItem[i].offsetTop) {
+                        scrollItem[i].classList.add("active");
+                    }
+                }
+
+                if (containerHeight - 100 >= progressBox.offsetTop && cafeSwitch == 0) {
+                    progressBox.classList.add('active')
+                }
+            }
+            scrollEvents()
+            $('.container').scroll(function() {
+                scrollEvents();
             });
         </script>
 </body>
