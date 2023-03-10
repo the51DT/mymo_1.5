@@ -280,16 +280,24 @@ body {
     margin-top: 12px;
 }
 
-.wrap.sub_mydata .slide-card {
-    border: 1px solid #e6e6e6;
-}
-
 .wrap.sub_mydata .btn-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin: 14.8px auto 24.79px;
     gap: 10px;
+}
+
+.wrap.sub_mydata .container .section-slide {
+    padding: 30px 0;
+}
+
+.wrap.sub_mydata .container .section-slide .btn-box {
+    margin: 40px auto 0;
+}
+
+.wrap.sub_mydata .slide-card {
+    border: 1px solid #e6e6e6;
 }
 
 .wrap.sub_mydata .text-list+.btn-box {
