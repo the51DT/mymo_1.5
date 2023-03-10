@@ -296,6 +296,21 @@ body {
     margin: 14.8px auto 24.79px;
 }
 
+.wrap.sub_mydata .box {
+    border: 1px solid #dddddd;
+    padding: 14px 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrap.sub_mydata .box--jc-left {
+    justify-content: left;
+    gap: 10px;
+    padding: 20px;
+}
+
 
 /* sub_myasset ----------------------------------------- */
 
