@@ -30,17 +30,17 @@
         </div>
         <div class="container">
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/main-profile.svg" alt="">
                     <img src="./img/main-my-account.svg" alt="">
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/section-titlle1.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-book">
+                <div class="box box-book scroll-item">
                     <div class="box__list">
                         <img src="./img/back-book-01-01.svg">
                         <div class="box__flex">
@@ -65,7 +65,7 @@
                 </div>
             </section>
             <section class="section-slide">
-                <div class="slider-wrap">
+                <div class="slider-wrap scroll-item">
                     <div class="slide-card">
                         <img src="./img/slide1-left.svg" class="slide1-left" />
                         <img src="./img/slide1-right.svg" class="slide1-right" />
@@ -81,17 +81,17 @@
                 </div>
             </section>
             <section>
-                <div class="box box-benefit">
+                <div class="box box-benefit scroll-item">
                     <img src="./img/suggest-01.svg">
                     <img src="./img/suggest-02.svg">
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-asset.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box">
+                <div class="box box-test scroll-item">
                     <div class="progress-wrap progress-type1">
                         <div class="progress-bar">
                             <div class="progress"></div>
@@ -113,11 +113,11 @@
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-consume.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-consume">
+                <div class="box box-consume scroll-item">
                     <div class="box__flex">
                         <img src="./img/consume-text1-1.svg" alt="">
                         <img src="./img/consume-text1-2.svg" alt="">
@@ -153,7 +153,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="box">
+                <div class="box scroll-item">
                     <img src="./img/consume-text2-1.svg">
                     <div class="cafe-graph-wrap">
                         <div class="cafe-graph-bar">
@@ -169,11 +169,11 @@
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-loan.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-loan">
+                <div class="box box-loan scroll-item">
                     <div class="box__list">
                         <div class="box__flex">
                             <img src="./img/loan-01-01.svg">
@@ -191,17 +191,17 @@
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-benefit.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-benefit">
+                <div class="box box-benefit scroll-item">
                     <img src="./img/benefit-01.svg">
                     <img src="./img/benefit-02.svg">
                 </div>
             </section>
             <section class="section-slide">
-                <div class="slider-mymo-wrap">
+                <div class="slider-mymo-wrap scroll-item">
                     <div class="slide-card">
                         <img src="./img/mymo-slide-01-01.svg">
                         <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
@@ -360,6 +360,24 @@
                 marBar.style.height = marT + 'px'
                 marT++ >= marTotal && clearInterval(marBarAnimation)
             }, 10)
+
+            // scroll event ---------------------------------------------------------------------
+            function scrollEvents() {
+                const vh = window.innerHeight
+                let containerHeight = $('.container').scrollTop() + vh;
+                let scrollItem = document.querySelectorAll('.scroll-item');
+                
+                for (let i = 0; i < scrollItem.length; i += 1) {
+                    if (containerHeight - 100 >= scrollItem[i].offsetTop) {
+                        scrollItem[i].classList.add("active");
+                    }
+                }
+
+            }
+            scrollEvents()
+            $('.container').scroll(function () {
+                scrollEvents();
+            });
         </script>
 </body>
 
