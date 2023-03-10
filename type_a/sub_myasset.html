@@ -36,11 +36,39 @@
                     <img src="./img/myasset-add.svg" class="myasset-add">
                     <img src="./img/myasset-asset.svg" class="myasset-asset">
                 </div>
+                <div class="title-box">
+                    <img src="./img/sub_myasset_section01_desc.svg" alt="">
+                    <img src="./img/sub_myasset_section01_cnt.svg" alt="">
+                </div>
             </section>
             <section>
                 <div class="title-box">
-                    <img src="./img/sub_myasset_section02_desc.svg" alt="">
-                    <img src="./img/sub_myasset_section02_cnt.svg" alt="">
+                    <img src="./img/sub_myasset_section02_title.svg" alt="">
+                    <img src="./img/sub_myasset_section02_text.svg" alt="">
+                </div>
+                <div class="doughnutChart">
+                    <canvas id="myChart" aria-label="내 자산" role="Chart"></canvas>
+                </div>
+                <div class="progress-desc">
+                    <div class="title-box">
+                        <img src="./img/graph02-desc1.svg" alt="">
+                        <img src="./img/graph02-won1.svg" alt="">
+                    </div>
+                    <div class="title-box">
+                        <img src="./img/graph02-desc2.svg" alt="">
+                        <img src="./img/graph02-won2.svg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="section-border">
+                <div class="title-box title-box--column">
+                    <img src="./img/sub_myasset_section-title2.svg" alt="">
+                </div>
+                <div class="mixChart">
+                    <canvas id="myChart3" aria-label="내 자산" role="Chart"></canvas>
+                </div>
+                <div class="btn-box">
+                    <img src="./img/progress-add-btn.svg" alt="">
                 </div>
             </section>
             <section class="section-slide">
@@ -98,6 +126,8 @@
         </div>
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script>
         <script>
             $(function() {
                 $(".slider-mymo-wrap").slick({
@@ -122,6 +152,87 @@
                         },
                     ]
                 });
+            });
+            Chart.register(ChartjsPluginStacked100.default);
+            const ctx = document.getElementById('myChart');
+            const ctx3 = document.getElementById('myChart3');
+            const doughnut = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        '계좌/현금',
+                        '투자',
+                        '페이머니',
+                        '포인트'
+                    ],
+                    datasets: [{
+                        label: '자산구성',
+                        data: [5, 73, 8, 14],
+                        backgroundColor: [
+                            'rgb(25, 220, 161)',
+                            'rgb(50, 153, 249)',
+                            'rgb(249, 146, 50)',
+                            'rgb(249, 217, 50)'
+                        ]
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+            const barChart = new Chart(ctx3, {
+                type: 'bar',
+                // data 총합 100 에 맞춰서 사용
+                data: {
+                    labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+                    datasets: [{
+                        label: '순자산',
+                        data: [0, 0, 0, 0, 40, 30],
+                        backgroundColor: 'rgb(129, 90, 237)',
+                        min: -10,
+                        max: 100,
+                        type: 'line',
+                    }, {
+                        label: '자산',
+                        data: [0, 0, 0, 0, 50, 50],
+                        backgroundColor: 'rgb(129, 90, 237)',
+                        min: -10,
+                        max: 100,
+                        borderRadius: 100,
+                        categoryPercentage: 0.5
+                    }, {
+                        label: '부채',
+                        data: [0, 0, 0, 0, -10, -10],
+                        backgroundColor: 'rgb(224, 214, 253)',
+                        min: -10,
+                        max: 100,
+                        categoryPercentage: 0.5
+                    }, ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: {
+                                display: false
+                            }
+
+                        },
+                        y: {
+                            stacked: true,
+                        }
+                    }
+                }
             });
         </script>
 </body>
