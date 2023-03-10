@@ -67,8 +67,10 @@
                 <div class="progress-wrap progress-type2">
                     <div class="progress-bg">
                         <img src="./img/sub_myasset_graph-bg.svg" alt="">
-                        <img src="./img/sub_myasset_graph-desc.svg" alt="">
-                        <img src="./img/sub_myasset_graph-line.svg" alt="">
+                        <img src="./img/sub_myasset_graph-desc.svg" alt="" class="progress-desc">
+                        <img src="./img/sub_myasset_graph-line.svg" alt="" class="progress-line">
+                        <div class="progress-bar progress-bar--01"></div>
+                        <div class="progress-bar progress-bar--02"></div>
                     </div>
                 </div>
                 <div class="btn-box">
@@ -186,6 +188,22 @@
                         }
                     }
                 }
+            });
+            let progressSwitch = 0
+            let cafeSwitch = 0
+            let consumeSwitch = 0
+
+            function scrollEvents() {
+                const vh = window.innerHeight
+                let containerHeight = $('.container').scrollTop() + vh;
+                let progressBox = document.querySelector('.progress-type2');
+                if (containerHeight - 100 >= progressBox.offsetTop && cafeSwitch == 0) {
+                    progressBox.classList.add('active')
+                }
+            }
+            scrollEvents()
+            $('.container').scroll(function() {
+                scrollEvents();
             });
         </script>
 </body>
