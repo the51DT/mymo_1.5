@@ -155,7 +155,6 @@
             });
             Chart.register(ChartjsPluginStacked100.default);
             const ctx = document.getElementById('myChart');
-            const ctx3 = document.getElementById('myChart3');
             const doughnut = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
@@ -180,56 +179,6 @@
                     plugins: {
                         legend: {
                             display: false
-                        }
-                    }
-                }
-            });
-            const barChart = new Chart(ctx3, {
-                type: 'bar',
-                // data 총합 100 에 맞춰서 사용
-                data: {
-                    labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
-                    datasets: [{
-                        label: '순자산',
-                        data: [0, 0, 0, 0, 40, 30],
-                        backgroundColor: 'rgb(129, 90, 237)',
-                        min: -10,
-                        max: 100,
-                        type: 'line',
-                    }, {
-                        label: '자산',
-                        data: [0, 0, 0, 0, 50, 50],
-                        backgroundColor: 'rgb(129, 90, 237)',
-                        min: -10,
-                        max: 100,
-                        borderRadius: 100,
-                        categoryPercentage: 0.5
-                    }, {
-                        label: '부채',
-                        data: [0, 0, 0, 0, -10, -10],
-                        backgroundColor: 'rgb(224, 214, 253)',
-                        min: -10,
-                        max: 100,
-                        categoryPercentage: 0.5
-                    }, ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                    },
-                    scales: {
-                        x: {
-                            stacked: true,
-                            grid: {
-                                display: false
-                            }
-
-                        },
-                        y: {
-                            stacked: true,
                         }
                     }
                 }

@@ -356,3 +356,7 @@ body {
 .wrap.sub_myasset .slide-card {
     border: 1px solid #e6e6e6;
 }
+
+.wrap.sub_myasset .btn-box {
+    text-align: center;
+}
