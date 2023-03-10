@@ -294,6 +294,11 @@ body {
     align-items: center;
 }
 
+.wrap.sub_mydata .mydata-top-flex .mydata-top-flex__btn {
+    display: block;
+    font-size: 0;
+}
+
 .wrap.sub_mydata .section--text-wrap .title-box+.title-box {
     margin-top: 10px;
 }
