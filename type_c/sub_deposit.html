@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Type C SUB : 예적금 상품상세</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="../src/assets/css/reset.css" />
         <link rel="stylesheet" href="./css/footer.css" />
@@ -68,6 +72,9 @@
                         src="./img/sub_deposit/sub_deposit_section3_copy.png"
                     />
                 </div>
+                <div data-aos="fade-up" class="img">
+                    <img src="./img/sub_deposit/sub_deposit_section3_img.png" />
+                </div>
             </section>
             <section class="section04">
                 <div data-aos="fade-up" class="copy">
@@ -107,6 +114,30 @@
                         <img
                             src="./img/sub_deposit/sub_deposit_section5_accordion5.png"
                         />
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="text">
+                    <img
+                        src="./img/sub_deposit/sub_deposit_section5_text.png"
+                    />
+                </div>
+                <div class="swiper section05-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img
+                                src="./img/sub_deposit/sub_deposit_section5_swiper1.png"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./img/sub_deposit/sub_deposit_section5_swiper2.png"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./img/sub_deposit/sub_deposit_section5_swiper1.png"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -165,8 +196,13 @@
             </footer>
         </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+        var swiper = new Swiper(".section05-swiper", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        });
     </script>
 </html>
