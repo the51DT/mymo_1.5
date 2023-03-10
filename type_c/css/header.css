@@ -10,11 +10,15 @@
     transform: translateX(-50%);
     width: 100%;
     max-width: 768px;
+    height: 60px;
     z-index: 10;
     background-color: #f4f4f4;
+    border-bottom: 1px solid #ececec;
 }
 .header_menu.white {
     background-color: white;
+    padding: 13px 25px;
+    border: none;
 }
 .header_menu .logo {
     padding-top: 4px;
