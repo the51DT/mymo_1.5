@@ -30,17 +30,17 @@
         </div>
         <div class="container">
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/main-profile.svg" alt="">
                     <img src="./img/main-my-account.svg" alt="">
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/section-titlle1.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-book">
+                <div class="box box-book scroll-item">
                     <div class="box__list">
                         <img src="./img/back-book-01-01.svg">
                         <div class="box__flex">
@@ -65,7 +65,7 @@
                 </div>
             </section>
             <section class="section-slide">
-                <div class="slider-wrap">
+                <div class="slider-wrap scroll-item">
                     <div class="slide-card">
                         <img src="./img/slide1-left.svg" class="slide1-left" />
                         <img src="./img/slide1-right.svg" class="slide1-right" />
@@ -81,17 +81,17 @@
                 </div>
             </section>
             <section>
-                <div class="box box-benefit">
+                <div class="box box-benefit scroll-item">
                     <img src="./img/suggest-01.svg">
                     <img src="./img/suggest-02.svg">
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-asset.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box">
+                <div class="box scroll-item box--progress">
                     <div class="progress-wrap progress-type1">
                         <div class="progress-bar">
                             <div class="progress"></div>
@@ -113,11 +113,11 @@
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-consume.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-consume">
+                <div class="box box-consume scroll-item">
                     <div class="box__flex">
                         <img src="./img/consume-text1-1.svg" alt="">
                         <img src="./img/consume-text1-2.svg" alt="">
@@ -153,7 +153,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="box">
+                <div class="box scroll-item box--cafe">
                     <img src="./img/consume-text2-1.svg">
                     <div class="cafe-graph-wrap">
                         <div class="cafe-graph-bar">
@@ -169,11 +169,11 @@
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-loan.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-loan">
+                <div class="box box-loan scroll-item">
                     <div class="box__list">
                         <div class="box__flex">
                             <img src="./img/loan-01-01.svg">
@@ -183,25 +183,37 @@
                     </div>
                     <div class="box__list">
                         <div class="box__flex">
-                            <img src="./img/loan-01-01.svg">
+                            <img src="./img/loan-02-01.svg">
                             <img src="./img/loan-arrow.svg">
                         </div>
-                        <img src="./img/loan-01-02.svg">
+                        <img src="./img/loan-02-02.svg">
                     </div>
                 </div>
             </section>
             <section>
-                <div class="title-box">
+                <div class="title-box scroll-item">
                     <img src="./img/title-benefit.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-benefit">
+                <div class="box box-benefit scroll-item">
                     <img src="./img/benefit-01.svg">
                     <img src="./img/benefit-02.svg">
                 </div>
             </section>
             <section class="section-slide">
-                <div class="slider-mymo-wrap">
+                <div class="slider-mymo-wrap scroll-item">
+                    <div class="slide-card">
+                        <img src="./img/mymo-slide-01-01.svg">
+                        <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
+                    </div>
+                    <div class="slide-card">
+                        <img src="./img/mymo-slide-02-01.svg">
+                        <img src="./img/mymo-slide-02-02.svg" class="mymo-icon">
+                    </div>
+                    <div class="slide-card">
+                        <img src="./img/mymo-slide-01-01.svg">
+                        <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
+                    </div>
                     <div class="slide-card">
                         <img src="./img/mymo-slide-01-01.svg">
                         <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
@@ -229,6 +241,12 @@
                         <li>
                             <a href="javascript:void(0);">
 
+                                <img src=".\..\src\assets\img\ico_menu_product.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+
                                 <img src=".\..\src\assets\img\ico_menu_loan.svg" alt="">
                             </a>
                         </li>
@@ -243,12 +261,6 @@
                                 <img src=".\..\src\assets\img\ico_menu_chetbot.svg" alt="">
                             </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);">
-
-                                <img src=".\..\src\assets\img\ico_menu_product.svg" alt="">
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </footer>
@@ -258,112 +270,129 @@
         <script>
             $(function() {
                 $(".slider-wrap").slick({
-                    slide: "div", //슬라이드 되어야 할 태그
-                    infinite: true, //무한 반복 옵션
-                    slidesToShow: 1, // 한 화면에 보여질 컨텐츠 개수
-                    slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
-                    speed: 500, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-                    arrows: false, // 옆으로 이동하는 화살표 표시 여부
-                    dots: true, // 스크롤바 아래 점으로 페이지네이션 여부
-                    autoplay: false, // 자동 스크롤 사용 여부
-                    autoplaySpeed: 2000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-                    pauseOnHover: true, // 슬라이드 이동    시 마우스 호버하면 슬라이더 멈추게 설정
-                    vertical: false, // 세로 방향 슬라이드 옵션
-                    draggable: true, //드래그 가능 여부
+                    slide: "div",
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 500,
+                    arrows: false,
+                    dots: true,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    pauseOnHover: true,
+                    vertical: false,
+                    draggable: true,
                 });
-            });
-            $(function() {
                 $(".slider-mymo-wrap").slick({
-                    slide: "div", //슬라이드 되어야 할 태그
-                    infinite: false, //무한 반복 옵션
-                    slidesToShow: 3, // 한 화면에 보여질 컨텐츠 개수
-                    slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
-                    speed: 500, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-                    arrows: false, // 옆으로 이동하는 화살표 표시 여부
-                    dots: false, // 스크롤바 아래 점으로 페이지네이션 여부
-                    autoplay: false, // 자동 스크롤 사용 여부
-                    autoplaySpeed: 2000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-                    pauseOnHover: true, // 슬라이드 이동    시 마우스 호버하면 슬라이더 멈추게 설정
-                    vertical: false, // 세로 방향 슬라이드 옵션
-                    draggable: true, //드래그 가능 여부
-                    responsive: [ // 반응형 웹 구현 옵션
-                        {
-                            breakpoint: 768, //화면 사이즈 960px
-                            settings: {
-                                slidesToShow: 2.4
-                            }
-                        },
-                        // { 
-                        //   breakpoint: 768, //화면 사이즈 768px
-                        //   settings: {    
-                        //     slidesToShow: 5
-                        //   } 
-                        // }
-                    ]
+                    slide: "div",
+                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    speed: 500,
+                    arrows: false,
+                    dots: false,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    pauseOnHover: true,
+                    vertical: false,
+                    draggable: true,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2.4
+                        }
+                    }, ]
                 });
             });
+            let progressSwitch = 0
+            let cafeSwitch = 0
+            let consumeSwitch = 0
 
-            // graph type1
-            const bar = document.querySelector(".progress")
-            let per1 = 16,
-                per2 = 50,
-                per3 = 16,
-                per4 = 18
-            let t = 0
-            const barAnimation = setInterval(() => {
-                    bar.style.background =
-                        per1 > t ?
-                        `linear-gradient(to right, #19DCA1 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
-                        per1 + per2 > t ?
-                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
-                        per1 + per2 + per3 > t ?
-                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
-                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
-                    t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
-                }, 10)
-                // const repeat = setInterval(() => {
-                //     barAnimation()
-                // })
+            function scrollEvents() {
+                const vh = window.innerHeight
+                let containerHeight = $('.container').scrollTop() + vh;
+                let scrollItem = document.querySelectorAll('.scroll-item');
+                let progressBox = document.querySelector('.box--progress');
+                let cafeBox = document.querySelector('.box--cafe');
+                let consumeBox = document.querySelector('.box-consume');
 
-            const cafeBar = document.querySelector(".cafe-graph")
-            const cafeTotal = 72
-            let cafeT = 0
-            cafeBar.style.width = 0
-            const cafeBarAnimation = setInterval(() => {
-                cafeBar.style.width = cafeT + '%'
-                cafeT++ >= cafeTotal && clearInterval(cafeBarAnimation)
-                console.log(cafeT)
-            }, 10)
+                for (let i = 0; i < scrollItem.length; i += 1) {
+                    if (containerHeight - 100 >= scrollItem[i].offsetTop) {
+                        scrollItem[i].classList.add("active");
+                    }
+                }
 
-            const janBar = document.querySelector(".jan-graph-bar")
-            const janTotal = 80
-            let janT = 0
-            janBar.style.height = 0
-            const janBarAnimation = setInterval(() => {
-                janBar.style.height = janT + 'px'
-                janT++ >= janTotal && clearInterval(janBarAnimation)
-                console.log(janT)
-            }, 10)
+                if (containerHeight - 100 >= progressBox.offsetTop && progressSwitch == 0) {
+                    const bar = document.querySelector(".progress")
+                    let per1 = 16,
+                        per2 = 50,
+                        per3 = 16,
+                        per4 = 18
+                    let t = 0
+                    const barAnimation = setInterval(() => {
+                            bar.style.background =
+                                per1 > t ?
+                                `linear-gradient(to right, #19DCA1 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
+                                per1 + per2 > t ?
+                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
+                                per1 + per2 + per3 > t ?
+                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                            t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
+                        }, 10)
+                        // const repeat = setInterval(() => {
+                        //     barAnimation()
+                        // })        
+                    progressSwitch = 1
+                }
 
-            const febBar = document.querySelector(".feb-graph-bar")
-            const febTotal = 100
-            let febT = 0
-            febBar.style.height = 0
-            const febBarAnimation = setInterval(() => {
-                febBar.style.height = febT + 'px'
-                febT++ >= febTotal && clearInterval(febBarAnimation)
-                console.log(janT)
-            }, 10)
+                if (containerHeight - 100 >= cafeBox.offsetTop && cafeSwitch == 0) {
+                    const cafeBar = document.querySelector(".cafe-graph")
+                    const cafeTotal = 72
+                    let cafeT = 0
+                    cafeBar.style.width = 0
+                    const cafeBarAnimation = setInterval(() => {
+                        cafeBar.style.width = cafeT + '%'
+                        cafeT++ >= cafeTotal && clearInterval(cafeBarAnimation)
+                    }, 10)
+                    cafeSwitch = 1
+                }
 
-            const marBar = document.querySelector(".mar-graph-bar")
-            const marTotal = 120
-            let marT = 0
-            marBar.style.height = 0
-            const marBarAnimation = setInterval(() => {
-                marBar.style.height = marT + 'px'
-                marT++ >= marTotal && clearInterval(marBarAnimation)
-                console.log(marT)
-            }, 10)
+                if (containerHeight - 100 >= consumeBox.offsetTop && consumeSwitch == 0) {
+                    const janBar = document.querySelector(".jan-graph-bar")
+                    const janTotal = 80
+                    let janT = 0
+                    janBar.style.height = 0
+                    const janBarAnimation = setInterval(() => {
+                        janBar.style.height = janT + 'px'
+                        janT++ >= janTotal && clearInterval(janBarAnimation)
+                    }, 10)
+
+                    const febBar = document.querySelector(".feb-graph-bar")
+                    const febTotal = 100
+                    let febT = 0
+                    febBar.style.height = 0
+                    const febBarAnimation = setInterval(() => {
+                        febBar.style.height = febT + 'px'
+                        febT++ >= febTotal && clearInterval(febBarAnimation)
+                    }, 10)
+
+                    const marBar = document.querySelector(".mar-graph-bar")
+                    const marTotal = 120
+                    let marT = 0
+                    marBar.style.height = 0
+                    const marBarAnimation = setInterval(() => {
+                        marBar.style.height = marT + 'px'
+                        marT++ >= marTotal && clearInterval(marBarAnimation)
+                    }, 10)
+                    consumeSwitch = 1
+                }
+
+            }
+            scrollEvents()
+            $('.container').scroll(function() {
+                scrollEvents();
+            });
         </script>
 </body>
 

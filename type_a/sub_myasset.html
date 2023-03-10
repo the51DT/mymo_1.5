@@ -32,24 +32,67 @@
         </div>
         <div class="container">
             <section>
-                <div class="box">
+                <div class="box scroll-item">
                     <img src="./img/myasset-add.svg" class="myasset-add">
                     <img src="./img/myasset-asset.svg" class="myasset-asset">
+                    <div class="num-increase total">
+                        <span class="value" id="counter1">0</span>
+                    </div>
+                </div>
+                <div class="title-box scroll-item">
+                    <img src="./img/sub_myasset_section01_desc.svg" alt="">
+                    <img src="./img/sub_myasset_section01_cnt.svg" alt="">
+                </div>
+            </section>
+            <section>
+                <div class="title-box scroll-item">
+                    <img src="./img/sub_myasset_section02_title.svg" alt="">
+                    <img src="./img/sub_myasset_section02_text.svg" alt="">
+                </div>
+                <div class="doughnutChart scroll-item">
+                    <canvas id="myChart" aria-label="내 자산" role="Chart"></canvas>
+                </div>
+                <div class="progress-desc scroll-item">
+                    <div class="title-box">
+                        <img src="./img/graph02-desc1.svg" alt="">
+                        <img src="./img/graph02-won1.svg" alt="">
+                    </div>
+                    <div class="title-box">
+                        <img src="./img/graph02-desc2.svg" alt="">
+                        <img src="./img/graph02-won2.svg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="section-border">
+                <div class="title-box title-box--column scroll-item">
+                    <img src="./img/sub_myasset_section-title2.svg" alt="">
+                </div>
+                <div class="progress-wrap progress-type2 scroll-item">
+                    <div class="progress-bg">
+                        <img src="./img/sub_myasset_graph-bg.svg" alt="">
+                        <img src="./img/sub_myasset_graph-desc.svg" alt="" class="progress-desc">
+                        <img src="./img/sub_myasset_graph-line.svg" alt="" class="progress-line">
+                        <div class="progress-bar progress-bar--01"></div>
+                        <div class="progress-bar progress-bar--02"></div>
+                    </div>
+                </div>
+                <div class="btn-box scroll-item">
+                    <img src="./img/progress-add-btn.svg" alt="">
                 </div>
             </section>
             <section class="section-slide">
-                <div class="slider-mymo-wrap">
+                <div class="slider-mymo-wrap scroll-item">
                     <div class="slide-card">
-                        <img src="./img/mymo-slide-01-01.svg">
-                        <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
+                        <img src="./img/sub_mydata_slide_01_01.svg">
+                        <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
                     </div>
                     <div class="slide-card">
-                        <img src="./img/mymo-slide-02-01.svg">
-                        <img src="./img/mymo-slide-02-02.svg" class="mymo-icon">
+                        <img src="./img/sub_mydata_slide_02_01.svg">
+                        <img src="./img/sub_mydata_slide_02_02.svg" class="mymo-icon">
                     </div>
                     <div class="slide-card">
-                        <img src="./img/mymo-slide-01-01.svg">
-                        <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
+                        <img src="./img/sub_mydata_slide_03_01.svg">
+                        <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
                     </div>
                 </div>
             </section>
@@ -61,6 +104,12 @@
                         <li>
                             <a href="./sub_mydata.html" target="">
                                 <img src=".\..\src\assets\img\ico_menu_mymo.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+
+                                <img src=".\..\src\assets\img\ico_menu_product.svg" alt="">
                             </a>
                         </li>
                         <li>
@@ -80,42 +129,120 @@
                                 <img src=".\..\src\assets\img\ico_menu_chetbot.svg" alt="">
                             </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);">
-
-                                <img src=".\..\src\assets\img\ico_menu_product.svg" alt="">
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </footer>
         </div>
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script>
         <script>
             $(function() {
                 $(".slider-mymo-wrap").slick({
-                    slide: "div", //슬라이드 되어야 할 태그
-                    infinite: false, //무한 반복 옵션
-                    slidesToShow: 3, // 한 화면에 보여질 컨텐츠 개수
-                    slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
-                    speed: 500, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-                    arrows: false, // 옆으로 이동하는 화살표 표시 여부
-                    dots: false, // 스크롤바 아래 점으로 페이지네이션 여부
-                    autoplay: false, // 자동 스크롤 사용 여부
-                    autoplaySpeed: 2000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-                    pauseOnHover: true, // 슬라이드 이동    시 마우스 호버하면 슬라이더 멈추게 설정
-                    vertical: false, // 세로 방향 슬라이드 옵션
-                    draggable: true, //드래그 가능 여부
-                    responsive: [ // 반응형 웹 구현 옵션
-                        {
-                            breakpoint: 768, //화면 사이즈 960px
-                            settings: {
-                                slidesToShow: 2.4
-                            }
-                        },
-                    ]
+                    slide: "div",
+                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    speed: 500,
+                    arrows: false,
+                    dots: false,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    pauseOnHover: true,
+                    vertical: false,
+                    draggable: true,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2.4
+                        }
+                    }, ]
                 });
+            });
+            //총 자산 증감
+            function numberCounter(target_frame, target_number) {
+                this.count = 0;
+                this.diff = 0;
+                this.target_count = parseInt(target_number);
+                this.target_frame = document.getElementById(target_frame);
+                this.timer = null;
+                this.counter();
+            };
+            numberCounter.prototype.counter = function() {
+                var self = this;
+                this.diff = this.target_count - this.count;
+
+                if (this.diff > 0) {
+                    self.count += Math.ceil(this.diff / 5);
+                }
+
+                this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+                if (this.count < this.target_count) {
+                    this.timer = setTimeout(function() {
+                        self.counter();
+                    }, 20);
+                } else {
+                    clearTimeout(this.timer);
+                }
+            };
+            new numberCounter("counter1", 550000000);
+
+            // 도넛그래프
+            Chart.register(ChartjsPluginStacked100.default);
+            const ctx = document.getElementById('myChart');
+            const doughnut = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        '계좌/현금',
+                        '투자',
+                        '페이머니',
+                        '포인트'
+                    ],
+                    datasets: [{
+                        label: '자산구성',
+                        data: [5, 73, 8, 14],
+                        backgroundColor: [
+                            'rgb(25, 220, 161)',
+                            'rgb(50, 153, 249)',
+                            'rgb(249, 146, 50)',
+                            'rgb(249, 217, 50)'
+                        ]
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+            let progressSwitch = 0
+            let cafeSwitch = 0
+            let consumeSwitch = 0
+
+            function scrollEvents() {
+                const vh = window.innerHeight
+                let containerHeight = $('.container').scrollTop() + vh;
+                let scrollItem = document.querySelectorAll('.scroll-item');
+                let progressBox = document.querySelector('.progress-type2');
+
+                for (let i = 0; i < scrollItem.length; i += 1) {
+                    if (containerHeight - 100 >= scrollItem[i].offsetTop) {
+                        scrollItem[i].classList.add("active");
+                    }
+                }
+
+                if (containerHeight - 100 >= progressBox.offsetTop && cafeSwitch == 0) {
+                    progressBox.classList.add('active')
+                }
+            }
+            scrollEvents()
+            $('.container').scroll(function() {
+                scrollEvents();
             });
         </script>
 </body>
