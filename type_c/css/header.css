@@ -11,6 +11,9 @@
     width: 100%;
     max-width: 768px;
     z-index: 10;
+    background-color: #f4f4f4;
+}
+.header_menu.white {
     background-color: white;
 }
 .header_menu .logo {
