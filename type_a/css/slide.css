@@ -145,6 +145,10 @@
   border: 1px solid #e6e6e6;
 } */
 
+.wrap.sub_myasset .container section:first-child {
+    padding-top: 0;
+}
+
 
 /* box-consume ------------------------------------------------------- */
 
