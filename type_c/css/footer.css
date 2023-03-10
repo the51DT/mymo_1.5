@@ -1,3 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+}
+section {
+    position: relative;
+}
+.wrap {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding-bottom: 72px;
+}
 footer {
     position: fixed;
     bottom: 0;
