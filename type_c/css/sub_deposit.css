@@ -1,0 +1,74 @@
+section {
+    position: relative;
+}
+.section01 {
+    background-color: #5725e0;
+    height: 550px;
+    padding-top: 70px;
+}
+.section01 .copy {
+    padding-top: 40px;
+    padding-left: 30px;
+}
+.section01 .text {
+    margin-top: 70px;
+    padding-left: 30px;
+}
+
+.section02 {
+    height: 520px;
+}
+.section02 .copy {
+    padding-top: 50px;
+    padding-left: 30px;
+}
+.section02 .number {
+    margin-top: 50px;
+    padding-left: 30px;
+}
+.section02 .person {
+    position: absolute;
+    bottom: 18px;
+    left: 103px;
+}
+
+.section03 {
+    height: 500px;
+    background-color: #f1f1f1;
+}
+.section03 .copy {
+    padding-top: 50px;
+    padding-left: 25px;
+}
+
+.section04 {
+    height: 400px;
+}
+.section04 .copy {
+    padding-top: 50px;
+    padding-left: 25px;
+}
+.section04 .button {
+    margin-top: 33px;
+    padding-left: 25px;
+}
+
+.section05 {
+    height: 450px;
+}
+.section05 .accordion_container {
+    padding-top: 50px;
+    padding-left: 25px;
+}
+.section05 .accordion + .accordion {
+    margin-top: 15px;
+}
+
+.section06 {
+    height: 90px;
+}
+.section06 .button {
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 93px;
+}

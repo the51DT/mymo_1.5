@@ -1,0 +1,19 @@
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 25px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+}
+.header_menu .logo {
+    padding-top: 4px;
+}
+.header_menu li {
+    display: flex;
+}
