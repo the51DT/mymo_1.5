@@ -8,23 +8,16 @@
 
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/swiper.css" />
-    <link rel="stylesheet" href="./font/" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
       @font-face {
-        font-family: "Gotham";
-        font-style: normal;
-        font-weight: 300;
-        src: url("./font/");
-      }
-      @font-face {
-        font-family: 'LINESeedKR-Bd';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
+          font-family: 'Pretendard-Regular';
+          src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+          font-weight: 400;
+          font-style: normal;
       }
       body {
         min-width: 360px;
@@ -56,15 +49,29 @@
       #section1 .top_btn {display: flex; justify-content: space-between;}
       #section1 .top {position: relative; margin-top: 14.16%; margin-left: 12.2%; width: 81.1%;}
       #section1 .top img {width: 100%;}
-      #section1 .top .top_num {position: absolute; top: 20.3%; left: 0; font-family: 'LINESeedKR-Bd';}
-      #section1 .top .top_num p {font-size: clamp(28px, calc(100vw * 59 / 768), 59px); letter-spacing: -0.03em;}
+      #section1 .top .top_num {position: absolute; top: 18%; left: 0;}
+      #section1 .top .top_num p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(28px, calc(100vw * 59 / 768), 59px); letter-spacing: -0.03em;}
+
       #section1 .view {position: relative; margin-top: 11.1%;}
-      #section1 .view .tap {position: absolute; left: 12.2%; display: flex; justify-content: space-between; width: 35%;}
-      #section1 .view .tap1 {top: 4.67%;}
-      #section1 .view .tap2 {top: 4.33%;}
+      #section1 .view .view_btn {position: absolute; top: 10.76%; right: 6.6%; width: 5.5%;}
+      #section1 .view .tab {position: absolute; left: 12.2%; display: flex; justify-content: space-between; width: 35%;}
+      #section1 .view .tab1 {top: 4.67%;}
+      #section1 .view .tab2 {top: 4.33%;}
       #section1 .view .progressbar {position: absolute; top: 78.3%; left: 12.2%; width: 81.1%; height: 3.47%;}
       #section1 .view .progressbar .background{position: absolute; width: 100%; height: 100%; background: #4522BD; opacity: 0.2; border-radius: calc(100vw * 12 / 360);}
       #section1 .view .progressbar .bar{width: 0; height: 100%; background: #6732F9; border-radius: calc(100vw * 12 / 360); transition: width .5s;}
+
+      #section1 .period {position: fixed; top: 0; left: 0;}
+      #section1 .period .back {position: absolute; background: rgba(0, 0, 0, 0.7); opacity: 0.6;}
+      #section1 .period .set {background: url(./img/view_period.png);}
+      #section1 .period h2 {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: calc(100vw * 16 / 360); letter-spacing: -0.03em;}
+      #section1 .period .close {}
+      #section1 .period p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: calc(100vw * 13 / 360); letter-spacing: -0.03em; color: #999;}
+      #section1 .period .swiper-container {}
+      #section1 .period .list {display: inline-block; font-family: 'Pretendard-Regular'; border: 1px solid #ddd; padding: calc(100vw * 9 / 360) calc(100vw * 18 / 360); border-radius: 12px;}
+      #section1 .period .list.active {border: 1px solid #6732F9;}
+      #section1 .period .btn_ok {}
+
     </style>
   </head>
 
@@ -80,6 +87,7 @@
             <img class="btn_back" src="./img/btn_back.png" alt=""/>
             <img class="btn_more" src="./img/btn_more.png" alt=""/>
         </div>
+
         <div class="top">
             <img src="./img/view_top.png" alt=""/>
             <div class="top_num">
@@ -87,23 +95,62 @@
                 <!-- <p class="value" akhi="34523040">0</p> -->
             </div>
         </div>
+
         <div class="view view1">
             <img src="./img/view_01.png" alt=""/>
-            <div class="tap tap1">
+            <img class="view_btn" src="./img/view_01_btn.png" alt=""/>
+            <div class="tab tab1">
                 <img class="btn_tap" src="./img/view_tap_01_active.png" alt=""/>
                 <img class="btn_tap" src="./img/view_tap_02.png" alt=""/>
             </div>
         </div>
+
         <div class="view view2 blind">
             <img src="./img/view_02.png" alt=""/>
             <div class="progressbar">
                 <div class="background"></div>
                 <div class="bar"></div>
             </div>
-            <div class="tap tap2">
+            <div class="tab tab2">
                 <img class="btn_tap" src="./img/view_tap_01.png" alt=""/>
                 <img class="btn_tap" src="./img/view_tap_02_active.png" alt=""/>
             </div>
+        </div>
+
+        <div class="period blind">
+          <div class="back"></div>
+          <div class="set">
+            <h2>조회기간 설정</h2>
+            <img class="close" src="./img/view_period_x.png" alt=""/>
+            <div class="list1">
+              <p>기간선택</p>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide list">오늘</div>
+                  <div class="swiper-slide list">1개월</div>
+                  <div class="swiper-slide list">3개월</div>
+                  <div class="swiper-slide list">6개월</div>
+                  <div class="swiper-slide list">직접입력</div>
+                </div>
+              </div>
+            </div>
+            <div class="list2">
+              <p>거래유형</p>
+              <div>
+                <div class="list">전체</div>
+                <div class="list">입금</div>
+                <div class="list">출금</div>
+              </div>
+            </div>
+            <div class="list3">
+              <p>정렬순서</p>
+              <div>
+                <div class="list">최신순</div>
+                <div class="list">과거순</div>
+              </div>
+            </div>
+            <img class="btn_ok" src="./img/btn_ok.png" alt=""/>
+          </div>
         </div>
     </section>
   </body>
@@ -114,12 +161,12 @@
 
     $(document).ready(function(){
         //탭
-        $('.view1 .tap .btn_tap').eq(1).click(function(){
+        $('.view1 .tab .btn_tab').eq(1).click(function(){
             $('.view1').addClass('blind')
             $('.view2').removeClass('blind')
             $('.view2').addClass('bar')
         })
-        $('.view2 .tap .btn_tap').eq(0).click(function(){
+        $('.view2 .tab .btn_tab').eq(0).click(function(){
             $('.view2').addClass('blind')
             $('.view1').removeClass('blind')
             $('.view2').removeClass('bar')
@@ -197,6 +244,23 @@
         };
         new numberCounter("count", 34523040)
 
+
+        // 조회기간 설정
+        $('.view_btn').click(function(){
+          $('.period').removeClass('blind')
+        })
+        $('.period .close').click(function(){
+          $('.period').addClass('blind')
+        })
+        $('.period .btn_ok').click(function(){
+          $('.period').addClass('blind')
+        })
+
+        //swiper
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 4.5,
+          spaceBetween: 13,
+        });
     })
   </script>
 </html>
