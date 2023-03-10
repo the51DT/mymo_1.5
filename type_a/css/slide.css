@@ -182,11 +182,16 @@
     padding: 30px 0 40px;
 }
 
+.wrap.sub_myasset .progress-wrap.progress-type2 {
+    padding: 30px 0;
+}
+
 .wrap.sub_myasset .progress-wrap.progress-type2 .progress-bg {
     position: relative;
     margin: 0 auto;
     max-width: 310px;
     overflow: hidden;
+    font-size: 0;
 }
 
 .wrap.sub_myasset .progress-wrap.progress-type2 .progress-desc {
@@ -244,9 +249,9 @@
 }
 
 .wrap.sub_myasset .progress-wrap.progress-type2.active .progress-bar.progress-bar--01 {
-    transition-delay: 0.6s;
+    transition-delay: 0.4s;
 }
 
 .wrap.sub_myasset .progress-wrap.progress-type2.active .progress-bar.progress-bar--02 {
-    transition-delay: 0.8s;
+    transition-delay: 0.6s;
 }
