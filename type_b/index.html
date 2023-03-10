@@ -249,7 +249,18 @@
       .section3 .swiper-slide > img{
         padding-right: 7%;
       }
-
+      .section3 .month-consum{
+        position: absolute;
+        top: 87px;
+        font-size: 51px;
+        font-weight: 600;
+      }
+      @media (max-width: 768px){
+        .section3 .month-consum{
+          top:11.3281vw;
+          font-size: 6.6406vw;
+        }
+      }
 
       .section4 {
         background: url(./img/section-gray-mid.png) no-repeat;
@@ -512,12 +523,18 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img src="./img/cal01.png">
+                    <div class="month-consum">
+                      <span class="value" id="counter2">337,582</span>원
+                    </div>
                     <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
                       <img src="./img/cal-content.png">
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="./img/cal02.png">
+                    <div class="month-consum">
+                      <span class="value" id="counter3">337,582</span>원
+                    </div>
                     <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
                       <img src="./img/cal-content.png">
                     </div>
@@ -765,7 +782,6 @@
         $(".menu-bott").css({"display": "none"});
         $("body").addClass("popup");
       }
-      AOS.init();
     })
     //menu close
     $(".pop-close").on("click", function(){
@@ -775,5 +791,26 @@
         $("body").removeClass("popup");
       }
     })
+
+    //월 소비 금액 증감
+    $(window).scroll(function() {
+
+      // var counter2 = document.getElementById('counter2')
+      //     counter3 = document.getElementById('counter3');
+      //   console.log(counter2.innerHTML);
+
+      // if($(window).width() >= 768) {
+      //   if ($(this).scrollTop() + 700 >= Math.ceil($(".section.section3").offset().top)) {
+      //     new numberCounter("counter2", 337582);
+      //     new numberCounter("counter3", 337582);
+      //   }
+      // }else if($(window).width() < 768){
+      //   if ($(this).scrollTop() + 400 >= Math.ceil($(".section.section3").offset().top)) {
+      //     new numberCounter("counter2", 337582);
+      //     new numberCounter("counter3", 337582);
+      //   }
+      // }
+    });
+    
   </script>
 </html>
