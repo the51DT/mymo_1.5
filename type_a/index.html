@@ -91,7 +91,7 @@
                     <img src="./img/title-asset.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
                 </div>
-                <div class="box box-test scroll-item">
+                <div class="box scroll-item box--progress">
                     <div class="progress-wrap progress-type1">
                         <div class="progress-bar">
                             <div class="progress"></div>
@@ -153,7 +153,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="box scroll-item">
+                <div class="box scroll-item box--cafe">
                     <img src="./img/consume-text2-1.svg">
                     <div class="cafe-graph-wrap">
                         <div class="cafe-graph-bar">
@@ -288,84 +288,26 @@
                     draggable: true, //드래그 가능 여부
                     responsive: [ // 반응형 웹 구현 옵션
                         {
-                            breakpoint: 768, //화면 사이즈 960px
+                            breakpoint: 768,
                             settings: {
                                 slidesToShow: 2.4
                             }
                         },
-                        // { 
-                        //   breakpoint: 768, //화면 사이즈 768px
-                        //   settings: {    
-                        //     slidesToShow: 5
-                        //   } 
-                        // }
                     ]
                 });
             });
 
-            // graph type1
-            const bar = document.querySelector(".progress")
-            let per1 = 16,
-                per2 = 50,
-                per3 = 16,
-                per4 = 18
-            let t = 0
-            const barAnimation = setInterval(() => {
-                    bar.style.background =
-                        per1 > t ?
-                        `linear-gradient(to right, #19DCA1 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
-                        per1 + per2 > t ?
-                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
-                        per1 + per2 + per3 > t ?
-                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
-                        `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
-                    t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
-                }, 10)
-                // const repeat = setInterval(() => {
-                //     barAnimation()
-                // })
+            let progressSwitch = 0
+            let cafeSwitch = 0
+            let consumeSwitch = 0
 
-            const cafeBar = document.querySelector(".cafe-graph")
-            const cafeTotal = 72
-            let cafeT = 0
-            cafeBar.style.width = 0
-            const cafeBarAnimation = setInterval(() => {
-                cafeBar.style.width = cafeT + '%'
-                cafeT++ >= cafeTotal && clearInterval(cafeBarAnimation)
-            }, 10)
-
-            const janBar = document.querySelector(".jan-graph-bar")
-            const janTotal = 80
-            let janT = 0
-            janBar.style.height = 0
-            const janBarAnimation = setInterval(() => {
-                janBar.style.height = janT + 'px'
-                janT++ >= janTotal && clearInterval(janBarAnimation)
-            }, 10)
-
-            const febBar = document.querySelector(".feb-graph-bar")
-            const febTotal = 100
-            let febT = 0
-            febBar.style.height = 0
-            const febBarAnimation = setInterval(() => {
-                febBar.style.height = febT + 'px'
-                febT++ >= febTotal && clearInterval(febBarAnimation)
-            }, 10)
-
-            const marBar = document.querySelector(".mar-graph-bar")
-            const marTotal = 120
-            let marT = 0
-            marBar.style.height = 0
-            const marBarAnimation = setInterval(() => {
-                marBar.style.height = marT + 'px'
-                marT++ >= marTotal && clearInterval(marBarAnimation)
-            }, 10)
-
-            // scroll event ---------------------------------------------------------------------
             function scrollEvents() {
                 const vh = window.innerHeight
                 let containerHeight = $('.container').scrollTop() + vh;
                 let scrollItem = document.querySelectorAll('.scroll-item');
+                let progressBox = document.querySelector('.box--progress');
+                let cafeBox = document.querySelector('.box--cafe');
+                let consumeBox = document.querySelector('.box-consume');
                 
                 for (let i = 0; i < scrollItem.length; i += 1) {
                     if (containerHeight - 100 >= scrollItem[i].offsetTop) {
@@ -373,6 +315,72 @@
                     }
                 }
 
+                if (containerHeight - 100 >= progressBox.offsetTop && progressSwitch == 0) {
+                    const bar = document.querySelector(".progress")
+                    let per1 = 16,
+                        per2 = 50,
+                        per3 = 16,
+                        per4 = 18
+                    let t = 0
+                    const barAnimation = setInterval(() => {
+                            bar.style.background =
+                                per1 > t ?
+                                `linear-gradient(to right, #19DCA1 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
+                                per1 + per2 > t ?
+                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
+                                per1 + per2 + per3 > t ?
+                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                            t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
+                        }, 10)
+                        // const repeat = setInterval(() => {
+                        //     barAnimation()
+                        // })        
+                    progressSwitch = 1            
+                }
+
+                if (containerHeight - 100 >= cafeBox.offsetTop && cafeSwitch == 0) {
+                    const cafeBar = document.querySelector(".cafe-graph")
+                    const cafeTotal = 72
+                    let cafeT = 0
+                    cafeBar.style.width = 0
+                    const cafeBarAnimation = setInterval(() => {
+                        cafeBar.style.width = cafeT + '%'
+                        cafeT++ >= cafeTotal && clearInterval(cafeBarAnimation)
+                    }, 10)
+                    cafeSwitch = 1            
+                }
+
+                if (containerHeight - 100 >= consumeBox.offsetTop && consumeSwitch == 0) {
+                    const janBar = document.querySelector(".jan-graph-bar")
+                    const janTotal = 80
+                    let janT = 0
+                    janBar.style.height = 0
+                    const janBarAnimation = setInterval(() => {
+                        janBar.style.height = janT + 'px'
+                        janT++ >= janTotal && clearInterval(janBarAnimation)
+                    }, 10)
+
+                    const febBar = document.querySelector(".feb-graph-bar")
+                    const febTotal = 100
+                    let febT = 0
+                    febBar.style.height = 0
+                    const febBarAnimation = setInterval(() => {
+                        febBar.style.height = febT + 'px'
+                        febT++ >= febTotal && clearInterval(febBarAnimation)
+                    }, 10)
+
+                    const marBar = document.querySelector(".mar-graph-bar")
+                    const marTotal = 120
+                    let marT = 0
+                    marBar.style.height = 0
+                    const marBarAnimation = setInterval(() => {
+                        marBar.style.height = marT + 'px'
+                        marT++ >= marTotal && clearInterval(marBarAnimation)
+                    }, 10)
+                    consumeSwitch = 1            
+                }
+                
             }
             scrollEvents()
             $('.container').scroll(function () {
