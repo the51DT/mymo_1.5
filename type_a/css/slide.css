@@ -100,50 +100,7 @@
 /* sub_mydata ----------------------------------------- */
 
 
-/* .wrap.sub_mydata .container {
-  background-color: #fff;
-}
-
-.wrap.sub_mydata .slide-card {
-  border: 1px solid #e6e6e6;
-}
-
-.wrap.sub_mydata .section-gray {
-  background-color: #f4f4f4;
-  padding: 30px 25px;
-}
-
-.wrap.sub_mydata .mydata-top-flex {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-
 /* sub_myasset ----------------------------------------- */
-
-
-/* 
-
-/* .wrap.sub_myasset .container {
-  background-color: #fff;
-}
-.wrap.sub_myasset .box {
-  background-color: #5725e0;
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-}
-.wrap.sub_myasset .myasset-add {
-  margin-left: auto;
-}
-.wrap.sub_myasset .myasset-asset {
-  margin-right: auto;
-}
-.wrap.sub_myasset .slide-card {
-  border: 1px solid #e6e6e6;
-} */
 
 .wrap.sub_myasset .container section:first-child {
     padding-top: 0;
