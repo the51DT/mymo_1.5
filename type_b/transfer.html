@@ -14,10 +14,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
       @font-face {
-        font-family: "Gotham";
-        font-style: normal;
-        font-weight: 300;
-        src: url("./font/");
+          font-family: 'Pretendard-Regular';
+          src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+          font-weight: 400;
+          font-style: normal;
       }
       body {
         min-width: 360px;
@@ -38,6 +38,15 @@
 
 
       /* transfer */
+      @font-face {
+        font-family: 'ClashDisplay-Medium';
+        src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2'),
+            url('./fonts/ClashDisplay-Medium.woff') format('woff'),
+            url('./fonts/ClashDisplay-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-display: swap;
+            font-style: normal;
+      }
       .blind {display: none;}
       .btn_back {margin-left: 12.2%; width: 6.6%;}
 
@@ -58,17 +67,24 @@
       /* sec2 */
       #section2 {position: relative;}
       #section2 .top {margin-top: 14.16%; margin-left: 12.2%;}
-      #section2 .middle {margin-top: 9.72%; margin-left: 30%; width: 45.5%;}
-      #section2 .middle img {width: 100%}
+      #section2 .middle {position: relative; margin-top: 15.83%; margin-bottom: 19.4%; margin-left: 11%; text-align: center;}
+      #section2 .middle img {position: absolute; top: -41%; left: 36%; width: 26%;}
+      #section2 .middle .amount {font-family: 'Pretendard-Regular'; font-size: clamp(14px, calc(100vw * 14 / 360), 30px); font-weight: 700; width: 100%;}
+      #section2 .middle .amount span {font-size: clamp(48px, calc(100vw * 48 / 360), 100px); vertical-align: bottom; letter-spacing: -0.03em;}
       #section2 .bottom {margin-top: 12.2%; margin-left: 7.7%;}
+      #section2 .bottom .keypad {height: 34.5%; display: flex; justify-content: space-around; align-content: space-around; flex-wrap: wrap; text-align: center;}
+      #section2 .bottom .key {width: 30%; height: 3%;  font-family: 'ClashDisplay-Medium'; font-size: clamp(22px, calc(100vw * 22 / 360), 46px); align-items: center; margin-bottom: 16.6%;}
+      #section2 .bottom .last {margin-bottom: 0;}
+      #section2 .bottom .key img {width: clamp(20.38px, calc(100vw * 20.38 / 360), 43.4px); margin-top: 5%;}
       #section2 .bottom img {width: 100%;}
       #section2 .btn_bottom {margin-top: 12.2%; margin-left: 12.2%; width: 81.1%; margin-bottom: calc(100vw * 40 / 800);}
 
       /* sec3 */
       #section3 {position: relative;}
-      #section3 .top { margin-top: 14.16%; margin-left: 14.16%; width: 56.1%;}
-      #section3 .top img {width: 100%;}
-      #section3 .back {margin-left: 12.7%; margin-top: 1.375%; width: 87.7%; z-index: -1;}
+      #section3 .top { margin-top: 14.16%; margin-left: 14.16%;}
+      #section3 .top p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(24px, calc(100vw * 24 / 360), 51px); line-height: 142%; letter-spacing: -0.03em;}
+      #section3 .top img {position: absolute; width: 25.5%; margin-top: 2%;}
+      #section3 .back {margin-top: 3%; width: 100%; z-index: -1;}
       #section3 .btn_bottom {position: absolute; bottom: calc(100vw * 40 / 800); left: 12.2%; width: 81.1%;}
     </style>
   </head>
@@ -81,7 +97,7 @@
     </header>
     <div class="dim"></div>
 
-    <section id="section1" class="body">
+    <section id="section1" class="body blind">
       <div class="btn_back">
         <a href="#"><img src="./img/btn_back.png" alt=""/></a>
       </div>
@@ -92,20 +108,8 @@
         <img src="./img/transfer_01_bottom.png" alt=""/>
       </div>
     </section>
-<!-- 
-    <section id="section1_active" class="body blind">
-      <div class="btn_back">
-        <a href="#"><img src="./img/btn_back.png" alt=""/></a>
-      </div>
-      <div class="top">
-        <img src="./img/transfer_01_top_active.png" alt=""/>
-      </div>
-      <div class="bottom">
-        <img src="./img/transfer_01_bottom.png" alt=""/>
-      </div>
-    </section> -->
 
-    <section id="section2" class="body blind">
+    <section id="section2" class="body">
       <div class="btn_back">
         <img src="./img/btn_back.png" alt=""/>
       </div>
@@ -114,9 +118,24 @@
       </div>
       <div class="middle">
         <img src="./img/transfer_02_middle.png" alt=""/>
+        <div class="amount"><span>0</span>원</div>
       </div>
       <div class="bottom">
-        <img src="./img/transfer_02_bottom.png" alt=""/>
+        <div class="keypad">
+          <div class="key">1</div>
+          <div class="key">2</div>
+          <div class="key">3</div>
+          <div class="key">4</div>
+          <div class="key">5</div>
+          <div class="key">6</div>
+          <div class="key">7</div>
+          <div class="key">8</div>
+          <div class="key">9</div>
+          <div class="key last">00</div>
+          <div class="key last">0</div>
+          <div class="key last delete"><img src="./img/transfer_02_bottom_key.png" alt=""></div>
+          <!-- <img src="./img/transfer_02_bottom.png" alt=""/> -->
+        </div>
       </div>
       <div class="btn_bottom">
         <img src="./img/btn_send.png" alt=""/>
@@ -128,7 +147,8 @@
         <img src="./img/btn_back.png" alt=""/>
       </div>
       <div class="top">
-        <img src="./img/transfer_03_top.png" alt=""/>
+        <p>엄마 님에게<br/><span>0</span>원을 보냈어요</p>
+        <img src="./img/transfer_03_top_btn.png" alt=""/>
       </div>
       <div class="back">
         <img src="./img/transfer_03_back.png" alt=""/>
@@ -159,11 +179,11 @@
         }
       })
       
-      
       //02 뒤로가기
       $('#section2 .btn_back').click(function(){
         $('#section2').addClass('blind')
         $('#section1').removeClass('blind')
+        $('#section1 .top img').attr('src', './img/transfer_01_top.png')
       })
 
       //02 보내기
@@ -171,6 +191,36 @@
         $('#section2').addClass('blind')
         $('#section3').removeClass('blind')
       })
+
+      //02 키패드
+      let amount = ""
+      $('.key').click(function(){
+        if($(this).hasClass('delete')){
+          amount = amount.slice(0, -1)
+        }else{
+          amount += $(this).text()
+        }
+        console.log(amount)
+        const parts = amount.toString().split('.')
+        const result = Number(parts[0]).toLocaleString() + (parts[1] ? '.' + parts[1] : '');
+        console.log(result);
+        $('.amount span').text(result)
+        $('#section3 .top span').text(result)
+      })
+      
+
+      /* let amount = []
+      $('.key').click(function(){
+        if($(this).hasClass('delete')){
+          amount.pop();
+        } else{
+          amount.push($(this).text())
+        }
+        let amountStr = amount.join("");
+        amountStr = amountStr.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+        $('.amount span').text(amountStr)
+        $('#section3 .top span').text(amountStr)
+      }) */
 
       //03 뒤로가기
       $('#section3 .btn_back').click(function(){
