@@ -237,6 +237,11 @@ body {
     background-color: #fff;
 }
 
+.wrap.sub_mydata .container .section-border {
+    border-top: 10px solid #f4f4f4;
+    padding-top: 30px;
+}
+
 .wrap.sub_mydata .section-gray {
     background-color: #f4f4f4;
     padding: 30px 25px;
@@ -274,6 +279,13 @@ body {
     border: 1px solid #e6e6e6;
 }
 
+.wrap.sub_mydata .btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 
 /* sub_myasset ----------------------------------------- */
 
@@ -287,6 +299,11 @@ body {
 
 .wrap.sub_myasset .container {
     background-color: #fff;
+}
+
+.wrap.sub_myasset .container .section-border {
+    border-top: 10px solid #f4f4f4;
+    padding-top: 30px;
 }
 
 .wrap.sub_myasset .box {
