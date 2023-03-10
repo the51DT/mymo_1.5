@@ -332,7 +332,6 @@
             const cafeBarAnimation = setInterval(() => {
                 cafeBar.style.width = cafeT + '%'
                 cafeT++ >= cafeTotal && clearInterval(cafeBarAnimation)
-                console.log(cafeT)
             }, 10)
 
             const janBar = document.querySelector(".jan-graph-bar")
@@ -342,7 +341,6 @@
             const janBarAnimation = setInterval(() => {
                 janBar.style.height = janT + 'px'
                 janT++ >= janTotal && clearInterval(janBarAnimation)
-                console.log(janT)
             }, 10)
 
             const febBar = document.querySelector(".feb-graph-bar")
@@ -352,7 +350,6 @@
             const febBarAnimation = setInterval(() => {
                 febBar.style.height = febT + 'px'
                 febT++ >= febTotal && clearInterval(febBarAnimation)
-                console.log(janT)
             }, 10)
 
             const marBar = document.querySelector(".mar-graph-bar")
@@ -362,7 +359,6 @@
             const marBarAnimation = setInterval(() => {
                 marBar.style.height = marT + 'px'
                 marT++ >= marTotal && clearInterval(marBarAnimation)
-                console.log(marT)
             }, 10)
         </script>
 </body>
