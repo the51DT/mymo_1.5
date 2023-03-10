@@ -257,11 +257,15 @@ body {
 
 .wrap.sub_mydata .section-gray {
     background-color: #f4f4f4;
-    padding: 30px 25px;
+    padding: 14px 25px 30px;
 }
 
 .wrap.sub_mydata .section-toggle {
     padding-bottom: 0;
+}
+
+.wrap.sub_mydata .mydata-top-icon {
+    text-align: end;
 }
 
 .wrap.sub_mydata .mydata-top-flex {
@@ -311,6 +315,9 @@ body {
 
 .wrap.sub_mydata .slide-card {
     border: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
 
 .wrap.sub_mydata .text-list+.btn-box {
@@ -368,6 +375,9 @@ body {
 
 .wrap.sub_myasset .slide-card {
     border: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
 
 .wrap.sub_myasset .btn-box {
