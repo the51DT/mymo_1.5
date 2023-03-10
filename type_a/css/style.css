@@ -239,12 +239,16 @@ body {
 
 .wrap.sub_mydata .container .section-border {
     border-top: 10px solid #f4f4f4;
-    padding-top: 30px;
+    padding: 30px 25px;
 }
 
 .wrap.sub_mydata .section-gray {
     background-color: #f4f4f4;
     padding: 30px 25px;
+}
+
+.wrap.sub_mydata .section-toggle {
+    padding-bottom: 0;
 }
 
 .wrap.sub_mydata .mydata-top-flex {
@@ -284,7 +288,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
     gap: 10px;
+}
+
+.wrap.sub_mydata .text-list+.btn-box {
+    margin: 14.8px auto 24.79px;
 }
 
 
