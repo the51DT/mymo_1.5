@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MYMO Type B</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./font/" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        max-width: 768px;
+        margin: 0 auto !important;
+        font-family: Pretendard-Regular;
+      }
+      body img {
+        display: inline-block;
+      }
+
+      .section1 .item {
+        padding-left: 93.8px;
+        padding-top: 102px;
+        padding-bottom: 102px;
+      }
+      .section1 .back-wrap .back {
+        width: 49px;
+        height: 49px;
+        display: inline-block;
+      }
+      .section1 .item .cal-select-wrap {
+        max-width: 622px;
+        margin: 108px 0 0;
+      }
+      .section1 .item .time-line-wrap {
+        margin-top: 51px;
+      }
+      .section1 .time-line ul li {
+        margin-top: 102px;
+      }
+      .section1 .time-line ul li:first-child {
+        margin-top: 0;
+      }
+      .section1 .time-line ul {
+        position: relative;
+      }
+      .section1 .time-line ul::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 189vh;
+        position: absolute;
+        top: 17px;
+        left: 6px;
+        background-color: #f0ebfe;
+      }
+      .back {
+        position: relative;
+      }
+      .back-btn {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 52px;
+        height: 45px;
+      }
+      @media (max-width: 768px) {
+        .section1 .item {
+          padding-left: 12.2135vw;
+          padding-top: 13.2813vw;
+          padding-bottom: 13.2813vw;
+        }
+        .section1 .back-wrap .back {
+          width: 6.3802vw;
+          height: 6.3802vw;
+        }
+        .section1 .item .cal-select-wrap {
+          max-width: 80.9896vw;
+          margin: 14.0625vw 0 0vw;
+        }
+        .section1 .item .time-line-wrap {
+          margin-top: 6.6406vw;
+        }
+        .section1 .time-line ul li {
+          margin-top: 13.2813vw;
+        }
+        .section1 .time-line ul::before {
+          width: 0.5208vw;
+          height: 189vh;
+          top: 2.2135vw;
+          left: 0.7813vw;
+        }
+        .back-btn {
+          width: 6.7708vw;
+          height: 5.8594vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="body">
+      <section id="section1" class="section section1">
+        <div class="section-inner">
+          <div class="item">
+            <div class="back-wrap">
+              <div class="back">
+                <img src="./img/consum-back.svg" />
+                <a class="back-btn" href="javascript:history.back();"> </a>
+              </div>
+            </div>
+            <div class="cal-select-wrap">
+              <div class="cal-select">
+                <img src="./img/consum-top.png" />
+              </div>
+            </div>
+            <div class="time-line-wrap">
+              <div class="time-line">
+                <ul>
+                  <li data-aos="fade-up">
+                    <img src="./img/consum-list01.png" />
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="300">
+                    <img src="./img/consum-list02.png" />
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="200">
+                    <img src="./img/consum-list03.png" />
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="200">
+                    <img src="./img/consum-list01.png" />
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="200">
+                    <img src="./img/consum-list02.png" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
