@@ -1,6 +1,6 @@
 .section01 {
     background-color: #f4f4f4;
-    height: 473px;
+    height: 568px;
     margin-top: 60px;
 }
 .section01 .main {
@@ -17,22 +17,25 @@
     top: 74px;
     right: 40px;
 }
-.section01 .main .main-contents1 {
+.section01 .main .main-contents__wrapper {
     margin-top: 90px;
 }
-.section01 .main .main-contents2 {
+.section01 .main-contents:first-child {
+    margin-top: 0;
+}
+.section01 .main-contents {
     margin-top: 19px;
 }
-.section01 .main-hidden {
+/* .section01 .main-hidden {
     margin: 0 30px;
     padding-top: 20px;
     display: none;
-}
+} */
 .section01 .main-hidden .main-contents2 {
     margin-top: 19px;
 }
 .section01.active {
-    height: 660px;
+    height: 568px;
 }
 .section01.active .main-hidden {
     display: block;
@@ -50,7 +53,7 @@
     background-image: url(../img/icon/icon-down-arrow.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 12px 7.56px;
+    background-size: 12px 9.08px;
     outline: none;
 }
 .section01.active .down-arrow {
@@ -80,6 +83,48 @@
     top: 50%;
     left: 30px;
     transform: translateY(-50%);
+}
+.section03-swiper {
+    width: 100%;
+    height: 100%;
+}
+.section03-swiper .swiper-pagination {
+    top: 0;
+    left: auto;
+    right: 30px;
+    width: auto;
+}
+.section03-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    margin: 0;
+}
+.section03-swiper
+    .swiper-pagination-bullet
+    + .section03-swiper
+    .swiper-pagination-bullet {
+    margin-left: 10px;
+}
+.section03-swiper .swiper-pagination-bullet-active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.section03-swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+    transition: opacity 0.5s;
+}
+.section03-swiper .swiper-slide-active {
+    opacity: 1;
+}
+.section03-swiper .swiper-slide img {
+    display: block;
+    object-fit: cover;
 }
 
 .section04 {

@@ -43,21 +43,29 @@
                     <div class="main-profile">
                         <img src="./img/main/main-profile.png" />
                     </div>
-                    <div class="main-contents1">
-                        <img src="./img/main/main-contents1.png" />
-                    </div>
-                    <div class="main-contents2">
-                        <img src="./img/main/main-contents2.png" />
+                    <div class="main-contents__wrapper">
+                        <div class="main-contents">
+                            <img src="./img/main/main-contents1.png" />
+                        </div>
+                        <div class="main-contents">
+                            <img src="./img/main/main-contents2.png" />
+                        </div>
+                        <div class="main-contents">
+                            <img src="./img/main/main-contents3.png" />
+                        </div>
+                        <div class="main-contents">
+                            <img src="./img/main/main-contents4.png" />
+                        </div>
                     </div>
                 </div>
-                <div class="main-hidden">
+                <!-- <div class="main-hidden">
                     <div class="main-contents1">
-                        <img src="./img/main/main-contents1.png" />
+                        <img src="./img/main/main-contents3.png" />
                     </div>
                     <div class="main-contents2">
-                        <img src="./img/main/main-contents2.png" />
+                        <img src="./img/main/main-contents4.png" />
                     </div>
-                </div>
+                </div> -->
                 <button class="down-arrow"></button>
             </section>
             <section class="section02">
@@ -69,11 +77,32 @@
                 </div>
             </section>
             <section class="section03">
-                <a href="./sub_deposit.html">
-                    <div class="img">
-                        <img src="./img/main/section3-img.png" />
+                <div class="swiper section03-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="./sub_deposit.html">
+                                <div class="img">
+                                    <img src="./img/main/section3-img.png" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./sub_deposit.html">
+                                <div class="img">
+                                    <img src="./img/main/section3-img.png" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./sub_deposit.html">
+                                <div class="img">
+                                    <img src="./img/main/section3-img.png" />
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
             <section class="section04">
                 <div class="img">
@@ -198,6 +227,17 @@
         var swiper = new Swiper(".section10-swiper", {
             loop: true,
             loopAdditionalSlides: 1,
+        });
+        var swiper = new Swiper(".section03-swiper", {
+            loop: true,
+            loopAdditionalSlides: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "bullets",
+            },
+            autoplay: {
+                delay: 3000,
+            },
         });
     </script>
 </html>

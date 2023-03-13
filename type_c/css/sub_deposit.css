@@ -13,7 +13,7 @@
 }
 
 .section02 {
-    height: 520px;
+    height: 580px;
 }
 .section02 .copy {
     padding-top: 50px;
@@ -21,12 +21,12 @@
 }
 .section02 .person {
     position: absolute;
-    bottom: 18px;
-    left: 90px;
+    bottom: 78px;
+    left: 20%;
 }
 
 .section03 {
-    height: 500px;
+    height: 580px;
     background-color: #f1f1f1;
 }
 .section03 .copy {
@@ -66,7 +66,7 @@
     height: 100%;
     margin-top: 10px;
     padding: 0 25px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 .section05-swiper .swiper-slide {
     text-align: center;
