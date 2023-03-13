@@ -12,9 +12,14 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/slide.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <div class="wrap sub_myasset">
         <div class="header">
             <header>
@@ -37,6 +42,7 @@
                     <img src="./img/myasset-asset.svg" class="myasset-asset">
                     <div class="num-increase total">
                         <span class="value" id="counter1">0</span>
+                        <span class="value">원</span>
                     </div>
                 </div>
                 <div class="title-box scroll-item">
@@ -81,14 +87,14 @@
                 </div>
             </section>
             <section class="section-slide">
-                <div class="slider-mymo-wrap scroll-item">
+                <!-- <div class="slider-mymo-wrap scroll-item">
                     <div class="slide-card">
                         <img src="./img/sub_mydata_slide_01_01.svg">
                         <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
                     </div>
                     <div class="slide-card">
                         <img src="./img/sub_mydata_slide_02_01.svg">
-                        <img src="./img/sub_mydata_slide_02_02.svg" class="mymo-icon">
+                        <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
                     </div>
                     <div class="slide-card">
                         <img src="./img/sub_mydata_slide_03_01.svg">
@@ -100,12 +106,52 @@
                     </div>
                     <div class="slide-card">
                         <img src="./img/sub_mydata_slide_02_01.svg">
-                        <img src="./img/sub_mydata_slide_02_02.svg" class="mymo-icon">
+                        <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
                     </div>
                     <div class="slide-card">
                         <img src="./img/sub_mydata_slide_03_01.svg">
                         <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
                     </div>
+                </div> -->
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper slider-mymo-wrap scroll-item">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide-card">
+                        <img src="./img/sub_mydata_slide_01_01.svg">
+                        <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                    </div>
+                    <div class="swiper-slide slide-card">
+                        <img src="./img/sub_mydata_slide_02_01.svg">
+                        <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
+                    </div>
+                    <div class="swiper-slide slide-card">
+                        <img src="./img/sub_mydata_slide_03_01.svg">
+                        <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                    </div>
+                    <div class="swiper-slide slide-card">
+                        <img src="./img/sub_mydata_slide_01_01.svg">
+                        <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                    </div>
+                    <div class="swiper-slide slide-card">
+                        <img src="./img/sub_mydata_slide_02_01.svg">
+                        <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
+                    </div>
+                    <div class="swiper-slide slide-card">
+                        <img src="./img/sub_mydata_slide_03_01.svg">
+                        <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                    </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
             </section>
         </div>
@@ -150,28 +196,28 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script>
         <script>
-            $(function() {
-                $(".slider-mymo-wrap").slick({
-                    slide: "div",
-                    infinite: false,
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    speed: 500,
-                    arrows: false,
-                    dots: false,
-                    autoplay: false,
-                    autoplaySpeed: 2000,
-                    pauseOnHover: true,
-                    vertical: false,
-                    draggable: true,
-                    responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2.4
-                        }
-                    }, ]
-                });
-            });
+            // $(function() {
+            //     $(".slider-mymo-wrap").slick({
+            //         slide: "div",
+            //         infinite: false,
+            //         slidesToShow: 3,
+            //         slidesToScroll: 1,
+            //         speed: 500,
+            //         arrows: false,
+            //         dots: false,
+            //         autoplay: false,
+            //         autoplaySpeed: 2000,
+            //         pauseOnHover: true,
+            //         vertical: false,
+            //         draggable: true,
+            //         responsive: [{
+            //             breakpoint: 768,
+            //             settings: {
+            //                 slidesToShow: 2.4
+            //             }
+            //         }, ]
+            //     });
+            // });
             //총 자산 증감
             function numberCounter(target_frame, target_number) {
                 this.count = 0;
@@ -256,7 +302,32 @@
             $('.container').scroll(function() {
                 scrollEvents();
             });
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                // direction: 'vertical',
+                slidesPerView : 2.5,
+                spaceBetween: 10,
+                debugger:true,
+                loop: false,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                // navigation: {
+                //     nextEl: '.swiper-button-next',
+                //     prevEl: '.swiper-button-prev',
+                // },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });            
         </script>
+        
 </body>
 
 </html>
