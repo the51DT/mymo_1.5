@@ -20,7 +20,6 @@
           font-style: normal;
       }
       body {
-        min-width: 360px;
         max-width: 768px;
         margin: 0 auto !important;
       }
@@ -48,19 +47,19 @@
             font-style: normal;
       }
       .blind {display: none;}
-      .btn_back {margin-left: 12.2%; width: 6.6%;}
+      .btn_back {margin-left: 12.2%; width: 6.6%; cursor: pointer;}
 
       /* sec1 */
       #section1 {background: #F7F7F7; overflow: hidden;}
-      #section1 .top {margin-top: 4,4%; margin-left: 12.2%;}
-      #section1 .top img { width: 100%;}
-      #section1 .bottom {margin-top: 11.1%; height: 100%;}
+      #section1 .top {margin-top: 8.61%; margin-left: 12.2%;}
+      #section1 .top img {width: 100%;}
+      #section1 .bottom {margin-top: 11.1%; height: 100%; cursor: pointer;}
       #section1 .bottom img {width: 100%;}
 
       /* sec1_active */
       #section1_active {background: #F7F7F7; overflow: hidden;}
-      #section1_active .top {margin-top: 4,4%; margin-left: 12.2%;}
-      #section1_active .top img { width: 100%;}
+      #section1_active .top {margin-top: 8.61%; margin-left: 12.2%; cursor: pointer;}
+      #section1_active .top img {width: 100%;}
       #section1_active .bottom {margin-top: 11.1%; height: 100%;}
       #section1_active .bottom img {width: 100%;}
 
@@ -69,23 +68,23 @@
       #section2 .top {margin-top: 14.16%; margin-left: 12.2%;}
       #section2 .middle {position: relative; margin-top: 15.83%; margin-bottom: 19.4%; margin-left: 11%; text-align: center;}
       #section2 .middle img {position: absolute; top: -41%; left: 36%; width: 26%;}
-      #section2 .middle .amount {font-family: 'Pretendard-Regular'; font-size: clamp(14px, calc(100vw * 14 / 360), 30px); font-weight: 700; width: 100%;}
-      #section2 .middle .amount span {font-size: clamp(48px, calc(100vw * 48 / 360), 100px); vertical-align: bottom; letter-spacing: -0.03em;}
+      #section2 .middle .amount {font-family: 'Pretendard-Regular'; font-size: clamp(1px, calc(100vw * 14 / 360), 30px); font-weight: 700; width: 100%;}
+      #section2 .middle .amount span {font-size: clamp(1px, calc(100vw * 48 / 360), 100px); vertical-align: bottom; letter-spacing: -0.03em;}
       #section2 .bottom {margin-top: 12.2%; margin-left: 7.7%;}
       #section2 .bottom .keypad {height: 34.5%; display: flex; justify-content: space-around; align-content: space-around; flex-wrap: wrap; text-align: center;}
-      #section2 .bottom .key {width: 30%; height: 3%;  font-family: 'ClashDisplay-Medium'; font-size: clamp(22px, calc(100vw * 22 / 360), 46px); align-items: center; margin-bottom: 16.6%;}
+      #section2 .bottom .key {width: 30%; height: 3%;  font-family: 'ClashDisplay-Medium'; font-size: clamp(1px, calc(100vw * 22 / 360), 46px); align-items: center; margin-bottom: 16.6%; cursor: pointer;}
       #section2 .bottom .last {margin-bottom: 0;}
       #section2 .bottom .key img {width: clamp(20.38px, calc(100vw * 20.38 / 360), 43.4px); margin-top: 5%;}
       #section2 .bottom img {width: 100%;}
-      #section2 .btn_bottom {margin-top: 12.2%; margin-left: 12.2%; width: 81.1%; margin-bottom: calc(100vw * 40 / 800);}
+      #section2 .btn_bottom {margin-top: 12.2%; margin-left: 12.2%; width: 81.1%; margin-bottom: calc(100vw * 40 / 800);  cursor: pointer;}
 
       /* sec3 */
       #section3 {position: relative;}
       #section3 .top { margin-top: 14.16%; margin-left: 14.16%;}
-      #section3 .top p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(24px, calc(100vw * 24 / 360), 51px); line-height: 142%; letter-spacing: -0.03em;}
+      #section3 .top p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(1px, calc(100vw * 24 / 360), 51px); line-height: 142%; letter-spacing: -0.03em;}
       #section3 .top img {position: absolute; width: 25.5%; margin-top: 2%;}
       #section3 .back {margin-top: 3%; width: 100%; z-index: -1;}
-      #section3 .btn_bottom {position: absolute; bottom: calc(100vw * 40 / 800); left: 12.2%; width: 81.1%;}
+      #section3 .btn_bottom {position: absolute; bottom: calc(100vw * 40 / 800); left: 12.2%; width: 81.1%;  cursor: pointer;}
     </style>
   </head>
 
@@ -97,9 +96,9 @@
     </header>
     <div class="dim"></div>
 
-    <section id="section1" class="body blind">
+    <section id="section1" class="body">
       <div class="btn_back">
-        <a href="#"><img src="./img/btn_back.png" alt=""/></a>
+        <img src="./img/btn_back.png" alt=""/>
       </div>
       <div class="top" data-aos="fade-up">
         <img src="./img/transfer_01_top.png" alt=""/>
@@ -109,7 +108,7 @@
       </div>
     </section>
 
-    <section id="section2" class="body">
+    <section id="section2" class="body blind">
       <div class="btn_back">
         <img src="./img/btn_back.png" alt=""/>
       </div>
@@ -200,15 +199,14 @@
         }else{
           amount += $(this).text()
         }
-        console.log(amount)
+        /* console.log(amount) */
         const parts = amount.toString().split('.')
         const result = Number(parts[0]).toLocaleString() + (parts[1] ? '.' + parts[1] : '');
-        console.log(result);
+        /* console.log(result); */
         $('.amount span').text(result)
         $('#section3 .top span').text(result)
       })
       
-
       /* let amount = []
       $('.key').click(function(){
         if($(this).hasClass('delete')){
@@ -222,11 +220,21 @@
         $('#section3 .top span').text(amountStr)
       }) */
 
+      
       //03 뒤로가기
       $('#section3 .btn_back').click(function(){
         $('#section3').addClass('blind')
         $('#section2').removeClass('blind')
       })
+
+      //페이지 이동
+      $('#section1 .btn_back').click(function(){
+        location.href = "view_account.html";
+      })
+      $('#section3 .btn_bottom').click(function(){
+        location.href = "index.html";
+      })
+
     })
   </script>
 </html>

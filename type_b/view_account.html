@@ -20,7 +20,6 @@
           font-style: normal;
       }
       body {
-        min-width: 360px;
         max-width: 768px;
         margin: 0 auto !important;
       }
@@ -38,39 +37,47 @@
 
 
       /* View Account */
-      body {font-size: 62.5%;}
       .blind {display: none;}
       .btn_back {margin-left: 12.2%; width: 6.6%;}
       .btn_more {margin-right: 6.6%; width: 6.6%;}
-      .btn_tap {width: 40.47%;}
+      .btn_tab {width: 40.47%;}
+      .hidden {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; overflow:hidden !important; touch-action:none;}
+      .clearfix:before, .clearfix:after {display: block;content: '';line-height: 0;}
+      .clearfix:after {clear:both;}
 
       /* sec1 */
-      #section1 {background: #F7F7F7;}
+      #section1 {background: #F7F7F7; position: relative;}
       #section1 .top_btn {display: flex; justify-content: space-between;}
       #section1 .top {position: relative; margin-top: 14.16%; margin-left: 12.2%; width: 81.1%;}
+      #section1 .top .top_bottom {display: flex; justify-content: space-between; margin-top: 9.4%;}
+      #section1 .top .top_bottom img {width: 48.63%;}
       #section1 .top img {width: 100%;}
       #section1 .top .top_num {position: absolute; top: 18%; left: 0;}
-      #section1 .top .top_num p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(28px, calc(100vw * 59 / 768), 59px); letter-spacing: -0.03em;}
+      #section1 .top .top_num p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(1px, calc(100vw * 59 / 768), 59px); letter-spacing: -0.03em;}
 
       #section1 .view {position: relative; margin-top: 11.1%;}
-      #section1 .view .view_btn {position: absolute; top: 10.76%; right: 6.6%; width: 5.5%;}
-      #section1 .view .tab {position: absolute; left: 12.2%; display: flex; justify-content: space-between; width: 35%;}
+      #section1 .view .view_btn {position: absolute; top: 10.76%; right: 6.6%; width: 5.5%; cursor: pointer;}
+      #section1 .view .tab {position: absolute; left: 12.2%; display: flex; justify-content: space-between; width: 35%; cursor: pointer;}
       #section1 .view .tab1 {top: 4.67%;}
       #section1 .view .tab2 {top: 4.33%;}
       #section1 .view .progressbar {position: absolute; top: 78.3%; left: 12.2%; width: 81.1%; height: 3.47%;}
       #section1 .view .progressbar .background{position: absolute; width: 100%; height: 100%; background: #4522BD; opacity: 0.2; border-radius: calc(100vw * 12 / 360);}
       #section1 .view .progressbar .bar{width: 0; height: 100%; background: #6732F9; border-radius: calc(100vw * 12 / 360); transition: width .5s;}
 
-      #section1 .period {position: fixed; top: 0; left: 0;}
-      #section1 .period .back {position: absolute; background: rgba(0, 0, 0, 0.7); opacity: 0.6;}
-      #section1 .period .set {background: url(./img/view_period.png);}
-      #section1 .period h2 {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: calc(100vw * 16 / 360); letter-spacing: -0.03em;}
-      #section1 .period .close {}
-      #section1 .period p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: calc(100vw * 13 / 360); letter-spacing: -0.03em; color: #999;}
-      #section1 .period .swiper-container {}
-      #section1 .period .list {display: inline-block; font-family: 'Pretendard-Regular'; border: 1px solid #ddd; padding: calc(100vw * 9 / 360) calc(100vw * 18 / 360); border-radius: 12px;}
-      #section1 .period .list.active {border: 1px solid #6732F9;}
-      #section1 .period .btn_ok {}
+      #section1 .period {position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;}
+      #section1 .period .back {background: rgba(0, 0, 0, 0.7); opacity: 0.6; width: 100%; height: 100%;}
+      #section1 .period .set {position: absolute; bottom: 0; width: 100%; height: auto; background: url(./img/view_period.png); z-index: 3; background-repeat: no-repeat; background-size: cover;}
+      #section1 .period .set .list_top {display: flex; justify-content: space-between; padding-left: 12.2%; padding-top: 11.1%; padding-right: 6.66%;}
+      #section1 .period h2 {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(1px, calc(100vw * 16 / 360), 34px); letter-spacing: -0.03em;}
+      #section1 .period .close {width: 6.6%; cursor: pointer;}
+      #section1 .period p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(1px, calc(100vw * 13 / 360), 27px); letter-spacing: -0.03em; color: #999; margin-bottom: 3.3%;}
+      #section1 .period .list1 {margin-left: 12.2%; margin-top: 7.77%;}
+      #section1 .period .list2,.list3 {margin-left: 12.2%; margin-top: 5.5%;}
+      #section1 .period .list2 div {display: flex;}
+      #section1 .period .list3 div {display: flex;}
+      #section1 .period div.list {display: inline-block; font-family: 'Pretendard-Regular'; font-size: clamp(1px, calc(100vw * 12 / 360), 25.6px); white-space: nowrap; border: clamp(1px, calc(100vw * 1 / 360), 2.13px) solid #ddd; padding: 2.5% 5.5%; border-radius: clamp(12px, calc(100vw * 12 / 360), 25.6px); width: auto !important; height: clamp(36px, calc(100vw * 36 / 360), 76.8px); margin-right: 1.66%; line-height: 150%; cursor: pointer;}
+      #section1 .period .list.active {border: clamp(1px, calc(100vw * 1 / 360), 2.13px) solid #6732F9;}
+      #section1 .period .btn_ok { width: 81.1%; margin-left: 12.2%; padding-top: 11.6%; padding-bottom: 11.1%; cursor: pointer;}
 
     </style>
   </head>
@@ -80,7 +87,6 @@
       <nav>
       </nav>
     </header>
-    <div class="dim"></div>
 
     <section id="section1" class="body">
         <div class="top_btn">
@@ -92,7 +98,10 @@
             <img src="./img/view_top.png" alt=""/>
             <div class="top_num">
                 <p id="count"></p>
-                <!-- <p class="value" akhi="34523040">0</p> -->
+            </div>
+            <div class="top_bottom">
+              <img src="./img/view_top_btn1.png" alt="" />
+              <img src="./img/view_top_btn2.png" alt="" />
             </div>
         </div>
 
@@ -100,8 +109,8 @@
             <img src="./img/view_01.png" alt=""/>
             <img class="view_btn" src="./img/view_01_btn.png" alt=""/>
             <div class="tab tab1">
-                <img class="btn_tap" src="./img/view_tap_01_active.png" alt=""/>
-                <img class="btn_tap" src="./img/view_tap_02.png" alt=""/>
+                <img class="btn_tab" src="./img/view_tab_01_active.png" alt=""/>
+                <img class="btn_tab" src="./img/view_tab_02.png" alt=""/>
             </div>
         </div>
 
@@ -112,21 +121,24 @@
                 <div class="bar"></div>
             </div>
             <div class="tab tab2">
-                <img class="btn_tap" src="./img/view_tap_01.png" alt=""/>
-                <img class="btn_tap" src="./img/view_tap_02_active.png" alt=""/>
+                <img class="btn_tab" src="./img/view_tab_01.png" alt=""/>
+                <img class="btn_tab" src="./img/view_tab_02_active.png" alt=""/>
             </div>
         </div>
 
         <div class="period blind">
           <div class="back"></div>
           <div class="set">
-            <h2>조회기간 설정</h2>
-            <img class="close" src="./img/view_period_x.png" alt=""/>
+            <div class="list_top">
+              <h2>조회기간 설정</h2>
+              <img class="close" src="./img/view_period_x.png" alt=""/>
+            </div>
+
             <div class="list1">
               <p>기간선택</p>
               <div class="swiper-container">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide list">오늘</div>
+                  <div class="swiper-slide list active">오늘</div>
                   <div class="swiper-slide list">1개월</div>
                   <div class="swiper-slide list">3개월</div>
                   <div class="swiper-slide list">6개월</div>
@@ -137,18 +149,20 @@
             <div class="list2">
               <p>거래유형</p>
               <div>
-                <div class="list">전체</div>
+                <div class="list active">전체</div>
                 <div class="list">입금</div>
                 <div class="list">출금</div>
               </div>
             </div>
+            <div class="clearfix"></div>
             <div class="list3">
               <p>정렬순서</p>
               <div>
-                <div class="list">최신순</div>
+                <div class="list active">최신순</div>
                 <div class="list">과거순</div>
               </div>
             </div>
+            <div class="clearfix"></div>
             <img class="btn_ok" src="./img/btn_ok.png" alt=""/>
           </div>
         </div>
@@ -196,28 +210,6 @@
         }
 
         //총 자산 증감
-        /* const counters = document.querySelectorAll(".value");
-        const speed = 200;
-
-        counters.forEach((counter) => {
-        const animate = () => {
-            const value = +counter.getAttribute("akhi");
-            const data = +counter.innerText;
-
-            const time = value / speed;
-            if (data < value) {
-            counter.innerText = Math.ceil(data + time);
-            setTimeout(animate, 1);
-            } else {
-            counter.innerText = value
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
-        };
-
-        animate();
-        }); */
-
         function numberCounter(target_frame, target_number) {
             this.count = 0;
             this.diff = 0;
@@ -248,18 +240,41 @@
         // 조회기간 설정
         $('.view_btn').click(function(){
           $('.period').removeClass('blind')
+          $('#section1').addClass('hidden');
         })
         $('.period .close').click(function(){
           $('.period').addClass('blind')
+          $('#section1').removeClass('hidden');
         })
         $('.period .btn_ok').click(function(){
           $('.period').addClass('blind')
+          $('#section1').removeClass('hidden');
+        })
+
+        $('.swiper-wrapper .list').click(function(){
+          $('.swiper-wrapper .list').removeClass('active')
+          $(this).addClass('active')
+        })
+        $('.list2 .list').click(function(){
+          $('.list2 .list').removeClass('active')
+          $(this).addClass('active')
+        })
+        $('.list3 .list').click(function(){
+          $('.list3 .list').removeClass('active')
+          $(this).addClass('active')
+        })
+
+        //페이지 이동
+        $('.btn_back').click(function(){
+          location.href = "index.html";
+        })
+        $('.top_bottom img').eq(1).click(function(){
+          location.href = "transfer.html";
         })
 
         //swiper
         var swiper = new Swiper(".swiper-container", {
           slidesPerView: 4.5,
-          spaceBetween: 13,
         });
     })
   </script>
