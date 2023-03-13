@@ -153,13 +153,11 @@ body {
 }
 
 .box-consume .box__flex+.box__flex {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #eeeeee;
+    margin-top: 4px;
 }
 
 .cafe-graph-wrap {
-    padding: 15px 0 21px;
+    padding: 10px 0 19px;
 }
 
 .cafe-graph-wrap .cafe-graph-bar {
@@ -251,6 +249,20 @@ body {
 
 .wrap.main .container>section:first-child {
     padding: 20px 25px 10px;
+}
+
+.wrap.main .container .section-progress {
+    padding-top: 40px;
+}
+
+.wrap.main .container .box.box-consume {
+    padding: 25px 20px;
+}
+
+.wrap.main .container .box.box-benefit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
