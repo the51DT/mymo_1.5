@@ -244,10 +244,16 @@ body {
   transform: translateY(0);
 }
 
+.num-increase {
+  display: flex;
+  align-items: center;
+  font-family: "NanumSquareNeo-Variable";
+}
+
 .num-increase .value {
   display: block;
-  color: #000;
-  font-size: 20px;
+  color: #fff;
+  font-size: 23px;
   font-weight: 800;
   line-height: 34px;
 }
@@ -292,8 +298,8 @@ body {
 }
 
 .wrap.sub_mydata .section-gray {
-  background-color: #f4f4f4;
-  padding: 14px 25px 30px;
+  background-color: #5725e0;
+  padding: 20px 25px;
 }
 
 .wrap.sub_mydata .section-toggle {
@@ -305,7 +311,8 @@ body {
 }
 
 .wrap.sub_mydata .mydata-top-flex {
-  margin-top: 10px;
+  margin-top: 4px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -423,12 +430,6 @@ body {
 .wrap.sub_myasset .btn-box {
   text-align: center;
   font-size: 0;
-}
-
-.wrap.sub_myasset .num-increase {
-  display: flex;
-  align-items: center;
-  font-family: "NanumSquareNeo-Variable";
 }
 
 .wrap.sub_myasset .num-increase .value {
