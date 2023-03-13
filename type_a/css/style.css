@@ -1,26 +1,5 @@
 /* common */
 
-
-/* @font-face {
-  font-family: "nanumsquare-800";
-  src: url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
-} */
-
-
-/* @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css); */
-
-
-/* @font-face {
-  font-family: "NanumSquareNeo-Variable";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
-} */
-
 @font-face {
     font-family: "NanumSquareNeo";
     font-weight: 800;
@@ -261,6 +240,7 @@ body {
     display: flex;
     align-items: center;
     font-family: "NanumSquareNeo";
+    font-weight: 800;
 }
 
 .num-increase .value {
@@ -276,6 +256,34 @@ body {
 
 .wrap.main .container>section:first-child {
     padding: 20px 25px 10px;
+}
+
+.wrap.main .box-book .box__list.border {
+    padding-top: 6px;
+    border-top: 1px solid #eee;
+}
+
+.wrap.main .box-book .box__list+.box__list {
+    margin-top: 6px;
+}
+
+.wrap.main .box__flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap.main .box-loan .box__list+.box__list {
+    border-top: 1px solid #eeeeee;
+    padding-top: 14px;
+    margin-top: 14px;
+}
+
+.wrap.main .box-loan .box__flex+img {
+    margin-top: 4px;
+}
+
+.wrap.main .container .section-book {
+    padding-bottom: 10px;
 }
 
 .wrap.main .container .section-progress {
@@ -424,6 +432,10 @@ body {
     background-color: #fff;
 }
 
+.wrap.sub_myasset .container section:first-child {
+    padding-top: 0;
+}
+
 .wrap.sub_myasset .container .section-border {
     border-top: 10px solid #f4f4f4;
 }
@@ -435,12 +447,114 @@ body {
     flex-direction: column;
 }
 
-.wrap.sub_myasset .myasset-add {
+
+/* .wrap.sub_myasset .myasset-add {
     margin-left: auto;
-}
+} */
 
 .wrap.sub_myasset .myasset-asset {
     margin-right: auto;
+}
+
+.wrap.sub_myasset .num-increase .value {
+    color: #fff;
+}
+
+.wrap.sub_myasset .num-increase+.title-box {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.wrap.sub_myasset .progress-type2 {
+    margin: 24px auto;
+    padding: 0;
+    width: 170px;
+    height: 170px;
+}
+
+.wrap.sub_myasset .progress-desc .title-box+.title-box {
+    padding-top: 14px;
+    margin-top: 14px;
+    border-top: 1px solid #e4e4e4;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3 {
+    padding: 30px 0;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3 .progress-bg {
+    position: relative;
+    margin: 0 auto;
+    max-width: 310px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3 .progress-desc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3 .progress-line {
+    position: absolute;
+    bottom: 26.5%;
+    left: 21%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3 .progress-bar {
+    position: absolute;
+    bottom: 10%;
+    width: 20px;
+    height: 147px;
+    background: #815aed;
+    border-radius: 0;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    opacity: 0;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3 .progress-bar.progress-bar--01 {
+    right: 20.5%;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3 .progress-bar.progress-bar--02 {
+    right: 6.5%;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3.active .progress-desc {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3.active .progress-line {
+    opacity: 1;
+    transition: all 1s;
+    transition-delay: 0.1s;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3.active .progress-bar {
+    opacity: 1;
+    bottom: 17.5%;
+    background: linear-gradient(#815aed 18% 80%, #e0d6fd 0% 18%);
+    transform: translateY(0);
+    transition: all 1s;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3.active .progress-bar.progress-bar--01 {
+    transition-delay: 0.4s;
+}
+
+.wrap.sub_myasset .progress-wrap.progress-type3.active .progress-bar.progress-bar--02 {
+    transition-delay: 0.6s;
+}
+
+.wrap.sub_myasset .container .section-slide {
+    padding: 30px 0;
 }
 
 .wrap.sub_myasset .slide-card {
@@ -455,6 +569,6 @@ body {
     font-size: 0;
 }
 
-.wrap.sub_myasset .num-increase .value {
-    color: #fff;
+.wrap.sub_myasset .container .section-slide .btn-box {
+    margin-top: 40px;
 }
