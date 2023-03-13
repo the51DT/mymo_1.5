@@ -9,12 +9,28 @@
 } */
 /* @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css); */
 
-@font-face {
+/* @font-face {
   font-family: "NanumSquareNeo-Variable";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
     format("woff2");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
+} */
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  font-weight: 800;
+  font-style: normal;
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot");
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2")
+      format("woff2"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff")
+      format("woff"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf")
+      format("truetype");
+  font-display: swap;
 }
 
 body {
@@ -247,7 +263,7 @@ body {
 .num-increase {
   display: flex;
   align-items: center;
-  font-family: "NanumSquareNeo-Variable";
+  font-family: "NanumSquareNeo";
 }
 
 .num-increase .value {
@@ -303,6 +319,7 @@ body {
 }
 
 .wrap.sub_mydata .section-toggle {
+  padding-top: 30px;
   padding-bottom: 0;
 }
 
