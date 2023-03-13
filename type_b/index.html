@@ -15,11 +15,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
       @font-face {
-        font-family: "LINESeedKR-Bd";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
-          format("woff2");
-        font-weight: 700;
-        font-style: normal;
+          font-family: 'Pretendard-Regular';
+          src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+          font-weight: 400;
+          font-style: normal; 
       }
       .swiper.mySwiper {
         width: 100%;
@@ -27,14 +26,19 @@
         padding-left: 12%;
       }
       .swiper.mySwiper .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 24px;
+        border-radius: 51px;
         overflow: hidden;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+      }
+      @media (max-width: 768px) {
+        .swiper.mySwiper .swiper-slide {
+          border-radius: 6.6667vw;
+        }
       }
       .swiper.mySwiper .swiper-wrapper{
         margin-left: -5%;
@@ -48,10 +52,14 @@
       body {
         max-width: 768px;
         margin: 0 auto !important;
-        font-family: LINESeedKR-Bd;
+        font-family: Pretendard-Regular;
       }
       body img {
         display: inline-block;
+      }
+      body.popup {
+        overflow: hidden;
+        height: 100vh;
       }
       header {
         max-width: 584px;
@@ -73,182 +81,203 @@
       .section:first-child{
         margin-top: 0;
       }
-
-
-      .section1 {
-        position: relative;
-      }
-      .section1 .num-increase {
+      header nav{position: relative;}
+      .time-line-btn{
+        width: 49px;
+        height: 47px;
         position: absolute;
-        left: 12%;
-        top: 9%;
-        font-size: 73px;
-      }
-      @media (max-width: 768px) {
-        .section1 .num-increase {
-          font-size: 9.5vw;
-        }
-      }
-
-
-      .section2 {
-        margin-top: -10%;
-        z-index: 1;
-        position: relative;
-      }
-      .section2 .tab-list > li{
-        display: none;
-        width: 100%;
-        max-height: 88vw;
-        overflow: hidden;
-        position: relative;
-      }
-      .section2 .tab-list .per-info li{
-        color: #fff;
-        font-size: 50px;
-        position: absolute;
-      }
-      .section2 .tab-list .per-info li:nth-child(1){
-        top: 185px;
-        left: 12%;
-      }
-      .section2 .tab-list .per-info li:nth-child(2){
-        top: 315px;
-        left: 12%;
-      }
-      .section2 .tab-list .per-info li:nth-child(3){
-        top: 458px;
-        left: 12%;
-      }
-      @media (max-width: 768px) {
-        .section2 .tab-list .per-info li{
-        font-size: 6.5104vw;
-        }
-        .section2 .tab-list .per-info li:nth-child(1){
-          top: 24vw;
-        }
-        .section2 .tab-list .per-info li:nth-child(2){
-          top: 41vw;
-        }
-        .section2 .tab-list .per-info li:nth-child(3){
-          top: 60vw;
-        }
-      }
-      @media (max-width: 768px) {
-        .section2 .tab-list > li{max-height: 751px;}
-      }
-      .section2 .tab-list > li img{
-        width: 100%;
-      }
-      .section2 .tab-list > li:first-child{
-        display: inline-block;
-      }
-      .section2 .tab-btn li{
+        top: 0;
+        right: 136px;
         cursor: pointer;
-        position: absolute;
-      }
-      .section2 .tab-btn li:nth-child(1){
-        width: 100px;
-        height: 46px;
-        top: 11%;
-        left: 11%;
-      }
-      .section2 .tab-btn li:nth-child(2){
-        width: 199px;
-        height: 46px;
-        top: 11%;
-        left: 29%;
-      }
-      .section2 .tab-btn li:nth-child(3){
-        width: 199px;
-        height: 46px;
-        top: 11%;
-        left: 61%;
       }
       @media (max-width: 768px) {
-        .section2 .tab-btn li:nth-child(1){
-        width: 13vw;
-        height: 6vw;
-      }
-      .section2 .tab-btn li:nth-child(2){
-        width: 26vw;
-        height: 6vw;
-      }
-      .section2 .tab-btn li:nth-child(3){
-        width: 26vw;
-        height: 6vw;
-      }
-      }
-      .section2 .prog-info img{
-        position: absolute;
-        right: 46px;
-        max-width: 432px;
-        display: inline-block;
-        width: 100%;
-        animation: prog-ani 1s ease forwards;
-      }
-      @keyframes prog-ani {
-        0% { top: 740px; }
-	      100% { top: 170px;}
-      }
-      @media (max-width: 768px) {
-        .section2 .prog-info img{
-          max-width: 56vw;
-          right: 5vw;
-        }
-        @keyframes prog-ani {
-        0% { top: 83vw; }
-	      100% { top: 21vw;}
+        .time-line-btn{
+        width: 6.3802vw;
+        height: 6.1198vw;
+        right: 17.7083vw;
       }
       }
 
-
-      .section.section3{
-        margin-top:-9%;
+      .main-wrap{
         position: relative;
-        background: url(./img/section-white.png) no-repeat;
-        background-size: cover;
-        padding: 12% 0 12% 12%;
-        z-index: 1;
       }
-      .section3 .cal-contents{
-        top: 18%;
-        right: 0;
+      .main-wrap .main-top{
         position: absolute;
-        z-index: 2;
-        max-width: 100%;
+        left: 92px;
+        top: 40px;
       }
-      .section3 .swiper-slide > img{
-        padding-right: 7%;
+      @media (max-width: 768px) {
+        .main-wrap .main-top{
+          left: 11.9792vw;
+          top: 5.2083vw;
+          width: 43.3594vw;
+        }
       }
-
-
-      .section4 {
-        background: url(./img/section-gray-mid.png) no-repeat;
-        width: 100%;
-        padding: 12% 0 20% 0;
-        background-size: cover;
+      .main-contents{
+        position: relative;
       }
-
-
-      .section5 {
-        margin-top: -10%;
+      .main-contents a{
+        position: absolute;
+        top: 489px;
+        left: 92px;
+        width: 172px;
+        height: 50px;
       }
-
-
-      .section6 {
-        background: url(./img/section-gray-bott.png) no-repeat;
-        width: 100%;
-        padding: 12% 0 34% 0;
-        background-size: cover;
-        margin-top: -12%;
+      @media (max-width: 768px) {
+        .main-contents a{
+        top: 63.6719vw;
+        left: 11.9792vw;
+        width: 22.3958vw;
+        height: 6.5104vw;
       }
-
-
+      }
+     
       .section.section7{
         margin-top:0;
       }
-
+      .section7{
+        background: #F7F7F7;
+        display: none;
+        max-width: 768px;
+      }
+      .section7.active{
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        height: 100vh;
+        overflow: scroll;
+        width: 100%;
+      }
+      .section7 .pop-menu-icon{
+        padding: 0 93.7px;
+      }
+      .section7 .pop-menu-top{
+        padding: 102px 93.7px 0;
+      }
+      .section7 .pop-close{
+        width: 53px;
+        height: 53px;
+        position: absolute;
+        top: 99px;
+        left: 90px;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        .section7 .pop-close{
+          width: 7vw;
+          height: 7vw;
+          top: 12.5vw;
+          left: 12vw;
+        }
+      }
+      .section7 .pop-menu-icon{
+        margin-top: 89px;
+      }
+      .section7 .pop-menu-icon .wel-text{
+        max-width: 592px;
+      }
+      .section7 .pop-menu-icon .icon-list{
+        margin-top: -14px;
+      }
+      .section7 .text-list-wrap{
+        background: url(./img/pop-menu-bg.png) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding: 85px 0 127px 93.7px;
+        text-align: right;
+        margin-top: 85px;
+      }
+      .section7 .swiper-slide{
+        height: 29px;
+        width: auto;
+      }
+      .section7 .swiper-slide img{
+        height: 100%;
+      }
+      .section7 .swiper-slide > img{
+        width: auto;
+        display: inline-block;
+      }
+      .section7 .text-tab{
+        margin-top: 68px;
+      }
+      .section7 .text-list{
+        margin-top: 85px;
+      }
+      @media (max-width: 768px) {
+        .section7 .pop-menu-icon{
+          padding: 0 12.2005vw;
+        }
+        .section7 .pop-menu-top{
+          padding: 13.2813vw 12.2005vw 0;
+        }
+        .section7 .pop-menu-icon{
+          margin-top: 11.5885vw;
+        }
+        .section7 .pop-menu-icon .icon-list{
+          margin-top: -1.8229vw;
+        }
+        .section7 .text-list-wrap{
+          padding: 11.0677vw 0 16.5365vw 12.2005vw;
+          margin-top: 11.0677vw;
+        }
+        .section7 .swiper-slide{
+          height: 3.7760vw;
+        }
+        .section7 .text-tab{
+          margin-top: 8.8542vw;
+        }
+        .section7 .text-list{
+          margin-top: 11.0677vw;
+        }
+        .section7 .swiper-slide{
+          margin-right: 6.6406vw !important;
+        }
+      }
+      
+      .menu-bott .menu-bott-inner{
+        position: relative;
+        max-width: 690px;
+        margin: 0 auto;
+      }
+      .menu-bott .menu-open{
+        width: 48px;
+        height: 77px;
+        position: absolute;
+        bottom: 28px;
+        right: 59px;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        .menu-bott .menu-open{
+        width: 6.25vw;
+        height: 10.026vw;
+        bottom: 3.6458vw;
+        right: 7.6823vw;
+      }
+      }
+      .menu-bott .asset-open{
+        width: 65px;
+        height: 77px;
+        position: absolute;
+        bottom: 28px;
+        right: 445px;
+        cursor: pointer;
+      }
+      .menu-bott .asset-open a{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+      @media (max-width: 768px) {
+        .menu-bott .asset-open{
+          width: 8.25vw;
+          height: 10.026vw;
+          bottom: 3.6458vw;
+          right: 57.6823vw;
+      }
+      }
 
       .menu-bott {
         margin: 0 auto;
@@ -269,151 +298,90 @@
     <header>
       <nav>
         <img src="./img/menu-top.png" />
+        <a class="time-line-btn" href="./timeline.html"></a>
       </nav>
     </header>
-    <div class="dim"></div>
+
+    </section>
 
     <section class="body">
-      <section id="section1" class="section section1">
-        <div class="section-inner">
-          <div class="item">
-            <img src="./img/section01.png" />
-            <div class="num-increase total">
-              <span class="value" id="counter1">0</span>
-            </div>
-          </div>
+      <section class="main-wrap">
+        <div class="main-top" data-aos="fade-up">
+          <img src="./img/main-name.png">
         </div>
+        <div class="main-contents"  data-aos="fade-up"  data-aos-delay="400">
+          <img src="./img/main-contents.png">
+          <a href="./view_account.html"></a>
+        </div>
+        
       </section>
 
       <section id="menu-bott" class="menu-bott">
-        <img src="./img/menu-bar-bot.png"/>
-      </section>
-
-      <section id="section2" class="section section2">
-        <div class="section-inner">
-          <div class="item">
-            <ul class="tab-list">
-              <li><img src="./img/tab-01.png" /></li>
-              <li><img src="./img/tab-02.png" /></li>
-              <li>
-                <img src="./img/tab-03.png" />
-                <div class="chart-info">
-                  <div class="per-info">
-                    <ul>
-                      <li><span class="per-val" akhi="52">0</span>%</li>
-                      <li><span class="per-val" akhi="32">0</span>%</li>
-                      <li><span class="per-val" akhi="6">0</span>%</li>
-                    </ul>
-                  </div>
-                  <div class="prog-info">
-                    <img src="./img/prog-bar.png">
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <ul class="tab-btn">
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+        <div class="menu-bott-inner">
+          <img src="./img/main-menu-bar-bot.png"/>
+          <div class="menu-open"></div>
+          <div class="asset-open"><a href="./asset_management.html"></a></div>
         </div>
       </section>
+    </section>
 
-      <section id="section3" class="section section3">
-        <div class="section-inner">
-          <div class="item">
-            <div class="cal-wrap">
-              
-              <!-- Swiper -->
-              <div class="swiper calSwiper" data-aos="fade-up" data-aos-delay="200">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="./img/cal01.png">
-                    <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
-                      <img src="./img/cal-content.png">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/cal02.png">
-                    <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
-                      <img src="./img/cal-content.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- 메뉴 풀페이지 팝업 -->
+    <section id="section7" class="section section7 menu-wrap">
+      <div class="section-inner">
+        <div class="item">
+          <div class="pop-menu-top">
+            <img src="./img/pop-menu-header.png">
+            <div class="pop-close">
             </div>
-            
           </div>
-        </div>
-      </section>
-
-      <section id="section4" class="section section4" data-aos="fade-up" data-aos-duration="600">
-        <div class="section-inner">
-          <div class="item">
-            <div class="card-banner">
+          <div class="pop-menu-icon" >
+            <div class="wel-text">
+              <img src="./img/pop-menu-wel.png">
+            </div>
+            <div class="icon-list" >
+              <img src="./img/pop-menu-icon-list.png">
+            </div>
+          </div>
+          <div class="text-list-wrap">
+            <div class="serch" >
+              <img src="./img/pop-menu-serch.png">
+            </div>
+            <div class="text-tab" >
               <!-- Swiper -->
-              <div
-                class="swiper mySwiper"
-                data-aos="fade-up"
-                data-aos-delay="400"
+                <div
+                class="swiper tabSwiper"
               >
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="./img/card-banner-01.png" />
+                    <img src="./img/pop-menu-tab01.png" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/card-banner-02.png" />
+                    <img src="./img/pop-menu-tab02.png" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="./img/card-banner-03.png" />
+                    <img src="./img/pop-menu-tab03.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/pop-menu-tab04.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/pop-menu-tab05.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/pop-menu-tab06.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/pop-menu-tab07.png" />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="section5" class="section section5" data-aos="fade-up"data-aos-duration="600">
-        <div class="section-inner">
-          <div class="item">
-            <img src="./img/section-list.png" />
-          </div>
-        </div>
-      </section>
-
-      <section id="section6" class="section section6" data-aos="fade-up" data-aos-duration="600">
-        <div class="section-inner">
-          <div class="item">
-            <div class="card-banner">
-              <!-- Swiper -->
-              <div
-                class="swiper mySwiper"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="./img/card-banner-bot-01.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/card-banner-bot-02.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/card-banner-bot-03.png" />
-                  </div>
-                </div>
-              </div>
+            <div class="text-list" >
+              <img src="./img/pop-menu-list.png">
             </div>
+          </div>
         </div>
-      </section>
-
-      <section id="section7" class="section section7">
-        <div class="section-inner">
-          <div class="item"></div>
-        </div>
-      </section>
+      </div>
     </section>
   </body>
 
@@ -421,84 +389,28 @@
   <script>
     AOS.init();
 
-    //카드 배너
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 2.5,
-      spaceBetween: 20,
-      // centeredSlides: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+    //메뉴탭 스와이프
+    var swiper = new Swiper(".tabSwiper", {
+      slidesPerView: '4',
+      spaceBetween: 51,
+      loop : false,
     });
 
-    //달력 스와이프
-    var swiper = new Swiper(".calSwiper", {
-      slidesPerView: 1,
-      // centeredSlides: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
-    //탭
-    $(".section2 .tab-btn > li").on("click", function(){
-      var tabIndex = $(this).index() + 1;
-      $(".tab-list > li").css({"display": "none"}).removeClass("active")
-      $(".tab-list > li:nth-child( "+ tabIndex +")").css({"display": "inline-block"}).addClass("active")
-
-      if($(".tab-list > li:last-child").hasClass("active")){
-      //소비내역 퍼센트 증가
-      const perCounters = document.querySelectorAll(".per-val");
-      const perSpeed = 900;
-
-      console.log(perCounters)
-
-      perCounters.forEach((counter) => {
-        const animate = () => {
-          const value = +counter.getAttribute("akhi");
-          const data = +counter.innerText;
-
-          const time = value / perSpeed;
-          if (data < value) {
-            counter.innerText = Math.ceil(data + time);
-            setTimeout(animate, 20);
-          } else {
-            counter.innerText = value
-          }
-        };
-
-        animate();
-      });
-    }
-    });
-
-    //총 자산 증감
-    function numberCounter(target_frame, target_number) {
-    this.count = 0; this.diff = 0;
-    this.target_count = parseInt(target_number);
-    this.target_frame = document.getElementById(target_frame);
-    this.timer = null;
-    this.counter();
-    };
-    numberCounter.prototype.counter = function() {
-        var self = this;
-        this.diff = this.target_count - this.count;
-        
-        if(this.diff > 0) {
-            self.count += Math.ceil(this.diff / 5);
-        }
-        
-        this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        
-        if(this.count < this.target_count) {
-            this.timer = setTimeout(function() { self.counter(); }, 20);
-        } else {
-            clearTimeout(this.timer);
-        }
-    };
-
-    new numberCounter("counter1", 134523040);
+    //menu opne
+    $(".menu-open").on("click", function(){
+      $(".section7").addClass("active");
+      if($(".section7").hasClass("active")){
+        $(".menu-bott").css({"display": "none"});
+        $("body").addClass("popup");
+      }
+    })
+    //menu close
+    $(".pop-close").on("click", function(){
+      $(".section7").removeClass("active");
+      if(!$(".section7").hasClass("active")){
+        $(".menu-bott").css({"display": "inline-block"});
+        $("body").removeClass("popup");
+      }
+    })
   </script>
 </html>
