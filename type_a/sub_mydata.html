@@ -176,11 +176,8 @@
                 </div>
             </section>
             <section class="section-slide section-border">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper slider-mymo-wrap scroll-item">
-                        <!-- Slides -->
+                <div class="swiper swiper2 scroll-item">
+                    <div class="swiper-wrapper slider-mymo-wrap">
                         <div class="swiper-slide slide-card">
                             <img src="./img/sub_mydata_slide_01_01.svg">
                             <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
@@ -206,8 +203,6 @@
                             <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
                         </div>
                     </div>
-                    <!-- If we need pagination -->
-                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
                 <div class="btn-box scroll-item">
                     <img src="./img/sub_mydata_btn01.svg" alt=""><img src="./img/sub_mydata_btn02.svg" alt="">
@@ -300,17 +295,10 @@
             });
 
             const swiper = new Swiper('.swiper', {
-                // Optional parameters
-                // direction: 'vertical',
                 slidesPerView : 2.4,
                 spaceBetween: 10,
                 debugger:true,
                 loop: false,
-
-                // If we need pagination
-                // pagination: {
-                //     el: '.swiper-pagination',
-                // },
             }); 
         </script>
 </body>

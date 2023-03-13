@@ -72,9 +72,7 @@
             </section>
             <section class="section-slide">
                 <div class="swiper swiper1 scroll-item">
-                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper slider-wrap">
-                        <!-- Slides -->
                         <div class="swiper-slide slide-card">
                             <img src="./img/slide1-left.svg" class="slide1-left" />
                             <img src="./img/slide1-right.svg" class="slide1-right" />
@@ -88,7 +86,6 @@
                             <img src="./img/slide1-right.svg" class="slide1-right" />
                         </div>
                     </div>
-                    <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
@@ -207,11 +204,8 @@
                 </div>
             </section>
             <section class="section-slide">
-                <!-- Slider main container -->
                 <div class="swiper swiper2 scroll-item">
-                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper slider-mymo-wrap">
-                        <!-- Slides -->
                         <div class="swiper-slide slide-card">
                             <img src="./img/mymo-slide-01-01.svg">
                             <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
@@ -237,8 +231,6 @@
                             <img src="./img/mymo-slide-02-02.svg" class="mymo-icon">
                         </div>
                     </div>
-                    <!-- If we need pagination -->
-                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
             </section>
         </div>
@@ -372,31 +364,20 @@
             });
 
             const swiper1 = new Swiper('.swiper1', {
-                // Optional parameters
-                // direction: 'vertical',
                 slidesPerView : 1,
                 spaceBetween: 25,
                 debugger:true,
                 loop: false,
-
-                // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
                 },
             });             
 
             const swiper = new Swiper('.swiper2', {
-                // Optional parameters
-                // direction: 'vertical',
                 slidesPerView : 2.4,
                 spaceBetween: 10,
                 debugger:true,
                 loop: false,
-
-                // If we need pagination
-                // pagination: {
-                //     el: '.swiper-pagination',
-                // },
             });             
         </script>
 </body>
