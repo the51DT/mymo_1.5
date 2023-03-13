@@ -37,6 +37,7 @@
 /* mymo-slide */
 
 .slider-mymo-wrap .slide-card {
+  overflow: hidden;
   background-color: #fff;
   padding: 14px;
   display: flex;
