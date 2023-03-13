@@ -49,11 +49,12 @@
       #section1 {background: #F7F7F7; position: relative;}
       #section1 .top_btn {display: flex; justify-content: space-between;}
       #section1 .top {position: relative; margin-top: 14.16%; margin-left: 12.2%; width: 81.1%;}
-      #section1 .top .top_bottom {display: flex; justify-content: space-between; margin-top: 9.4%;}
+      #section1 .top .top_bottom {display: flex; justify-content: space-between; margin-top: 13.9%;}
       #section1 .top .top_bottom img {width: 48.63%;}
       #section1 .top img {width: 100%;}
       #section1 .top .top_num {position: absolute; top: 18%; left: 0;}
-      #section1 .top .top_num p {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(1px, calc(100vw * 59 / 768), 59px); letter-spacing: -0.03em;}
+      #section1 .top .top_num span {font-family: 'Pretendard-Regular'; font-weight: 700; font-size: clamp(1px, calc(100vw * 59 / 768), 59px); letter-spacing: -0.03em; vertical-align: bottom;}
+      #section1 .top .top_num span.count_won {font-size: clamp(1px, calc(100vw * 30 / 768), 30px);}
 
       #section1 .view {position: relative; margin-top: 11.1%;}
       #section1 .view .view_btn {position: absolute; top: 10.76%; right: 6.6%; width: 5.5%; cursor: pointer;}
@@ -97,7 +98,7 @@
         <div class="top">
             <img src="./img/view_top.png" alt=""/>
             <div class="top_num">
-                <p id="count"></p>
+                <span id="count"></span><span class="count_won">원</span>
             </div>
             <div class="top_bottom">
               <img src="./img/view_top_btn1.png" alt="" />
