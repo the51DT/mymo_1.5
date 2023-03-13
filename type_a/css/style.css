@@ -238,9 +238,8 @@ body {
     transform: translateY(0);
 }
 
-.num-increase .value {}
-
 .num-increase .value {
+    display: block;
     color: #000;
     font-size: 23px;
     font-weight: 800;
