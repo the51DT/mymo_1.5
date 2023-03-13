@@ -76,7 +76,7 @@
 
 .section02 {
     background-color: #5725e0;
-    height: 576px;
+    height: 562px;
 }
 
 .section02 .text {
@@ -108,7 +108,7 @@
 }
 
 .section03-swiper .swiper-pagination {
-    top: 0;
+    top: 28px;
     left: auto;
     right: 30px;
     width: auto;
@@ -181,20 +181,36 @@
 }
 
 .section06 {
-    background-color: #fff;
+    padding-top: 26px;
+    padding-left: 31px;
     height: 295px;
     font-size: 0;
+    background-color: #fff;
+}
+
+.section06 div[class^="banner"] {
+    display: flex;
+    justify-content: space-between;
 }
 
 .section06 .banner1 {
-    padding-top: 26px;
-    padding-left: 30px;
+    position: relative;
+    padding: 13px 42px 21px 30px;
     text-align: right;
+    background: #141414;
+}
+
+.section06 .banner1 .banner1__img {
+    position: absolute;
+    right: 42px;
+    top: 60%;
+    transform: translateY(-50%);
 }
 
 .section06 .banner2 {
-    padding-left: 30px;
+    padding: 13px 36px 21px 30px;
     text-align: right;
+    background: #10c4cf;
 }
 
 .section07 {
@@ -233,6 +249,10 @@
     position: absolute;
     top: 20px;
     left: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 60px);
+    align-items: center;
 }
 
 .section10 {
