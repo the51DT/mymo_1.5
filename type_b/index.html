@@ -116,17 +116,30 @@
       .main-contents{
         position: relative;
       }
-      .main-contents a{
+      .main-contents .account{
         position: absolute;
         top: 489px;
         left: 92px;
         width: 172px;
         height: 50px;
       }
+      .main-contents .transfer{
+        position: absolute;
+        top: 489px;
+        left: 317px;
+        width: 172px;
+        height: 50px;
+      }
       @media (max-width: 768px) {
-        .main-contents a{
+        .main-contents .account{
         top: 63.6719vw;
         left: 11.9792vw;
+        width: 22.3958vw;
+        height: 6.5104vw;
+      }
+        .main-contents .transfer{
+        top: 63.6719vw;
+        left: 41.4792vw;
         width: 22.3958vw;
         height: 6.5104vw;
       }
@@ -322,7 +335,8 @@
         </div>
         <div class="main-contents"  data-aos="fade-up"  data-aos-delay="400">
           <img src="./img/main-contents.png">
-          <a href="./view_account.html"></a>
+          <a class="account" href="./view_account.html"></a>
+          <a class="transfer" href="./transfer.html"></a>
         </div>
         
       </section>
