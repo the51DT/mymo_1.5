@@ -578,7 +578,7 @@
                   <div class="swiper-slide">
                     <img src="./img/cal01.png">
                     <div class="month-consum">
-                      <span class="value" id="counter2">337,582</span>원
+                      <span class="value" id="counter2">0</span>원
                     </div>
                     <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
                       <img src="./img/cal-content.png">
@@ -587,7 +587,7 @@
                   <div class="swiper-slide">
                     <img src="./img/cal02.png">
                     <div class="month-consum">
-                      <span class="value" id="counter3">337,582</span>원
+                      <span class="value" id="counter3">0</span>원
                     </div>
                     <div class="cal-contents" data-aos="fade-up" data-aos-delay="400">
                       <img src="./img/cal-content.png">
@@ -843,24 +843,26 @@
     })
 
     //월 소비 금액 증감
+    var monthConsum = true;
     $(window).scroll(function() {
-
-      // var counter2 = document.getElementById('counter2')
-      //     counter3 = document.getElementById('counter3');
-      //   console.log(counter2.innerHTML);
-
-      // if($(window).width() >= 768) {
-      //   if ($(this).scrollTop() + 800 < Math.ceil($(".section.section3").offset().top) && $(this).scrollTop() + 700 >= Math.ceil($(".section.section3").offset().top)) {
-      //     new numberCounter("counter2", 337582);
-      //     new numberCounter("counter3", 337582);
-      //   }
-      // }else if($(window).width() < 768){
-      //   if ($(this).scrollTop() + 400 >= Math.ceil($(".section.section3").offset().top)) {
-      //     new numberCounter("counter2", 337582);
-      //     new numberCounter("counter3", 337582);
-      //   }
-      // }
+      var contentsTop = Math.ceil($(".section.section3").offset().top);
+          thisTop = $(this).scrollTop();
+          winWidth = $(window).width();
+      if(monthConsum){
+        if(winWidth >= 768) {
+          if (thisTop + 700 >= contentsTop) {
+              new numberCounter('counter2', 337582);
+              new numberCounter('counter3', 337582);
+              monthConsum = false;
+          }
+        }else if(winWidth < 768){
+          if (thisTop + 500 >= contentsTop) {
+            new numberCounter('counter2', 337582);
+            new numberCounter('counter3', 337582);
+            monthConsum = false;
+          }
+        }
+      }
     });
-    
   </script>
 </html>

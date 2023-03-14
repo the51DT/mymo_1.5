@@ -36,7 +36,7 @@
                     <img src="./img/main-my-account.svg" alt="">
                 </div>
             </section>
-            <section>
+            <section class="section-book">
                 <div class="title-box scroll-item">
                     <img src="./img/section-titlle1.svg" alt="">
                     <img src="./img/title-arrow-white.svg" alt="">
@@ -74,16 +74,16 @@
                 <div class="swiper swiper1 scroll-item">
                     <div class="swiper-wrapper slider-wrap">
                         <div class="swiper-slide slide-card">
-                            <img src="./img/slide1-left.svg" class="slide1-left" />
-                            <img src="./img/slide1-right.svg" class="slide1-right" />
+                            <img src="./img/slide1-left.svg"/>
+                            <img src="./img/slide1-right.svg"/>
                         </div>
                         <div class="swiper-slide slide-card">
-                            <img src="./img/slide1-left.svg" class="slide1-left" />
-                            <img src="./img/slide1-right.svg" class="slide1-right" />
+                            <img src="./img/slide2-left.svg"/>
+                            <img src="./img/slide2-right.svg"/>
                         </div>
                         <div class="swiper-slide slide-card">
-                            <img src="./img/slide1-left.svg" class="slide1-left" />
-                            <img src="./img/slide1-right.svg" class="slide1-right" />
+                            <img src="./img/slide3-left.svg"/>
+                            <img src="./img/slide3-right.svg"/>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -102,9 +102,6 @@
                     </div>
                     <ul class="progress-desc">
                         <li><img src="./img/graph01-desc1.svg" alt=""><img src="./img/graph01-won1.svg" alt=""></li>
-                        <li><img src="./img/graph01-desc2.svg" alt=""><img src="./img/graph01-won2.svg" alt=""></li>
-                        <li><img src="./img/graph01-desc3.svg" alt=""><img src="./img/graph01-won3.svg" alt=""></li>
-                        <li><img src="./img/graph01-desc4.svg" alt=""><img src="./img/graph01-won4.svg" alt=""></li>
                     </ul>
                     <div class="img-box">
                         <img src="./img/section05-text1.svg" alt="">
@@ -215,20 +212,12 @@
                             <img src="./img/mymo-slide-02-02.svg" class="mymo-icon">
                         </div>
                         <div class="swiper-slide slide-card">
-                            <img src="./img/mymo-slide-01-01.svg">
-                            <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
+                            <img src="./img/mymo-slide-03-01.svg">
+                            <img src="./img/mymo-slide-03-02.svg" class="mymo-icon">
                         </div>
                         <div class="swiper-slide slide-card">
-                            <img src="./img/mymo-slide-02-01.svg">
-                            <img src="./img/mymo-slide-02-02.svg" class="mymo-icon">
-                        </div>
-                        <div class="swiper-slide slide-card">
-                            <img src="./img/mymo-slide-01-01.svg">
-                            <img src="./img/mymo-slide-01-02.svg" class="mymo-icon">
-                        </div>
-                        <div class="swiper-slide slide-card">
-                            <img src="./img/mymo-slide-02-01.svg">
-                            <img src="./img/mymo-slide-02-02.svg" class="mymo-icon">
+                            <img src="./img/mymo-slide-04-01.svg">
+                            <img src="./img/mymo-slide-04-02.svg" class="mymo-icon">
                         </div>
                     </div>
                 </div>
@@ -301,14 +290,25 @@
                     const barAnimation = setInterval(() => {
                             bar.style.background =
                                 per1 > t ?
-                                `linear-gradient(to right, #19DCA1 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #B5A3F6 0 ${t}%, #680DDD ${t}% ,#EFEFEF ${t}% 100%)` :
                                 per1 + per2 > t ?
-                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #B5A3F6 0 ${per1}%, #680DDD ${per1}% ${t}%, #9176E6 ${t}%, #EFEFEF ${t}% 100%)` :
                                 per1 + per2 + per3 > t ?
-                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
-                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                                `linear-gradient(to right, #B5A3F6 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #9176E6 ${per1 + per2}% ${t}%, #C7BAF6 ${t}% , #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #B5A3F6 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #9176E6 ${per1 + per2}% ${per1 + per2 + per3}%, #C7BAF6 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
                             t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
                         }, 10)
+                    // const barAnimation = setInterval(() => {
+                    //         bar.style.background =
+                    //             per1 > t ?
+                    //             `linear-gradient(to right, #255AE2 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
+                    //             per1 + per2 > t ?
+                    //             `linear-gradient(to right, #255AE2 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
+                    //             per1 + per2 + per3 > t ?
+                    //             `linear-gradient(to right, #255AE2 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
+                    //             `linear-gradient(to right, #255AE2 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                    //         t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
+                    //     }, 10)
                         // const repeat = setInterval(() => {
                         //     barAnimation()
                         // })        
@@ -367,17 +367,15 @@
                 slidesPerView : 1,
                 spaceBetween: 25,
                 debugger:true,
-                loop: false,
                 pagination: {
                     el: '.swiper-pagination',
                 },
             });             
 
-            const swiper = new Swiper('.swiper2', {
-                slidesPerView : 2.4,
+            const swiper2 = new Swiper('.swiper2', {
+                slidesPerView : 2.3,
                 spaceBetween: 10,
                 debugger:true,
-                loop: false,
             });             
         </script>
 </body>
