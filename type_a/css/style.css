@@ -579,3 +579,7 @@ body {
 .wrap.sub_myasset .container .section-slide .btn-box {
   margin-top: 40px;
 }
+
+.wrap.sub_myasset .num-increase .value {
+  font-size: 20px;
+}
