@@ -1,17 +1,28 @@
-.swiper1 {
+/* swiper */
+
+.swiper {
   padding-left: 25px !important;
   padding-right: 25px !important;
+}
+
+.swiper.swiper1 {
   padding-bottom: 20px !important;
 }
+
+.swiper-pagination-bullet {
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 80%;
+}
+
 :root {
   --swiper-theme-color: #fff;
 }
+
 .swiper-pagination {
   bottom: 0 !important;
-}
-.swiper2 {
-  padding-left: 25px !important;
-  padding-right: 25px !important;
 }
 
 .slider-wrap .slide-card {
@@ -21,37 +32,20 @@
   justify-content: space-between;
   border-radius: 10px;
   align-items: center;
-  /* margin-left: 25px;
-  margin-right: 25px; */
 }
-
-/* .slide1-left {
-    width: 119px;
-    height: 100%;
-}
-
-.slide1-right {
-    width: 75px;
-    height: 100%;
-} */
 
 /* mymo-slide */
 
 .slider-mymo-wrap .slide-card {
+  overflow: hidden;
   background-color: #fff;
   padding: 14px;
-  /* display: flex !important; */
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  align-items: center;
-  /* margin-left: 5px;
-  margin-right: 5px; */
+  align-items: baseline;
   height: 160px;
-  /* margin-right: 25px; */
-}
-
-.slider-mymo-wrap .slide-card:first-child {
-  /* margin-left: 25px; */
 }
 
 .mymo-icon {
@@ -59,219 +53,12 @@
   margin-top: 10px;
 }
 
-/* slick */
-
-.slick-dots li.slick-active button:before {
-  color: #fff;
-}
-
-.slick-arrow {
-  display: none !important;
-}
-
-/* box */
-
-.box-book .box__list.border {
-  padding-top: 6px;
-  border-top: 1px solid #eee;
-}
-
-.box-book .box__list + .box__list {
-  margin-top: 6px;
-}
-
-.box__flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* .box-benefit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
-
-.box-loan {
-}
-
-.box-loan .box__list + .box__list {
-  border-top: 1px solid #eeeeee;
-  padding-top: 14px;
-  margin-top: 14px;
-}
-
-.box-loan .box__flex + img {
-  margin-top: 4px;
-}
-
-/* .container .section-mymo-slide {
-  padding-left: 25px;
-  padding-right: 0;
-} */
-
 .container .section-slide {
   padding-left: 0;
   padding-right: 0;
-}
-
-/* main  ----------------------------------------- */
-
-.wrap.main .slick-dots li {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-}
-
-.wrap.main .slick-dots li:first-child {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.wrap.main .slick-dots li + li {
-  margin-left: 10px;
-  margin-right: 0;
-}
-
-.wrap.main .slick-dots li button {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  text-align: center;
-}
-
-.wrap.main .slick-dots li button:before {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  font-size: 8px;
-  line-height: 8px;
-  text-align: center;
-  content: "";
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.3;
-}
-
-.wrap.main .slick-dots li.slick-active button:before {
-  opacity: 0.75;
+  padding-top: 0;
 }
 
 /* sub_mydata ----------------------------------------- */
 
-.wrap.sub_mydata .container .section-gray + section .title-box + .title-box {
-  margin-top: 10px;
-}
-
 /* sub_myasset ----------------------------------------- */
-
-.wrap.sub_myasset .container section:first-child {
-  padding-top: 0;
-}
-
-.wrap.sub_myasset .container section:first-child .box + .title-box {
-  margin-top: 20px;
-}
-
-.wrap.sub_myasset .container .title-box.title-box--column {
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.wrap.sub_myasset .doughnutChart {
-  width: 170px;
-  height: 170px;
-  margin: 24px auto;
-}
-
-.wrap.sub_myasset .progress-desc .title-box + .title-box {
-  padding-top: 14px;
-  margin-top: 14px;
-  border-top: 1px solid #e4e4e4;
-}
-
-.wrap.sub_myasset .mixChart {
-  margin: 30px auto;
-}
-
-.wrap.sub_myasset .container .section-slide {
-  padding: 30px 0 40px;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2 {
-  padding: 30px 0;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2 .progress-bg {
-  position: relative;
-  margin: 0 auto;
-  max-width: 310px;
-  overflow: hidden;
-  font-size: 0;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2 .progress-desc {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2 .progress-line {
-  position: absolute;
-  bottom: 26.5%;
-  left: 21%;
-  z-index: 1;
-  opacity: 0;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2 .progress-bar {
-  position: absolute;
-  bottom: 10%;
-  width: 20px;
-  height: 147px;
-  background: #815aed;
-  border-radius: 0;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  opacity: 0;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2 .progress-bar.progress-bar--01 {
-  right: 20.5%;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2 .progress-bar.progress-bar--02 {
-  right: 6.5%;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2.active .progress-desc {
-  opacity: 1;
-  transition: all 1s;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2.active .progress-line {
-  opacity: 1;
-  transition: all 1s;
-  transition-delay: 0.1s;
-}
-
-.wrap.sub_myasset .progress-wrap.progress-type2.active .progress-bar {
-  opacity: 1;
-  bottom: 17.5%;
-  background: linear-gradient(#815aed 18% 80%, #e0d6fd 0% 18%);
-  transform: translateY(0);
-  transition: all 1s;
-}
-
-.wrap.sub_myasset
-  .progress-wrap.progress-type2.active
-  .progress-bar.progress-bar--01 {
-  transition-delay: 0.4s;
-}
-
-.wrap.sub_myasset
-  .progress-wrap.progress-type2.active
-  .progress-bar.progress-bar--02 {
-  transition-delay: 0.6s;
-}

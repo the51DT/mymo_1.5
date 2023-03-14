@@ -6,13 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Type A SUB : 내자산</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="../src/assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/slide.css" />
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
 </head>
 
 <body>
@@ -34,24 +31,27 @@
         <div class="container">
             <section>
                 <div class="box scroll-item">
-                    <img src="./img/myasset-add.svg" class="myasset-add">
+                    <!-- <img src="./img/myasset-add.svg" class="myasset-add"> -->
                     <img src="./img/myasset-asset.svg" class="myasset-asset">
                     <div class="num-increase total">
                         <span class="value" id="counter1">0</span>
                         <span class="value">원</span>
                     </div>
+                    <div class="title-box scroll-item">
+                        <img src="./img/sub_mydata_section02_text1.svg" alt=""><img src="./img/sub_mydata_section02_text2.svg" alt="">
+                    </div>
                 </div>
-                <div class="title-box scroll-item">
+                <!-- <div class="title-box scroll-item">
                     <img src="./img/sub_myasset_section01_desc.svg" alt="">
                     <img src="./img/sub_myasset_section01_cnt.svg" alt="">
-                </div>
+                </div> -->
             </section>
             <section>
                 <div class="title-box scroll-item">
                     <img src="./img/sub_myasset_section02_title.svg" alt="">
                     <img src="./img/sub_myasset_section02_text.svg" alt="">
                 </div>
-                <div class="doughnutChart scroll-item">
+                <div class="progress-wrap progress-type2 scroll-item">
                     <canvas id="myChart" aria-label="내 자산" role="Chart"></canvas>
                 </div>
                 <div class="progress-desc scroll-item">
@@ -66,10 +66,10 @@
                 </div>
             </section>
             <section class="section-border">
-                <div class="title-box title-box--column scroll-item">
+                <div class="title-box scroll-item">
                     <img src="./img/sub_myasset_section-title2.svg" alt="">
                 </div>
-                <div class="progress-wrap progress-type2 scroll-item">
+                <div class="progress-wrap progress-type3 scroll-item">
                     <div class="progress-bg">
                         <img src="./img/sub_myasset_graph-bg.svg" alt="">
                         <img src="./img/sub_myasset_graph-desc.svg" alt="" class="progress-desc">
@@ -78,12 +78,12 @@
                         <div class="progress-bar progress-bar--02"></div>
                     </div>
                 </div>
-                <div class="btn-box scroll-item">
+                <!-- <div class="btn-box scroll-item">
                     <img src="./img/progress-add-btn.svg" alt="">
-                </div>
+                </div> -->
             </section>
-            <section class="section-slide">
-                <div class="swiper swiper2 scroll-item">
+            <section class="section-slide scroll-item">
+                <div class="swiper">
                     <div class="swiper-wrapper slider-mymo-wrap">
                         <div class="swiper-slide slide-card">
                             <img src="./img/sub_mydata_slide_01_01.svg">
@@ -91,25 +91,20 @@
                         </div>
                         <div class="swiper-slide slide-card">
                             <img src="./img/sub_mydata_slide_02_01.svg">
-                            <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
+                            <img src="./img/sub_mydata_slide_02_02.svg" class="mymo-icon">
                         </div>
                         <div class="swiper-slide slide-card">
                             <img src="./img/sub_mydata_slide_03_01.svg">
-                            <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                            <img src="./img/sub_mydata_slide_03_02.svg" class="mymo-icon">
                         </div>
                         <div class="swiper-slide slide-card">
-                            <img src="./img/sub_mydata_slide_01_01.svg">
-                            <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
-                        </div>
-                        <div class="swiper-slide slide-card">
-                            <img src="./img/sub_mydata_slide_02_01.svg">
-                            <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
-                        </div>
-                        <div class="swiper-slide slide-card">
-                            <img src="./img/sub_mydata_slide_03_01.svg">
-                            <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                            <img src="./img/sub_mydata_slide_04_01.svg">
+                            <img src="./img/sub_mydata_slide_04_02.svg" class="mymo-icon">
                         </div>
                     </div>
+                </div>
+                <div class="btn-box">
+                    <img src="./img/sub_mydata_btn02.svg" alt="">
                 </div>
             </section>
         </div>
@@ -190,26 +185,52 @@
                 type: 'doughnut',
                 data: {
                     labels: [
-                        '계좌/현금',
                         '투자',
-                        '페이머니',
-                        '포인트'
+                        '직장인 신용대출',
+                        '예금담보대출',
+                        '포인트',
+                        '계좌/현금',
+                        '페이머니'
                     ],
                     datasets: [{
                         label: '자산구성',
-                        data: [5, 73, 8, 14],
+                        data: [68, 4, 4, 3, 9, 12],
                         backgroundColor: [
-                            'rgb(25, 220, 161)',
-                            'rgb(50, 153, 249)',
-                            'rgb(249, 146, 50)',
-                            'rgb(249, 217, 50)'
-                        ]
-                    }]
+                            '#5A36D8',
+                            '#C0BFBF',
+                            '#ECECEC',
+                            '#C7BAF6',
+                            '#B5A3F6',
+                            '#9176E6',
+                        ],
+                        borderWidth: 0,
+                        borderColor: '#000',
+                        rotation:-30
+                    }],
+                    
                 },
                 options: {
                     plugins: {
                         legend: {
-                            display: false
+                            display: false,
+                            padding: 0
+                        },
+                        tooltip: {
+                            backgroundColor:"#fff",
+                            bodySpacing: 0,
+                            titleColor:'#000',
+                            bodyColor:'#000',
+                            borderWidth:1,
+                            borderColor:'#ddd',
+                            displayColors:false,
+                            bodyFontFamily:'NanumSquareNeo',
+                            bodyFontSize:50,
+                            // bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
+                            // shadowOffsetX: 3,
+                            // shadowOffsetY: 3,
+                            // shadowBlur: 10,
+                            // shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            // enabled: false,
                         }
                     }
                 }
@@ -240,13 +261,12 @@
             });
 
             const swiper = new Swiper('.swiper', {
-                slidesPerView : 2.4,
+                slidesPerView: 2.3,
                 spaceBetween: 10,
-                debugger:true,
-                loop: false,
-            });            
+                debugger: true,
+            });
         </script>
-        
+
 </body>
 
 </html>
