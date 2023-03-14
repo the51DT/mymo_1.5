@@ -102,9 +102,9 @@
                     </div>
                     <ul class="progress-desc">
                         <li><img src="./img/graph01-desc1.svg" alt=""><img src="./img/graph01-won1.svg" alt=""></li>
-                        <li><img src="./img/graph01-desc2.svg" alt=""><img src="./img/graph01-won2.svg" alt=""></li>
+                        <!-- <li><img src="./img/graph01-desc2.svg" alt=""><img src="./img/graph01-won2.svg" alt=""></li>
                         <li><img src="./img/graph01-desc3.svg" alt=""><img src="./img/graph01-won3.svg" alt=""></li>
-                        <li><img src="./img/graph01-desc4.svg" alt=""><img src="./img/graph01-won4.svg" alt=""></li>
+                        <li><img src="./img/graph01-desc4.svg" alt=""><img src="./img/graph01-won4.svg" alt=""></li> -->
                     </ul>
                     <div class="img-box">
                         <img src="./img/section05-text1.svg" alt="">
@@ -301,14 +301,25 @@
                     const barAnimation = setInterval(() => {
                             bar.style.background =
                                 per1 > t ?
-                                `linear-gradient(to right, #19DCA1 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #255AE2 0 ${t}%, #680DDD ${t}% ,#EFEFEF ${t}% 100%)` :
                                 per1 + per2 > t ?
-                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #255AE2 0 ${per1}%, #680DDD ${per1}% ${t}%, #8F0DBD ${t}%, #EFEFEF ${t}% 100%)` :
                                 per1 + per2 + per3 > t ?
-                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
-                                `linear-gradient(to right, #19DCA1 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                                `linear-gradient(to right, #255AE2 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #8F0DBD ${per1 + per2}% ${t}%, #3D08D6 ${t}% , #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #255AE2 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #8F0DBD ${per1 + per2}% ${per1 + per2 + per3}%, #3D08D6 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
                             t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
                         }, 10)
+                    // const barAnimation = setInterval(() => {
+                    //         bar.style.background =
+                    //             per1 > t ?
+                    //             `linear-gradient(to right, #255AE2 0 ${t}%, #3299F9 ${t}% ,#EFEFEF ${t}% 100%)` :
+                    //             per1 + per2 > t ?
+                    //             `linear-gradient(to right, #255AE2 0 ${per1}%, #3299F9 ${per1}% ${t}%, #F99232 ${t}%, #EFEFEF ${t}% 100%)` :
+                    //             per1 + per2 + per3 > t ?
+                    //             `linear-gradient(to right, #255AE2 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${t}%, #F9D932 ${t}% , #EFEFEF ${t}% 100%)` :
+                    //             `linear-gradient(to right, #255AE2 0 ${per1}%, #3299F9 ${per1}% ${per1 + per2}%, #F99232 ${per1 + per2}% ${per1 + per2 + per3}%, #F9D932 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                    //         t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
+                    //     }, 10)
                         // const repeat = setInterval(() => {
                         //     barAnimation()
                         // })        
