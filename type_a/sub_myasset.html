@@ -194,7 +194,7 @@
                     ],
                     datasets: [{
                         label: '자산구성',
-                        data: [73, 7, 7, 0.5, 5, 8],
+                        data: [68, 4, 4, 3, 9, 12],
                         backgroundColor: [
                             '#5A36D8',
                             '#C0BFBF',
@@ -203,12 +203,28 @@
                             '#B5A3F6',
                             '#9176E6',
                         ],
-                    }]
+                        borderWidth: 0,
+                        borderColor: '#000',
+                        rotation:-30
+                    }],
+                    
                 },
                 options: {
                     plugins: {
                         legend: {
-                            display: false
+                            display: false,
+                            padding: 0
+                        },
+                        tooltip: {
+                            backgroundColor:"#fff",
+                            bodySpacing: 0,
+                            titleColor:'#000',
+                            bodyColor:'#000',
+                            borderWidth:1,
+                            borderColor:'#ddd',
+                            displayColors:false,
+                            titleFontFamily:'NanumSquareNeo'
+
                         }
                     }
                 }

@@ -290,12 +290,12 @@
                     const barAnimation = setInterval(() => {
                             bar.style.background =
                                 per1 > t ?
-                                `linear-gradient(to right, #255AE2 0 ${t}%, #680DDD ${t}% ,#EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #B5A3F6 0 ${t}%, #680DDD ${t}% ,#EFEFEF ${t}% 100%)` :
                                 per1 + per2 > t ?
-                                `linear-gradient(to right, #255AE2 0 ${per1}%, #680DDD ${per1}% ${t}%, #8F0DBD ${t}%, #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #B5A3F6 0 ${per1}%, #680DDD ${per1}% ${t}%, #9176E6 ${t}%, #EFEFEF ${t}% 100%)` :
                                 per1 + per2 + per3 > t ?
-                                `linear-gradient(to right, #255AE2 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #8F0DBD ${per1 + per2}% ${t}%, #3D08D6 ${t}% , #EFEFEF ${t}% 100%)` :
-                                `linear-gradient(to right, #255AE2 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #8F0DBD ${per1 + per2}% ${per1 + per2 + per3}%, #3D08D6 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
+                                `linear-gradient(to right, #B5A3F6 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #9176E6 ${per1 + per2}% ${t}%, #C7BAF6 ${t}% , #EFEFEF ${t}% 100%)` :
+                                `linear-gradient(to right, #B5A3F6 0 ${per1}%, #680DDD ${per1}% ${per1 + per2}%, #9176E6 ${per1 + per2}% ${per1 + per2 + per3}%, #C7BAF6 ${per1 + per2 + per3}% ${t}%, #EFEFEF ${t}% 100%)`
                             t++ >= per1 + per2 + per3 + per4 && clearInterval(barAnimation)
                         }, 10)
                     // const barAnimation = setInterval(() => {

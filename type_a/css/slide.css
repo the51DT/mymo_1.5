@@ -1,67 +1,64 @@
 /* swiper */
 
 .swiper {
-    padding-left: 25px !important;
-    padding-right: 25px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
 }
 
 .swiper.swiper1 {
-    padding-bottom: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .swiper-pagination-bullet {
-    margin: 0 5px !important;
+  margin: 0 5px !important;
 }
 
 .swiper-pagination-bullet-active {
-    opacity: 80%;
+  opacity: 80%;
 }
 
 :root {
-    --swiper-theme-color: #fff;
+  --swiper-theme-color: #fff;
 }
 
 .swiper-pagination {
-    bottom: 0 !important;
+  bottom: 0 !important;
 }
 
 .slider-wrap .slide-card {
-    background-color: #fff;
-    padding: 20px;
-    display: flex !important;
-    justify-content: space-between;
-    border-radius: 10px;
-    align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  display: flex !important;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
 }
-
 
 /* mymo-slide */
 
 .slider-mymo-wrap .slide-card {
-    overflow: hidden;
-    background-color: #fff;
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10px;
-    align-items: baseline;
-    height: 160px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: baseline;
+  height: 160px;
 }
 
 .mymo-icon {
-    margin-left: auto;
-    margin-top: 10px;
+  margin-left: auto;
+  margin-top: 10px;
 }
 
 .container .section-slide {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
 }
 
-
 /* sub_mydata ----------------------------------------- */
-
 
 /* sub_myasset ----------------------------------------- */
