@@ -78,9 +78,9 @@
                         <div class="progress-bar progress-bar--02"></div>
                     </div>
                 </div>
-                <div class="btn-box scroll-item">
+                <!-- <div class="btn-box scroll-item">
                     <img src="./img/progress-add-btn.svg" alt="">
-                </div>
+                </div> -->
             </section>
             <section class="section-slide scroll-item">
                 <div class="swiper">
@@ -91,23 +91,15 @@
                         </div>
                         <div class="swiper-slide slide-card">
                             <img src="./img/sub_mydata_slide_02_01.svg">
-                            <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
+                            <img src="./img/sub_mydata_slide_02_02.svg" class="mymo-icon">
                         </div>
                         <div class="swiper-slide slide-card">
                             <img src="./img/sub_mydata_slide_03_01.svg">
-                            <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                            <img src="./img/sub_mydata_slide_03_02.svg" class="mymo-icon">
                         </div>
                         <div class="swiper-slide slide-card">
-                            <img src="./img/sub_mydata_slide_01_01.svg">
-                            <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
-                        </div>
-                        <div class="swiper-slide slide-card">
-                            <img src="./img/sub_mydata_slide_02_01.svg">
-                            <img src="./img/sub_myasset_slide_02_02.svg" class="mymo-icon">
-                        </div>
-                        <div class="swiper-slide slide-card">
-                            <img src="./img/sub_mydata_slide_03_01.svg">
-                            <img src="./img/sub_mydata_slide_01_02.svg" class="mymo-icon">
+                            <img src="./img/sub_mydata_slide_04_01.svg">
+                            <img src="./img/sub_mydata_slide_04_02.svg" class="mymo-icon">
                         </div>
                     </div>
                 </div>
@@ -193,19 +185,23 @@
                 type: 'doughnut',
                 data: {
                     labels: [
-                        '계좌/현금',
                         '투자',
-                        '페이머니',
-                        '포인트'
+                        '직장인 신용대출',
+                        '예금담보대출',
+                        '포인트',
+                        '계좌/현금',
+                        '페이머니'
                     ],
                     datasets: [{
                         label: '자산구성',
-                        data: [5, 73, 8, 14],
+                        data: [73, 7, 7, 0.5, 5, 8],
                         backgroundColor: [
-                            'rgb(25, 220, 161)',
-                            'rgb(50, 153, 249)',
-                            'rgb(249, 146, 50)',
-                            'rgb(249, 217, 50)'
+                            '#5A36D8',
+                            '#C0BFBF',
+                            '#ECECEC',
+                            '#C7BAF6',
+                            '#B5A3F6',
+                            '#9176E6',
                         ],
                     }]
                 },
