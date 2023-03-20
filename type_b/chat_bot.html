@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MYMO Type B</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./font/" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        max-width: 768px;
+        margin: 0 auto !important;
+        font-family: Pretendard-Regular;
+        position: relative;
+      }
+      body img {
+        display: inline-block;
+      }
+      .body {
+        position: relative;
+        overflow: hidden;
+      }
+      .section1 {
+        margin-right: -3px;
+      }
+      .pop-menu-top {
+        text-align: left;
+        margin-top: 102px;
+        margin-left: 93.7px;
+      }
+      .pop-menu-top img {
+        width: 51px;
+        height: 51px;
+        display: inline-block;
+      }
+      .chat-wrap {
+        background: url(./img/chat_bg.png) no-repeat;
+        background-size: cover;
+        margin-top: 51px;
+        padding-bottom: 280px;
+      }
+      .chat-wrap .chat-contents {
+        padding: 68px 89.5px 0;
+      }
+      .chat-wrap .chat-contents .chat-date {
+        max-width: 225px;
+        margin: 0 auto 25.5px;
+      }
+      .chat-box .chatSwiper {
+        margin-top: 25.5px;
+        width: 130%;
+        padding-left: 90px;
+        margin-left: -90px;
+        padding-right: 113px;
+      }
+      .chat-box .chatSwiper .swiper-slide {
+        margin-right: 25.5px;
+      }
+      .chat-box .chat-time {
+        margin-top: 17px;
+        max-width: 91.6px;
+      }
+      .chat-box.chat-customer {
+        margin-top: 42.6px;
+        text-align: right;
+      }
+      .chat-box.chat-customer img {
+        max-width: 547px;
+      }
+      .chat-box.chat-bot {
+        margin-top: 42.6px;
+      }
+      .chat-input {
+        position: fixed;
+        z-index: 1;
+        bottom: -424px;
+        max-width: 768px;
+        animation: 1s ease forwards;
+      }
+      .chat-input.active {
+        bottom: 0;
+      }
+      .chat-input .input.disabled {
+        padding: 0 21.3px;
+      }
+      .chat-input .input.active {
+        padding: 0 21.3px;
+        display: none;
+      }
+      .chat-input div + img {
+        margin-top: 21.3px;
+        width: 100.4%;
+      }
+      .chat-menu {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 63px;
+        top: 30px;
+        cursor: pointer;
+      }
+      .back-btn {
+        width: 51px;
+        height: 51px;
+        display: inline-block;
+        position: absolute;
+        left: 92px;
+      }
+
+      @media (max-width: 768px) {
+        .chat-box .chatSwiper .swiper-slide {
+          margin-right: 3.3203vw;
+        }
+        .back-btn {
+          width: 6.6406vw;
+          height: 6.6406vw;
+          left: 11.9792vw;
+        }
+        .chat-menu {
+          width: 6.5104vw;
+          height: 6.5104vw;
+          left: 11.2031vw;
+          top: 3.5063vw;
+        }
+        .pop-menu-top {
+          margin-top: 13.2813vw;
+          margin-left: 12.2005vw;
+        }
+        .pop-menu-top img {
+          width: 6.6406vw;
+          height: 6.6406vw;
+        }
+        .chat-wrap {
+          margin-top: 6.6406vw;
+          padding-bottom: 36.4583vw;
+        }
+        .chat-wrap .chat-contents {
+          padding: 8.8542vw 11.6536vw 0;
+        }
+        .chat-wrap .chat-contents .chat-date {
+          max-width: 29.2969vw;
+          margin: 0 auto 3.3203vw;
+        }
+        .chat-box .chatSwiper {
+          margin-top: 3.3203vw;
+          padding-left: 11.7188vw;
+          margin-left: -11.7188vw;
+          padding-right: 14.7135vw;
+        }
+        .chat-box .chat-time {
+          margin-top: 2.2135vw;
+          max-width: 11.9271vw;
+        }
+        .chat-box.chat-customer {
+          margin-top: 5.5469vw;
+        }
+        .chat-box.chat-customer img {
+          max-width: 71.224vw;
+        }
+        .chat-box.chat-bot {
+          margin-top: 5.5469vw;
+        }
+        .chat-input {
+          bottom: -55.2083vw;
+        }
+        .chat-input .input {
+          padding: 0 2.7734vw;
+        }
+        .chat-input div + img {
+          margin-top: 2.7734vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="body">
+      <section id="section1" class="section section1">
+        <div class="section-inner">
+          <div class="item">
+            <div class="pop-menu-top">
+              <img src="./img/chat_close.png" />
+              <a class="back-btn" href="javascript:history.back();"> </a>
+            </div>
+            <div class="chat-wrap">
+              <div class="chat-contents">
+                <div class="chat-date">
+                  <img src="./img/chat_date.png" />
+                </div>
+                <div class="chat-box chat-bot">
+                  <img src="./img/chat_contents01.png" data-aos="fade-up" />
+                  <!-- Swiper -->
+                  <div
+                    class="swiper chatSwiper"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./img/chat_slide01.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/chat_slide02.png" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-time" data-aos="fade-up">
+                    <img src="./img/chat_time.png" />
+                  </div>
+                </div>
+                <div
+                  class="chat-box chat-customer"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <img src="./img/chat_contents02.png" />
+                </div>
+                <div
+                  class="chat-box chat-bot"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <img src="./img/chat_contents03.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="chat-input">
+        <img src="./img/chat_input_bar.png" class="input disabled" />
+        <img src="./img/chat_input_bar_active.png" class="input active" />
+        <div class="chat-menu"></div>
+        <img src="./img/chat_menu.png" />
+      </div>
+    </section>
+  </body>
+
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+
+    //챗봇 스와이프
+    var swiper = new Swiper(".chatSwiper", {
+      slidesPerView: "1.12",
+      loop: false,
+    });
+
+    //input menu bottpm sheet
+    $(".chat-menu").on("click", function () {
+      if (!$(".chat-input").hasClass("active")) {
+        $(".input.disabled").css({ display: "none" });
+        $(".input.active").css({ display: "inline-block" });
+        $(".chat-input").animate({ bottom: "0" }, 300, "swing");
+        $(".chat-input").addClass("active");
+      } else {
+        $(".input.disabled").css({ display: "inline-block" });
+        $(".input.active").css({ display: "none" });
+
+        if ($(window).width() >= 768) {
+          $(".chat-input").animate({ bottom: "-424px" }, 300, "swing");
+        } else if ($(window).width() < 768) {
+          $(".chat-input").animate({ bottom: "-55.2083vw" }, 300, "swing");
+        }
+
+        $(".chat-input").removeClass("active");
+      }
+    });
+
+    $(".pop-menu-top").on("click", function () {});
+  </script>
+</html>
