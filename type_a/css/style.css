@@ -80,7 +80,7 @@ body {
 }
 
 .container {
-  height: calc(100vh - 132px);
+  height: calc(100vh - 160px);
   background: #5725e0;
   overflow-y: scroll;
 }
@@ -639,4 +639,187 @@ body {
 
 .wrap.sub_myasset .num-increase .value {
   font-size: 20px;
+}
+
+/* sub_fin_prod ----------------------------------------- */
+.wrap.sub_fin_prod .container {
+  background: #fff;
+}
+.wrap.sub_fin_prod .lg-banner {
+  padding: 30px 24px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.wrap.sub_fin_prod .img-lg-banner01 {
+  margin-left: auto;
+  margin-top: -60px;
+  margin-bottom: -12px;
+}
+.wrap.sub_fin_prod .box__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap.sub_fin_prod .card-banner {
+  padding: 27px 19px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.wrap.sub_fin_prod .card-banner .box__flex {
+  margin-top: 8px;
+  align-items: flex-start;
+}
+.wrap.sub_fin_prod .card-banner .box__flex .img-card-banner {
+  margin-top: 4px;
+  margin-bottom: -7px;
+}
+.wrap.sub_fin_prod .swiper {
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: 14px;
+}
+.wrap.sub_fin_prod .img-lg-banner02 {
+  margin-left: auto;
+  margin-top: -145px;
+  margin-bottom: -31px;
+}
+.wrap.sub_fin_prod .list-banner {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  padding: 19px 14px;
+}
+.wrap.sub_fin_prod .list-banner ul {
+  margin: 0;
+}
+.wrap.sub_fin_prod .list-banner ul li {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.wrap.sub_fin_prod .list-banner ul li:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.wrap.sub_fin_prod .img-lg-banner03 {
+  margin-left: auto;
+  margin-top: -121px;
+  margin-bottom: -30px;
+}
+.wrap.sub_fin_prod .banner-bot-sheet {
+  flex: 0 0 90px;
+  padding: 19px 25px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 7px 15px 5px #dedede;
+}
+.wrap.sub_fin_prod .banner-bot-sheet.active {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 768px;
+  animation: bottom-sheet 0.7s ease forwards;
+}
+@keyframes bottom-sheet {
+  0% {
+    bottom: -470px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-top .sheet-toggle {
+  margin-top: 6px;
+  transform: rotate(0deg);
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-top .sheet-toggle.active {
+  transform: rotate(180deg);
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-bottom {
+  text-align: center;
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-bottom > img {
+  margin-top: 12px;
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-bottom ul {
+  margin: 31px 0 0;
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-bottom ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 10px;
+  border: 1px solid #ededed;
+  padding: 21px 14px;
+  margin-top: 10px;
+}
+.wrap.sub_fin_prod .banner-bot-sheet .bot-sheet-bottom ul li:first-child {
+  margin-top: 0;
+}
+.wrap.sub_fin_prod .dim.active {
+  width: 100vw;
+  height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  opacity: 0.4;
+}
+.wrap.sub_fin_prod .tab-box {
+  margin-top: 24px;
+}
+.wrap.sub_fin_prod .tab-box .tab-btn {
+  display: flex;
+  justify-content: flex-start;
+}
+.wrap.sub_fin_prod .tab-box .tab-btn > img {
+  margin-left: 20px;
+}
+.wrap.sub_fin_prod .tab-box .tab-btn > img:first-child {
+  margin-left: 0;
+}
+.wrap.sub_fin_prod .tab-box .tab-contents > ul {
+  margin-bottom: 10px;
+}
+.wrap.sub_fin_prod .tab-box .tab-contents > ul > li {
+  border-radius: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ededed;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.wrap.sub_fin_prod .tab-box .tab-contents > ul > li:first-child {
+  margin-top: 10px;
+}
+.wrap.sub_fin_prod .tab-box .tab-contents .tab-info {
+  display: flex;
+}
+.wrap.sub_fin_prod .tab-box .tab-contents .tab-info > img:last-child {
+  margin-left: 12px;
+}
+.wrap.sub_fin_prod .swiper-dot {
+  text-align: center;
+  padding-bottom: 20px;
 }
