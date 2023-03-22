@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+}
+section {
+    position: relative;
+}
+.wrap {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding-bottom: 72px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+    width: 100%;
+    max-width: 768px;
+    transform: translateX(-50%);
+    border-top: 1px solid #eeeeee;
+}
+footer ul {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    margin: 0;
+    padding: 7px 20px 0;
+}
+footer ul li {
+    box-sizing: content-box;
+}
+footer ul a {
+    display: flex;
+}
+footer ul img {
+    width: 100%;
+}
