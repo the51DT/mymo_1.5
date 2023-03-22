@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type C SUB : 금융상품 유람</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/reset_.css" />
+
+    <style>
+      body {
+        max-width: 768px;
+        margin: 0 auto !important;
+      }
+
+      /* header */
+      header{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        width: clamp(1px, 100% ,768px);
+        z-index: 1;
+      }
+      header div:last-of-type{
+        display: flex;
+      }
+      .btn_back{width: 20px; margin: 19px 0 0 30px;}
+      .btn_main{width: 24px; margin: 20px 22px 0 0;}
+      .btn_hamburger{width: 20px; height: 16px; margin: 22px 30px 0 0;}
+
+      /* section1 */
+      .sec1{
+        position: relative;
+        background: #E7682B;
+        height: 550px;
+      }
+      .sec1 .text{
+        padding: 96px 0px 0px 30px;
+        width: clamp(1px, 100%, 270px);
+      }
+      .sec1 .main{
+        margin: 0 auto;
+        width: clamp(1px, 100%, 360px);
+      }
+      .sec1 .sub{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+      }
+
+      /* section2 */
+      .sec2{
+        position: relative;
+        background-image: url(./img/sec2_back.png);
+        background-size: cover;
+        background-position: center;
+        height: 610px;
+      }
+      .sec2 .sub{
+        padding: 48px 0 0 25px;
+        width: 210px;
+      }
+      .sec2 .title{
+        margin: 17px 0 0 25px;
+        width: 130px;
+      }
+      .sec2 .deco{
+        margin: 35px 0 0 33px;
+        width: 12px;
+      }
+      .sec2 .text{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: clamp(1px, 100% ,322px);
+      }
+
+      /* section3 */
+      .sec3{
+        padding: 0 25px;
+      }
+      .sec3 .text{
+        margin: 0 auto;
+        padding: 46px 0 17px 0;
+        width: clamp(1px, 100%, 310px);
+      }
+      .sec3 .button{
+        width: 100%;
+        height: 68px;
+        padding: 20px;
+        border: 1px #DDD solid;
+        border-radius: 10px;
+      }
+      .sec3 .button img{
+        width: clamp(1px, 100%, 270px);
+      }
+
+      /* section4 */
+      .sec4{
+        position: relative;
+        padding: 50px 25px 55px;
+      }
+      .sec4 .deco{
+        position: absolute;
+        right: 40px;
+        width: 30px;
+      }
+      .sec4 .number{
+        width: 31px;
+      }
+      .sec4 .title{
+        margin: 19px 0 42px;
+        width: clamp(1px, 100%, 266px);
+      }
+      .sec4 .image{
+        margin: 0 auto;
+        width: clamp(1px, 100%, 220px);
+      }
+      .sec4 .text{
+        margin: 0 auto;
+        margin-top: 30px;
+        width: clamp(1px, 100%, 310px);
+      }
+
+      /* section5 */
+      .sec5{
+        position: relative;
+        padding: 0 25px;
+      }
+      .sec5 .number{
+        width: 16px;
+      }
+      .sec5 .title{
+        margin: 19px 0 38px;
+        width: 126px;
+      }
+      .sec5 .deco{
+        position: absolute;
+        top: 39px;
+        right: 48px;
+        width: 30px;
+      }
+      .sec5 .image{
+        margin: 0 auto;
+        width: clamp(1px, 100%, 310px);
+      }
+      .sec5 .text{
+        margin: 0 auto;
+        margin-top: 30px;
+        width: clamp(1px, 100%, 310px);
+      }
+      .sec5 .button{
+        width: 100%;
+        height: 68px;
+        padding: 20px;
+        margin: 20px 0 38px;
+        border: 1px #DDD solid;
+        border-radius: 10px;
+      }
+      .sec5 .button img{
+        width: clamp(1px, 100%, 270px);
+      }
+      .sec5 .tag{
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      .sec5 .tag img{
+        width: auto;
+        height: 34px;
+      }
+
+      /* section6 */
+      .sec6{
+        padding: 64px 25px 39px;
+      }
+      .sec6 .image{
+        margin: 0 auto;
+        width: 80px;
+      }
+      .sec6 .name{
+        margin: 16px auto;
+        width: 38px;
+      }
+      .sec6 .text{
+        margin: 0 auto;
+        width: clamp(1px, 100%, 310px);
+      }
+      .sec6 .margin{
+        height: 90px;
+      }
+
+      /* footer */
+      /* footer{
+        position: fixed;
+        bottom: 89px;
+        width: clamp(1px, 100% ,768px);
+        padding: 8px 20px 0;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px #EEE solid;
+        background: #fff;
+      }
+      footer img{
+        width: 80px;
+      } */
+
+      /* aside */
+      aside{
+        position: fixed;
+        bottom: 0;
+        width: clamp(1px, 100% ,768px);
+        height: 90px;
+      }
+      aside .box{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 31px 32px 25px;
+        align-items: center;
+        background: #FFFFFF;
+        border-top: 1px solid #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 10px 10px 0px 0px;
+      }
+      aside .recommend{
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+      aside .recommend .image{
+        width: 36px;
+      }
+      aside .recommend .text{
+        width: 108px;
+      }
+      aside .arrow{
+        z-index: 2;
+        width: 13px;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+
+  
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div><a href="index.html"><img class="btn_back" src="./img/btn_back.png"></a></div>
+        <div>
+          <div><img class="btn_main" src="./img/btn_main.png"></div>
+          <div><img class="btn_hamburger" src="./img/btn_hamburger.png"></div>
+        </div>
+      </header>
+
+      <section class="sec1">
+        <div data-aos="fade-up">
+          <div class="text"><img src="./img/sec1_text.png"></div>
+          <div class="main"><img src="./img/sec1_main.png"></div>
+        </div>
+        <div data-aos="fade-left" class="sub"><img src="./img/sec1_sub.png"></div>
+      </section>
+
+      <section class="sec2">
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="sub"><img src="./img/sec2_subtitle.png"></div>
+          <div class="title"><img src="./img/sec2_title.png"></div>
+          <div class="deco"><img src="./img/sec2_deco.png"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="text"><img src="./img/sec2_text.png"></div>
+      </section>
+
+      <section class="sec3">
+        <div data-aos="fade-up" data-aos-delay="300" class="text"><img src="./img/sec3_text.png"></div>
+        <div data-aos="fade-up" data-aos-delay="300" class="button"><img src="./img/sec3_button.png"></div>
+      </section>
+
+      <section class="sec4">
+        <div data-aos="fade-up" data-aos-delay="300" class="deco"><img src="./img/sec4_deco.png"></div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="number"><img src="./img/sec4_number.png"></div>
+          <div class="title"><img src="./img/sec4_title.png"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="image"><img src="./img/sec4_img.png"></div>
+          <div class="text"><img src="./img/sec4_text.png"></div>
+        </div>
+      </section>
+
+      <section class="sec5">
+        <div data-aos="fade-up" data-aos-delay="300" class="deco"><img src="./img/sec5_deco.png"></div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="number"><img src="./img/sec5_number.png"></div>
+          <div class="title"><img src="./img/sec5_title.png"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="image"><img src="./img/sec5_img.png"></div>
+          <div class="text"><img src="./img/sec5_text.png"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="button"><img src="./img/sec5_button.png"></div>
+        <div data-aos="fade-up" data-aos-delay="300" class="tag">
+          <img src="./img/sec5_tag1.png">
+          <img src="./img/sec5_tag2.png">
+          <img src="./img/sec5_tag3.png">
+          <img src="./img/sec5_tag4.png">
+          <img src="./img/sec5_tag5.png">
+          <img src="./img/sec5_tag6.png">
+        </div>
+      </section>
+      
+      <section data-aos="fade-up" data-aos-delay="300" class="sec6">
+        <div class="image"><img src="./img/sec6_img.png"></div>
+        <div class="name"><img src="./img/sec6_name.png"></div>
+        <div class="text"><img src="./img/sec6_text.png"></div>
+        <div class="margin"></div>
+      </section>
+
+      <!-- <footer>
+        <a href="#"><img src="./img/footer_1.png"></a>
+        <a href="#"><img src="./img/footer_2.png"></a>
+        <a href="#"><img src="./img/footer_3.png"></a>
+        <a href="#"><img src="./img/footer_4.png"></a>
+      </footer> -->
+
+      <aside>
+        <div class="box">
+          <div class="recommend">
+            <div class="image"><img src="./img/recommend_img.png"></div>
+            <div class="text"><img src="./img/recommend_text.png"></div>
+          </div>
+          <div class="arrow"><img src="./img/recommend_arrow.png"></div>
+        </div>     
+      </aside>
+    </div>
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(); 
+  </script>
+</html>
