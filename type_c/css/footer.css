@@ -14,7 +14,25 @@ section {
     margin: 0 auto;
     padding-bottom: 72px;
 }
-footer {
+
+
+footer{
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    width: clamp(1px, 100% ,768px);
+    padding: 8px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px #EEE solid;
+    background: #fff;
+  }
+footer img{
+    width: 80px;
+}
+
+
+/* footer {
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -40,4 +58,4 @@ footer ul a {
 }
 footer ul img {
     width: 100%;
-}
+} */
